@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CHW-L: Departure Check Log</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/F6B7DC45-9562-4BD6-A31F-05436BBC1085" uiVersion="4" version="4" name="CHW-L: Departure Check Log">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-manualDate />
+					<LMD-VAL-chwlID />
+					<LMD-VAL-plateNumber />
+					<LMD-CHK-supervisionSupplies />
+					<LMD-CHK-motorbikeCheckManditory />
+					<LMD-CHK-motorbikeCheckOptional />
+					<LMD-VAL-fuelFilled />
+					<LMD-VAL-fuelAmount />
+					<LMD-TIM-timeOfDeparture />
+				</data>
+			</instance>
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_departurechecklog&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="4" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-manualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/LMD-VAL-chwlID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-chwlID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-plateNumber" type="xsd:int" constraint=". &gt; 0" required="true()" />
+			<bind nodeset="/data/LMD-CHK-supervisionSupplies" constraint="count-selected(.) &lt; 2 or not(selected(., &quot;LMD-OPT-none&quot;))" jr:constraintMsg="jr:itext('LMD-CHK-supervisionSupplies-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-CHK-motorbikeCheckManditory" constraint="count-selected(.) &lt; 2 or not(selected(., &quot;LMD-OPT-none&quot;))" jr:constraintMsg="jr:itext('LMD-CHK-motorbikeCheckManditory-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-CHK-motorbikeCheckOptional" constraint="count-selected(.) &lt; 2 or not(selected(., &quot;LMD-OPT-none&quot;))" jr:constraintMsg="jr:itext('LMD-CHK-motorbikeCheckOptional-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-fuelFilled" required="true()" />
+			<bind nodeset="/data/LMD-VAL-fuelAmount" type="xsd:double" constraint=". &lt; 25 and . &gt; 0" relevant="/data/LMD-VAL-fuelFilled = '1'" required="true()" />
+			<bind nodeset="/data/LMD-TIM-timeOfDeparture" type="xsd:time" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-manualDate-label">
+						<value>Today's date</value>
+					</text>
+					<text id="LMD-VAL-chwlID-label">
+						<value>CHW-L ID:</value>
+						<value form="markdown">CHW-L ID:</value>
+					</text>
+					<text id="LMD-VAL-chwlID-constraintMsg">
+						<value>CHW-L ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-plateNumber-label">
+						<value>Motorcycle plate number:</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-label">
+						<value>Ensure you have the following supplies:</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-constraintMsg">
+						<value>"None of the above" cannot be selected with other options</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-LMD-OPT-pensBinder-label">
+						<value>Binder, Pens</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-LMD-OPT-forms-label">
+						<value>All Program Forms: Routine Visit Form, Sick Child Form, Monthly Service Report, Referral Form
+</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-LMD-OPT-medicalSupplies-label">
+						<value>Extra Medical Supplies: ORS, ACT, Amoxcycillin, OCP's, Condoms</value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-LMD-OPT-satellitePhone-label">
+						<value>Satellite phone / In-Reach </value>
+					</text>
+					<text id="LMD-CHK-supervisionSupplies-LMD-OPT-none-label">
+						<value>None of the above</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-label">
+						<value>Motorbike Checklist:</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-constraintMsg">
+						<value>"None of the above" cannot be selected with other options</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-helmet-label">
+						<value>Helmet</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-chainTension-label">
+						<value>Check chain tension</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkBrakesAndClutch-label">
+						<value>Check brakes and clutch cables</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkHeadlight-label">
+						<value>Check headlight</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkTirePressure-label">
+						<value>Check tire pressure level</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckManditory-LMD-OPT-none-label">
+						<value>None of the above</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-label">
+						<value>Motorbike Checklist:</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-constraintMsg">
+						<value>"None of the above" cannot be selected with other options</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-firstAidKit-label">
+						<value>First Aid Kit</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-pocketOil-label">
+						<value>Pocket Oil</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-sparkPlugs-label">
+						<value>Extra spark plugs</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkToolkit-label">
+						<value>Toolkit</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkPatchkit-label">
+						<value>Patch kit</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkAirpump-label">
+						<value>Airpump</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-spareInnerTube-label">
+						<value>Spare inner tube</value>
+					</text>
+					<text id="LMD-CHK-motorbikeCheckOptional-LMD-OPT-rainGearAndSunglasses-label">
+						<value>Check for sunglasses and rain gear</value>
+					</text>
+					<text id="LMD-CHK-MotorbikeCheckManditory-copy-1-of-LMD-OPT-None-label">
+						<value>None of the above</value>
+					</text>
+					<text id="LMD-VAL-fuelFilled-label">
+						<value>Was fuel filled today?</value>
+					</text>
+					<text id="LMD-VAL-fuelFilled-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-VAL-fuelFilled-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-VAL-fuelAmount-label">
+						<value>How many gallons of fuel were filled? </value>
+					</text>
+					<text id="LMD-TIM-timeOfDeparture-label">
+						<value>What time are you departing?</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/LMD-VAL-manualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-manualDate-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-chwlID">
+			<label ref="jr:itext('LMD-VAL-chwlID-label')" />
+			<alert ref="jr:itext('LMD-VAL-chwlID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-plateNumber">
+			<label ref="jr:itext('LMD-VAL-plateNumber-label')" />
+		</input>
+		<select ref="/data/LMD-CHK-supervisionSupplies">
+			<label ref="jr:itext('LMD-CHK-supervisionSupplies-label')" />
+			<alert ref="jr:itext('LMD-CHK-supervisionSupplies-constraintMsg')" />
+			<item>
+				<label ref="jr:itext('LMD-CHK-supervisionSupplies-LMD-OPT-pensBinder-label')" />
+				<value>LMD-OPT-pensBinder</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-supervisionSupplies-LMD-OPT-forms-label')" />
+				<value>LMD-OPT-forms</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-supervisionSupplies-LMD-OPT-medicalSupplies-label')" />
+				<value>LMD-OPT-medicalSupplies</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-supervisionSupplies-LMD-OPT-satellitePhone-label')" />
+				<value>LMD-OPT-satellitePhone</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-supervisionSupplies-LMD-OPT-none-label')" />
+				<value>LMD-OPT-none</value>
+			</item>
+		</select>
+		<select ref="/data/LMD-CHK-motorbikeCheckManditory">
+			<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-label')" />
+			<alert ref="jr:itext('LMD-CHK-motorbikeCheckManditory-constraintMsg')" />
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-helmet-label')" />
+				<value>LMD-OPT-helmet</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-chainTension-label')" />
+				<value>LMD-OPT-chainTension</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkBrakesAndClutch-label')" />
+				<value>LMD-OPT-checkBrakesAndClutch</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkHeadlight-label')" />
+				<value>LMD-OPT-checkHeadlight</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-checkTirePressure-label')" />
+				<value>LMD-OPT-checkTirePressure</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckManditory-LMD-OPT-none-label')" />
+				<value>LMD-OPT-none</value>
+			</item>
+		</select>
+		<select ref="/data/LMD-CHK-motorbikeCheckOptional">
+			<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-label')" />
+			<alert ref="jr:itext('LMD-CHK-motorbikeCheckOptional-constraintMsg')" />
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-firstAidKit-label')" />
+				<value>LMD-OPT-firstAidKit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-pocketOil-label')" />
+				<value>LMD-OPT-pocketOil</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-sparkPlugs-label')" />
+				<value>LMD-OPT-sparkPlugs</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkToolkit-label')" />
+				<value>LMD-OPT-checkToolkit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkPatchkit-label')" />
+				<value>LMD-OPT-checkPatchkit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-checkAirpump-label')" />
+				<value>LMD-OPT-checkAirpump</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-spareInnerTube-label')" />
+				<value>LMD-OPT-spareInnerTube</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-motorbikeCheckOptional-LMD-OPT-rainGearAndSunglasses-label')" />
+				<value>LMD-OPT-rainGearAndSunglasses</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-CHK-MotorbikeCheckManditory-copy-1-of-LMD-OPT-None-label')" />
+				<value>LMD-OPT-none</value>
+			</item>
+		</select>
+		<select1 ref="/data/LMD-VAL-fuelFilled">
+			<label ref="jr:itext('LMD-VAL-fuelFilled-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-fuelFilled-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-fuelFilled-0-label')" />
+				<value>0</value>
+			</item>
+		</select1>
+		<input ref="/data/LMD-VAL-fuelAmount">
+			<label ref="jr:itext('LMD-VAL-fuelAmount-label')" />
+		</input>
+		<input ref="/data/LMD-TIM-timeOfDeparture">
+			<label ref="jr:itext('LMD-TIM-timeOfDeparture-label')" />
+		</input>
+	</h:body>
+</h:html>
