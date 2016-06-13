@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html>
+	<h:head>
+		<h:title>ROLES</h:title>
+	</h:head>
+	<h:body>
+		<meta>
+			<version>1</version>
+		</meta>
+		<role>
+			<name>CHW - Module 1</name>
+			<permission>
+				<form>CHW: Health Survey</form>
+				<form>CHW: Routine Visit (mod 1)</form>
+				<form>DCT Introduction</form>
+			</permission>
+		</role>
+		<role>
+			<name>CHW - Module 2</name>
+			<permission>
+				<form>CHW: Health Survey</form>
+				<form>CHW: Routine Visit (mod 2)</form>
+				<form>CHW: Sick Child Form</form>
+				<form>DCT Introduction</form>
+			</permission>
+		</role>
+		<role>
+			<name>CHW - Module 3</name>
+			<permission>
+				<form>CHW: Health Survey</form>
+				<form>CHW: Routine Visit (mod 3)</form>
+				<form>CHW: Sick Child Form</form>
+				<form>DCT Introduction</form>
+			</permission>
+		</role>		
+		<role>
+			<name>CHW-L</name>
+			<permission>
+				<form>CHW-L: Arrival Check Log</form>
+				<form>CHW-L: Departure Check Log</form>
+				<form>CHW-L: CHW Restock</form>
+				<form>DCT Introduction</form>
+			</permission>
+		</role>
+		<role>
+			<name>CCS</name>
+			<permission>
+				<form>CCS: Supervision Visit Log</form>
+				<form>CCS: Vaccine Tracker</form>
+				<form>DCT Introduction</form>
+			</permission>
+		</role>
+		<role>
+			<name>Administrator</name>
+			<permission>
+				<form>DCT Introduction</form>
+				<form>CHW: Health Survey</form>
+				<form>CHW: Routine Visit (mod 1)</form>
+				<form>CHW: Routine Visit (mod 2)</form>				
+				<form>CHW: Routine Visit (mod 3)</form>			
+				<form>CHW: Sick Child Form</form>				
+				<form>CHW-L: Arrival Check Log</form>
+				<form>CHW-L: Departure Check Log</form>
+				<form>CHW-L: CHW Restock</form>
+				<form>CCS: Supervision Visit Log</form>
+				<form>CCS: Vaccine Tracker</form>
+				<form>CHW Survey</form>
+			</permission>
+		</role>	
+	</h:body>
+</h:html>

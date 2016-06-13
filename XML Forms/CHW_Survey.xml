@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CHW Survey</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/5A305C87-8EA5-4991-90E2-11CFE50B0266" uiVersion="1" version="1" name="CHW Survey">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-RMEInitials />
+					<LMD-VAL-ManualDate />
+					<GRP-BasicInfo>
+						<LMD-VAL-respondentName />
+						<LMD-VAL-gender />
+						<LMD-VAL-dateOfBirth />
+						<LMD-VAL-maritalStatus />
+					</GRP-BasicInfo>
+					<GRP-HouseholdQuestions>
+						<LMD-VAL-getFarmLand />
+						<LMD-VAL-FarmLaps />
+						<LMD-VAL-drinkingWater />
+						<LMD-VAL-pooPoo />
+						<LMD-VAL-sharedToilet />
+						<LMD-CHK-utilities />
+						<LMD-VAL-Cooking />
+						<LMD-VAL-LightingSource />
+						<LMD-VAL-Floor />
+						<LMD-VAL-FloorOther />
+						<LMD-VAL-Roof />
+						<LMD-VAL-RoofOther />
+						<LMD-VAL-Walls />
+						<LMD-VAL-WallOther />
+						<LMD-VAL-NumberOfRooms />
+						<LMD-CHK-Transportation />
+						<LMD-VAL-hasAnimals />
+						<GRP-Animals>
+							<LMD-VAL-CountCows />
+							<LMD-VAL-CountPigs />
+							<LMD-VAL-CountGoats />
+							<LMD-VAL-CountSheep />
+							<LMD-VAL-CountBirds />
+						</GRP-Animals>
+						<LMD-VAL-bankMoney />
+					</GRP-HouseholdQuestions>
+					<GRP-Education>
+						<LMD-VAL-attendedSchool />
+						<LMD-VAL-schoolGrade />
+						<LMD-VAL-hasYoungChildren />
+						<LMD-VAL-numberOfYoungChildren />
+						<LMD-VAL-numberOfYoungChildrenInSchool />
+						<LMD-VAL />
+					</GRP-Education>
+					<GRP-householdFoodInsecurityAccessScale>
+						<LMD-VAL-enoughFood />
+						<LMD-VAL-eatsUnpreferredFood />
+						<LMD-VAL-repetitiousFood />
+						<LMD-VAL-noAccessToGoodFood />
+						<LMD-VAL-insufficientFood />
+						<LMD-VAL-fewerMeals />
+						<LMD-VAL-noMoneyForFood />
+						<LMD-VAL-sleepsHungry />
+						<LMD-VAL-noFoodAllDay />
+					</GRP-householdFoodInsecurityAccessScale>
+					<GRP-qualityOfLife>
+						<LMD-VAL-safteyAndSecurity />
+						<LMD-VAL-comfort />
+						<LMD-VAL-enjoysEnvironment />
+						<LMD-VAL-financialDifficulties />
+						<LMD-VAL-worriesAboutMoney />
+						<LMD-VAL-medicalCare />
+						<LMD-VAL-enjoysFreeTime />
+						<LMD-VAL-communityHealth />
+						<LMD-VAL-friendsInHighPlaces />
+						<LMD-VAL-friendAcceptance />
+						<LMD-VAL-communityAcceptance />
+						<LMD-VAL-communityAlienation />
+						<LMD-VAL-homeQuality />
+						<LMD-VAL-plentyMoney />
+					</GRP-qualityOfLife>
+				</data>
+			</instance>
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_chwSurvey&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="1" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-RMEInitials" type="xsd:string" constraint="string-length(.) = 2" required="true()" />
+			<bind nodeset="/data/LMD-VAL-ManualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/GRP-BasicInfo" />
+			<bind nodeset="/data/GRP-BasicInfo/LMD-VAL-respondentName" type="xsd:string" constraint="regex(., '^[a-zA-Z\s]+$')" jr:constraintMsg="jr:itext('GRP-BasicInfo/LMD-VAL-respondentName-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-BasicInfo/LMD-VAL-gender" required="true()" />
+			<bind nodeset="/data/GRP-BasicInfo/LMD-VAL-dateOfBirth" type="xsd:date" constraint=". &lt; today()" jr:constraintMsg="jr:itext('GRP-BasicInfo/LMD-VAL-dateOfBirth-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-BasicInfo/LMD-VAL-maritalStatus" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-getFarmLand" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-FarmLaps" type="xsd:int" constraint=". &gt; 0" relevant="/data/GRP-HouseholdQuestions/LMD-VAL-getFarmLand = '1'" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-drinkingWater" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-pooPoo" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-sharedToilet" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-CHK-utilities" constraint="not(selected(., 'LMD-OPT-None')) or count-selected(.) &lt; 2" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-Cooking" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-LightingSource" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-Floor" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-FloorOther" type="xsd:string" relevant="/data/GRP-HouseholdQuestions/LMD-VAL-Floor = 'LMD-Other'" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-Roof" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-RoofOther" type="xsd:string" relevant="/data/GRP-HouseholdQuestions/LMD-VAL-Roof = 'LMD-Other'" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-Walls" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-WallOther" type="xsd:string" relevant="/data/GRP-HouseholdQuestions/LMD-VAL-Walls = 'LMD-Other'" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-NumberOfRooms" type="xsd:int" constraint=". &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-CHK-Transportation" constraint="not(selected(., 'LMD-OPT-None')) or count-selected(.) &lt; 2" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-hasAnimals" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals" relevant="/data/GRP-HouseholdQuestions/LMD-VAL-hasAnimals = '1'" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountCows" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountPigs" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountGoats" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountSheep" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountBirds" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-HouseholdQuestions/LMD-VAL-bankMoney" required="true()" />
+			<bind nodeset="/data/GRP-Education" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL-attendedSchool" required="true()" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL-schoolGrade" type="xsd:int" constraint=". &gt; 0 and . &lt;= 30 or . = 999" relevant="/data/GRP-Education/LMD-VAL-attendedSchool = '1'" required="true()" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL-hasYoungChildren" required="true()" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL-numberOfYoungChildren" type="xsd:int" relevant="/data/GRP-Education/LMD-VAL-hasYoungChildren = '1'" required="true()" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool" type="xsd:int" constraint=". &gt;= 0 and . &lt;= /data/GRP-Education/LMD-VAL-numberOfYoungChildren" jr:constraintMsg="jr:itext('GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool-constraintMsg')" relevant="/data/GRP-Education/LMD-VAL-hasYoungChildren = '1'" required="true()" />
+			<bind nodeset="/data/GRP-Education/LMD-VAL" type="xsd:int" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry" required="true()" />
+			<bind nodeset="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-safteyAndSecurity" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-comfort" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-enjoysEnvironment" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-financialDifficulties" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-worriesAboutMoney" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-medicalCare" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-enjoysFreeTime" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-communityHealth" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-friendAcceptance" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-communityAcceptance" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-communityAlienation" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-homeQuality" required="true()" />
+			<bind nodeset="/data/GRP-qualityOfLife/LMD-VAL-plentyMoney" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-RMEInitials-label">
+						<value>Enter your initials:</value>
+					</text>
+					<text id="LMD-VAL-ManualDate-label">
+						<value>Today's date:</value>
+					</text>
+					<text id="GRP-BasicInfo-label">
+						<value>A. Basic Info</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-respondentName-label">
+						<value>Enter respondent's name:</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-respondentName-constraintMsg">
+						<value>Please only use letters to record the respondent's name</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-gender-label">
+						<value>Respondent's sex:</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-gender-male-label">
+						<value>Male</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-gender-female-label">
+						<value>Female</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-dateOfBirth-label">
+						<value>Respondent's Date of Birth:</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-dateOfBirth-constraintMsg">
+						<value>The respondent must have been born before today</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-maritalStatus-label">
+						<value>Respondent's marital status</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-maritalStatus-Married-label">
+						<value>Married</value>
+					</text>
+					<text id="GRP-BasicInfo/LMD-VAL-maritalStatus-single-label">
+						<value>Single (not married)</value>
+					</text>
+					<text id="GRP-HouseholdQuestions-label">
+						<value>A. Basic Info </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-getFarmLand-label">
+						<value>Is there anyone in this house who get farm land?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-getFarmLand-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-getFarmLand-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-FarmLaps-label">
+						<value>How many laps of farm land do members of this household farm? (4 laps = 1 acre)</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-FarmLaps-hint">
+						<value>[999 = I don't know]</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-label">
+						<value>Where do you people get water from for drinking most times? </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-HandPump-label">
+						<value>Hand Pump / Protected Well</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Rainwater-label">
+						<value>Rainwater</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-BottledWater-label">
+						<value>Bottled Water</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-SurfaceWater-label">
+						<value>Surface Water (Creek/Pond/Canal) </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Borehole-label">
+						<value>Tube Well or Borehole</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-UnprotectedWell-label">
+						<value>Unprotected Well</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-UnprotectedSpring-label">
+						<value>Unprotected Spring</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-TankerTruck-label">
+						<value>Tanker Truck</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PublicTap-label">
+						<value>Public Tap / Standpipe</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PipedIntoDwelling-label">
+						<value>Piped Into Dwelling</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-ProtectedSpring-label">
+						<value>Protected Spring</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PipedToYard-label">
+						<value>Piped into yard/plot</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Cart-label">
+						<value>Cart with small tank</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-label">
+						<value>Where do you people go to toilet/poo poo? </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_PitLatrineNoSlab-label">
+						<value>Pit latrine without slab/open pit</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_PitLatrine-label">
+						<value>Pit latrine with slab</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_ImprovedPitLatrine-label">
+						<value>Ventilated improved pit latrine</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Bush-label">
+						<value>No facility/bush/field</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Composting-label">
+						<value>Composting toilet</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Bucket-label">
+						<value>Bucket toilet</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushUnknown-label">
+						<value>Flush, don't know where</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_HangingToilet-label">
+						<value>Hanging Toilet / Hanging Latrine</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushPitLatrine-label">
+						<value>Flush to pit latrine</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushSeptic-label">
+						<value>Flush to septic tank</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushToSewer-label">
+						<value>Flush to piped sewer system</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushSomewhere-label">
+						<value>Flush to somewhere else</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-sharedToilet-label">
+						<value>People from other houses go to the same toilet?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-sharedToilet-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-sharedToilet-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-label">
+						<value>Does your household have: </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-hint">
+						<value>[Read all choices] [Multiple] </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Chairs-label">
+						<value>Chairs</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Table-label">
+						<value>Table</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-CellPhone-label">
+						<value>Cell phone</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Radio-label">
+						<value>Radio</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Cupboard-label">
+						<value>Cupboard</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Mattress-label">
+						<value>Mattress (not grass)</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-SewingMachine-label">
+						<value>Sewing machine</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-IceBox-label">
+						<value>Ice box</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Electricity-label">
+						<value>Electricity</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-SolarPanel-label">
+						<value>Solar panel</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Generator-label">
+						<value>Generator</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Television-label">
+						<value>Television</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Computer-label">
+						<value>Computer</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-None-label">
+						<value>None of the above</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-label">
+						<value>What you use for cooking - that coal, gas stove, wood, other thing?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-Wood-label">
+						<value>Wood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-Charcoal-label">
+						<value>Fire coal/charcoal</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-GasCylinder-label">
+						<value>Gas cylinder</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-KeroseneStove-label">
+						<value>Kerosene stove</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-Biogas-label">
+						<value>Biogas</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-Electricity-label">
+						<value>Electricity</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Cooking-NoCooking-label">
+						<value>No food cooked in house</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-label">
+						<value>What do you use for light in your house?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-Electricity-label">
+						<value>Electricity</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-solar-label">
+						<value>Solar</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-OilLamp-label">
+						<value>Oil lamp/jackolantern</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-gas-label">
+						<value>Gas</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-wood-label">
+						<value>Wood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-Battery-label">
+						<value>Battery</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-kerosene-label">
+						<value>Kerosene</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-ChineseLamp-label">
+						<value>Chinese lamp</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-Candles-label">
+						<value>Candles</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-noLight-label">
+						<value>No light in this house</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-LightingSource-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-label">
+						<value>What is the main materials of the floor of your house?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-EarthSand-label">
+						<value>Earth/sand/mud</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-Concrete-label">
+						<value>Concrete, cement</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-Floormat-label">
+						<value>Floormat, linoleum, vinyl</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-CeramicTiles-label">
+						<value>Ceramic Tiles</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-WoodPlanks-label">
+						<value>Wood planks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-Carpet-label">
+						<value>Carpet</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-Parquet-label">
+						<value>Parquet or polished wood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Floor-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-FloorOther-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-label">
+						<value>What is the main materials of the roof of your house?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Thatch-label">
+						<value>Thatch / palm leaf</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Tarpaulin-label">
+						<value>Tarpaulin, plastic</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Zinc-label">
+						<value>Zinc, metal</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Palm-label">
+						<value>Palm / bamboo</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-WoodPlanks-label">
+						<value>Wood planks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Concrete-label">
+						<value>Concrete, cement</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Wood-label">
+						<value>Wood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-RusticMat-label">
+						<value>Rustic mat</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-CeramicTiles-label">
+						<value>Ceramic tiles</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-AsbestosSheets-label">
+						<value>Asbestos sheets / shingles</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Roof-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-RoofOther-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-label">
+						<value>What is the main materials of the outside walls of your house?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Cane-label">
+						<value>Cane/palm/trunks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-MudAndSticks-label">
+						<value>Mud and sticks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-StoneBlocks-label">
+						<value>Stone blocks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-MudBricks-label">
+						<value>Mud bricks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Bricks-label">
+						<value>Bricks</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Plywood-label">
+						<value>Plywood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-ReusedWood-label">
+						<value>Reused wood</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Cement-label">
+						<value>Cement</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-WoodPlanks-label">
+						<value>Wood planks/shingles</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Thatch-label">
+						<value>Straw, thatch mats</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Cardboard-label">
+						<value>Cardboard, plastic</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Zinc-label">
+						<value>Zinc, metal</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-Walls-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-WallOther-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-NumberOfRooms-label">
+						<value>How many bedrooms in this house that people sleep in?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-label">
+						<value>Anyone in your house here get: </value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-hint">
+						<value>[Read all choices]</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Watch-label">
+						<value>a watch</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Bicycle-label">
+						<value>a bicycle</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Motorbike-label">
+						<value>a motorbike</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Car-label">
+						<value>a car/truck</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Boat-label">
+						<value>a boat/canoe</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-None-label">
+						<value>None of the above</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-hasAnimals-label">
+						<value>You have any animals, chickens, or ducks in your house?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-hasAnimals-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-hasAnimals-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals-label">
+						<value>How many animals people in your house get?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountCows-label">
+						<value>Cows:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountPigs-label">
+						<value>Pigs:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountGoats-label">
+						<value>Goats:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountSheep-label">
+						<value>Sheep:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountBirds-label">
+						<value>Chicken, ducks, or birds:</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-bankMoney-label">
+						<value>Anyone in this house who get money in the bank?</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-bankMoney-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HouseholdQuestions/LMD-VAL-bankMoney-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Education-label">
+						<value>B. Education</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-attendedSchool-label">
+						<value>You ever go to school before?</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-attendedSchool-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-attendedSchool-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-schoolGrade-label">
+						<value>What is the highest grade you completed?</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-schoolGrade-hint">
+						<value>[999= I don't know]</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-hasYoungChildren-label">
+						<value>You have children who not pass-by 10 years?</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-hasYoungChildren-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-hasYoungChildren-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-numberOfYoungChildren-label">
+						<value>How many children you have, who not pass-by 10 years?</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool-label">
+						<value>How many of your children (not pass by 10 years) are in school?</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool-constraintMsg">
+						<value>Please check your answers. Must be fewer than the number of children &lt; 10.</value>
+					</text>
+					<text id="GRP-Education/LMD-VAL-label">
+						<value>In this school year, how much your households pay for children school (in US$)? This includes: children school fees, books, uniforms, transport, living on campus, and other things you pay money for?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale-label">
+						<value>C. Household Food insecurity Access Scale</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-label">
+						<value>In the last 30 days, you sometime worry that your household will not have plenty food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-label">
+						<value>In the last 30 days, you or any one of your household wanted to eat certain food but could not eat it because you people don’t have money?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-label">
+						<value>In the last 30 days, you or any one of your household eats the same type of food every day just because you people don’t have money?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-label">
+						<value>In the last 30 days, you or any of your household eats food that you people never wanted to eat because you people don’t have money to buy other types of food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-label">
+						<value>In the last 30 days, you or any one of your household eat small food while your wanted plenty because you people never had plenty food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-label">
+						<value>In the last 30 days, you or any one in your household eat food that was very small in a day because you people didn’t have plenty food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-label">
+						<value>In the last 30 days, was there any time where your household didn’t eat at all because you never had money to buy food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-label">
+						<value>In the last 30 days, you or any one of your household ever go to sleep at night hungry because you people never had food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-label">
+						<value>In the last 30 days, you or any one of your household ever go the whole day without eating anything because you never had food?</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-never-label">
+						<value>Never happen</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-rarely-label">
+						<value>Hard to happen (one or two times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-sometimes-label">
+						<value>Sometimes (3-10 times)</value>
+					</text>
+					<text id="GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-always-label">
+						<value>Always (more than 10 times)</value>
+					</text>
+					<text id="GRP-qualityOfLife-label">
+						<value>D. WHO Quality of Life Questions</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-label">
+						<value>How much do you worry about your safety and security?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-comfort-label">
+						<value>How comfortable is the place where you live</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-comfort-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-comfort-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-comfort-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-label">
+						<value>How much do you like the place you are living?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-financialDifficulties-label">
+						<value>You have problems because you don't have money?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-financialDifficulties-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-financialDifficulties-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-financialDifficulties-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-label">
+						<value>How much you worry about money?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-medicalCare-label">
+						<value>Is it easy for you to get good treatment or care from the clinic or hospital?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-medicalCare-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-medicalCare-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-medicalCare-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-label">
+						<value>How much do you enjoy your free time?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityHealth-label">
+						<value>How healthy is your community in your own eyes?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityHealth-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityHealth-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityHealth-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-label">
+						<value>Can you look up to your friends when you need them? </value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendAcceptance-label">
+						<value>Do you feel that people you know accept you?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendAcceptance-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendAcceptance-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-friendAcceptance-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAcceptance-label">
+						<value>What level/degree you feel your community people accept you as a person?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAcceptance-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAcceptance-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAcceptance-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAlienation-label">
+						<value>How much do you feel separated from the people around you?How much do you feel separated from the people around you?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAlienation-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAlienation-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-communityAlienation-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-homeQuality-label">
+						<value>Your home where you live is good for you?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-homeQuality-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-homeQuality-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-homeQuality-alot-label">
+						<value>A lot</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-plentyMoney-label">
+						<value>You have plenty money to solve your problems?</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-plentyMoney-none-label">
+						<value>Not at all</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-plentyMoney-some-label">
+						<value>Some</value>
+					</text>
+					<text id="GRP-qualityOfLife/LMD-VAL-plentyMoney-alot-label">
+						<value>A lot</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/LMD-VAL-RMEInitials">
+			<label ref="jr:itext('LMD-VAL-RMEInitials-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-ManualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-ManualDate-label')" />
+		</input>
+		<group ref="/data/GRP-BasicInfo">
+			<label ref="jr:itext('GRP-BasicInfo-label')" />
+			<input ref="/data/GRP-BasicInfo/LMD-VAL-respondentName">
+				<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-respondentName-label')" />
+				<alert ref="jr:itext('GRP-BasicInfo/LMD-VAL-respondentName-constraintMsg')" />
+			</input>
+			<select1 ref="/data/GRP-BasicInfo/LMD-VAL-gender">
+				<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-gender-label')" />
+				<item>
+					<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-gender-male-label')" />
+					<value>male</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-gender-female-label')" />
+					<value>female</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-BasicInfo/LMD-VAL-dateOfBirth" appearance="no-calendar">
+				<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-dateOfBirth-label')" />
+				<alert ref="jr:itext('GRP-BasicInfo/LMD-VAL-dateOfBirth-constraintMsg')" />
+			</input>
+			<select1 ref="/data/GRP-BasicInfo/LMD-VAL-maritalStatus">
+				<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-maritalStatus-label')" />
+				<item>
+					<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-maritalStatus-Married-label')" />
+					<value>Married</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-BasicInfo/LMD-VAL-maritalStatus-single-label')" />
+					<value>single</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/GRP-HouseholdQuestions">
+			<label ref="jr:itext('GRP-HouseholdQuestions-label')" />
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-getFarmLand">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-getFarmLand-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-getFarmLand-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-getFarmLand-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-HouseholdQuestions/LMD-VAL-FarmLaps">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-FarmLaps-label')" />
+				<hint ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-FarmLaps-hint')" />
+			</input>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-drinkingWater">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-HandPump-label')" />
+					<value>HandPump</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Rainwater-label')" />
+					<value>Rainwater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-BottledWater-label')" />
+					<value>BottledWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-SurfaceWater-label')" />
+					<value>SurfaceWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Borehole-label')" />
+					<value>Borehole</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-UnprotectedWell-label')" />
+					<value>UnprotectedWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-UnprotectedSpring-label')" />
+					<value>UnprotectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-TankerTruck-label')" />
+					<value>TankerTruck</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PublicTap-label')" />
+					<value>PublicTap</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PipedIntoDwelling-label')" />
+					<value>PipedIntoDwelling</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-ProtectedSpring-label')" />
+					<value>ProtectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-PipedToYard-label')" />
+					<value>PipedToYard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Cart-label')" />
+					<value>Cart</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-drinkingWater-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-pooPoo">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_PitLatrineNoSlab-label')" />
+					<value>Toilet_PitLatrineNoSlab</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_PitLatrine-label')" />
+					<value>Toilet_PitLatrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_ImprovedPitLatrine-label')" />
+					<value>Toilet_ImprovedPitLatrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Bush-label')" />
+					<value>Toilet_Bush</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Composting-label')" />
+					<value>Toilet_Composting</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Bucket-label')" />
+					<value>Toilet_Bucket</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushUnknown-label')" />
+					<value>Toilet_FlushUnknown</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_HangingToilet-label')" />
+					<value>Toilet_HangingToilet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushPitLatrine-label')" />
+					<value>Toilet_FlushPitLatrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushSeptic-label')" />
+					<value>Toilet_FlushSeptic</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushToSewer-label')" />
+					<value>Toilet_FlushToSewer</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_FlushSomewhere-label')" />
+					<value>Toilet_FlushSomewhere</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-pooPoo-Toilet_Other-label')" />
+					<value>Toilet_Other</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-sharedToilet">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-sharedToilet-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-sharedToilet-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-sharedToilet-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select ref="/data/GRP-HouseholdQuestions/LMD-CHK-utilities">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-label')" />
+				<hint ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-hint')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Chairs-label')" />
+					<value>LMD-OPT-Chairs</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Table-label')" />
+					<value>LMD-OPT-Table</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-CellPhone-label')" />
+					<value>LMD-OPT-CellPhone</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Radio-label')" />
+					<value>LMD-OPT-Radio</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Cupboard-label')" />
+					<value>LMD-OPT-Cupboard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Mattress-label')" />
+					<value>LMD-OPT-Mattress</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-SewingMachine-label')" />
+					<value>LMD-OPT-SewingMachine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-IceBox-label')" />
+					<value>LMD-OPT-IceBox</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Electricity-label')" />
+					<value>LMD-OPT-Electricity</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-SolarPanel-label')" />
+					<value>LMD-OPT-SolarPanel</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Generator-label')" />
+					<value>LMD-OPT-Generator</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Television-label')" />
+					<value>LMD-OPT-Television</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-Computer-label')" />
+					<value>LMD-OPT-Computer</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-utilities-LMD-OPT-None-label')" />
+					<value>LMD-OPT-None</value>
+				</item>
+			</select>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-Cooking">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-Wood-label')" />
+					<value>Wood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-Charcoal-label')" />
+					<value>Charcoal</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-GasCylinder-label')" />
+					<value>GasCylinder</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-KeroseneStove-label')" />
+					<value>KeroseneStove</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-Biogas-label')" />
+					<value>Biogas</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-Electricity-label')" />
+					<value>Electricity</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-Other-label')" />
+					<value>Other</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Cooking-NoCooking-label')" />
+					<value>NoCooking</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-LightingSource">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-Electricity-label')" />
+					<value>Electricity</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-solar-label')" />
+					<value>solar</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-OilLamp-label')" />
+					<value>OilLamp</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-gas-label')" />
+					<value>gas</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-wood-label')" />
+					<value>wood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-Battery-label')" />
+					<value>Battery</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-kerosene-label')" />
+					<value>kerosene</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-ChineseLamp-label')" />
+					<value>ChineseLamp</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-Candles-label')" />
+					<value>Candles</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-noLight-label')" />
+					<value>noLight</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-LightingSource-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-Floor">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-EarthSand-label')" />
+					<value>EarthSand</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-Concrete-label')" />
+					<value>Concrete</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-Floormat-label')" />
+					<value>Floormat</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-CeramicTiles-label')" />
+					<value>CeramicTiles</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-WoodPlanks-label')" />
+					<value>WoodPlanks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-Carpet-label')" />
+					<value>Carpet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-Parquet-label')" />
+					<value>Parquet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Floor-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-HouseholdQuestions/LMD-VAL-FloorOther">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-FloorOther-label')" />
+			</input>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-Roof">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Thatch-label')" />
+					<value>Thatch</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Tarpaulin-label')" />
+					<value>Tarpaulin</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Zinc-label')" />
+					<value>Zinc</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Palm-label')" />
+					<value>Palm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-WoodPlanks-label')" />
+					<value>WoodPlanks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Concrete-label')" />
+					<value>Concrete</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Wood-label')" />
+					<value>Wood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-RusticMat-label')" />
+					<value>RusticMat</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-CeramicTiles-label')" />
+					<value>CeramicTiles</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-AsbestosSheets-label')" />
+					<value>AsbestosSheets</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Roof-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-HouseholdQuestions/LMD-VAL-RoofOther">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-RoofOther-label')" />
+			</input>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-Walls">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Cane-label')" />
+					<value>Cane</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-MudAndSticks-label')" />
+					<value>MudAndSticks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-StoneBlocks-label')" />
+					<value>StoneBlocks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-MudBricks-label')" />
+					<value>MudBricks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Bricks-label')" />
+					<value>Bricks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Plywood-label')" />
+					<value>Plywood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-ReusedWood-label')" />
+					<value>ReusedWood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Cement-label')" />
+					<value>Cement</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-WoodPlanks-label')" />
+					<value>WoodPlanks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Thatch-label')" />
+					<value>Thatch</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Cardboard-label')" />
+					<value>Cardboard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Zinc-label')" />
+					<value>Zinc</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-Walls-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-HouseholdQuestions/LMD-VAL-WallOther">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-WallOther-label')" />
+			</input>
+			<input ref="/data/GRP-HouseholdQuestions/LMD-VAL-NumberOfRooms">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-NumberOfRooms-label')" />
+			</input>
+			<select ref="/data/GRP-HouseholdQuestions/LMD-CHK-Transportation">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-label')" />
+				<hint ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-hint')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Watch-label')" />
+					<value>LMD-OPT-Watch</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Bicycle-label')" />
+					<value>LMD-OPT-Bicycle</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Motorbike-label')" />
+					<value>LMD-OPT-Motorbike</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Car-label')" />
+					<value>LMD-OPT-Car</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-Boat-label')" />
+					<value>LMD-OPT-Boat</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-CHK-Transportation-LMD-OPT-None-label')" />
+					<value>LMD-OPT-None</value>
+				</item>
+			</select>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-hasAnimals">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-hasAnimals-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-hasAnimals-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-hasAnimals-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<group ref="/data/GRP-HouseholdQuestions/GRP-Animals" appearance="field-list">
+				<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals-label')" />
+				<input ref="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountCows">
+					<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountCows-label')" />
+				</input>
+				<input ref="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountPigs">
+					<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountPigs-label')" />
+				</input>
+				<input ref="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountGoats">
+					<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountGoats-label')" />
+				</input>
+				<input ref="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountSheep">
+					<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountSheep-label')" />
+				</input>
+				<input ref="/data/GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountBirds">
+					<label ref="jr:itext('GRP-HouseholdQuestions/GRP-Animals/LMD-VAL-CountBirds-label')" />
+				</input>
+			</group>
+			<select1 ref="/data/GRP-HouseholdQuestions/LMD-VAL-bankMoney">
+				<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-bankMoney-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-bankMoney-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HouseholdQuestions/LMD-VAL-bankMoney-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/GRP-Education">
+			<label ref="jr:itext('GRP-Education-label')" />
+			<select1 ref="/data/GRP-Education/LMD-VAL-attendedSchool">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-attendedSchool-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Education/LMD-VAL-attendedSchool-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Education/LMD-VAL-attendedSchool-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-Education/LMD-VAL-schoolGrade">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-schoolGrade-label')" />
+				<hint ref="jr:itext('GRP-Education/LMD-VAL-schoolGrade-hint')" />
+			</input>
+			<select1 ref="/data/GRP-Education/LMD-VAL-hasYoungChildren">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-hasYoungChildren-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Education/LMD-VAL-hasYoungChildren-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Education/LMD-VAL-hasYoungChildren-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-Education/LMD-VAL-numberOfYoungChildren">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-numberOfYoungChildren-label')" />
+			</input>
+			<input ref="/data/GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool-label')" />
+				<alert ref="jr:itext('GRP-Education/LMD-VAL-numberOfYoungChildrenInSchool-constraintMsg')" />
+			</input>
+			<input ref="/data/GRP-Education/LMD-VAL">
+				<label ref="jr:itext('GRP-Education/LMD-VAL-label')" />
+			</input>
+		</group>
+		<group ref="/data/GRP-householdFoodInsecurityAccessScale">
+			<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale-label')" />
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-enoughFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-eatsUnpreferredFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-repetitiousFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noAccessToGoodFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-insufficientFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-fewerMeals-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noMoneyForFood-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-sleepsHungry-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay">
+				<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-label')" />
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-never-label')" />
+					<value>never</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-rarely-label')" />
+					<value>rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-sometimes-label')" />
+					<value>sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-householdFoodInsecurityAccessScale/LMD-VAL-noFoodAllDay-always-label')" />
+					<value>always</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/GRP-qualityOfLife">
+			<label ref="jr:itext('GRP-qualityOfLife-label')" />
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-safteyAndSecurity">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-safteyAndSecurity-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-comfort">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-comfort-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-comfort-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-comfort-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-comfort-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-enjoysEnvironment">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysEnvironment-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-financialDifficulties">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-financialDifficulties-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-financialDifficulties-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-financialDifficulties-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-financialDifficulties-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-worriesAboutMoney">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-worriesAboutMoney-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-medicalCare">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-medicalCare-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-medicalCare-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-medicalCare-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-medicalCare-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-enjoysFreeTime">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-enjoysFreeTime-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-communityHealth">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityHealth-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityHealth-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityHealth-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityHealth-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendsInHighPlaces-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-friendAcceptance">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendAcceptance-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendAcceptance-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendAcceptance-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-friendAcceptance-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-communityAcceptance">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAcceptance-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAcceptance-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAcceptance-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAcceptance-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-communityAlienation">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAlienation-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAlienation-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAlienation-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-communityAlienation-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-homeQuality">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-homeQuality-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-homeQuality-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-homeQuality-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-homeQuality-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-qualityOfLife/LMD-VAL-plentyMoney">
+				<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-plentyMoney-label')" />
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-plentyMoney-none-label')" />
+					<value>none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-plentyMoney-some-label')" />
+					<value>some</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-qualityOfLife/LMD-VAL-plentyMoney-alot-label')" />
+					<value>alot</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>

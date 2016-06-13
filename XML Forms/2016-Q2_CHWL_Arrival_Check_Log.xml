@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CHW-L: Arrival Check Log</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/59D8E4CD-AD83-4A82-B600-B915CB557994" uiVersion="6" version="6" name="CHW-L: Arrival Check Log">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-chwlID />
+					<LMD-VAL-manualDate />
+					<LMD-VAL-visitType />
+					<GRP-CHWSupervisionVisit>
+						<LMD-TIM-timeOfArrival />
+						<LMD-VAL-CHWPresent />
+						<LMD-VAL-excusedAbsence />
+						<LMD-VAL-SupervisedCHWID />
+					</GRP-CHWSupervisionVisit>
+					<GRP-FinalDestination>
+						<LMD-TIM-timeOfArrival />
+						<LMD-VAL-fieldEmergencies />
+						<LABEL_reportEmergency />
+						<LMD-VAL-maintenanceIssues />
+						<LABEL_reportMaintenance />
+					</GRP-FinalDestination>
+				</data>
+			</instance>
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_arrivalchecklog&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="6" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-chwlID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-chwlID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-manualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/LMD-VAL-visitType" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit" relevant="/data/LMD-VAL-visitType = 'supervisionVisit'" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival" type="xsd:time" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence" relevant="/data/GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent = '0'" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID" type="xsd:int" constraint=". &gt; 0 and . != /data/LMD-VAL-chwlID" jr:constraintMsg="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-FinalDestination" relevant="/data/LMD-VAL-visitType = 'finalDestination'" />
+			<bind nodeset="/data/GRP-FinalDestination/LMD-TIM-timeOfArrival" type="xsd:time" required="true()" />
+			<bind nodeset="/data/GRP-FinalDestination/LMD-VAL-fieldEmergencies" required="true()" />
+			<bind nodeset="/data/GRP-FinalDestination/LABEL_reportEmergency" relevant="/data/GRP-FinalDestination/LMD-VAL-fieldEmergencies = '1'" required="false()" />
+			<bind nodeset="/data/GRP-FinalDestination/LMD-VAL-maintenanceIssues" required="true()" />
+			<bind nodeset="/data/GRP-FinalDestination/LABEL_reportMaintenance" relevant="/data/GRP-FinalDestination/LMD-VAL-maintenanceIssues = '1'" required="false()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-chwlID-label">
+						<value>CHW-L ID:</value>
+					</text>
+					<text id="LMD-VAL-chwlID-constraintMsg">
+						<value>CHW-L ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-manualDate-label">
+						<value>Today's date:</value>
+					</text>
+					<text id="LMD-VAL-visitType-label">
+						<value>What type of arrival is this?</value>
+					</text>
+					<text id="LMD-VAL-visitType-supervisionVisit-label">
+						<value>CHW supervision visit</value>
+					</text>
+					<text id="LMD-VAL-visitType-finalDestination-label">
+						<value>Final destination </value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit-label">
+						<value>CHW Supervision Visit</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival-label">
+						<value>What time did you arrive at your destination?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-label">
+						<value>Is the CHW Present?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-label">
+						<value>Is the CHW excused to be absent? </value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID-label">
+						<value>CHW ID:</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID-constraintMsg">
+						<value>CHW ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="GRP-FinalDestination-label">
+						<value>GRP-FinalDestination</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-TIM-timeOfArrival-label">
+						<value>What time did you arrive at your destination?</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-fieldEmergencies-label">
+						<value>Were there any emergencies in the field?</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-fieldEmergencies-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-fieldEmergencies-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-FinalDestination/LABEL_reportEmergency-label">
+						<value>Please report the emergency to the health facility, site manager, and clinical mentor</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-maintenanceIssues-label">
+						<value>Any maintenance issue reported?</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-maintenanceIssues-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-FinalDestination/LMD-VAL-maintenanceIssues-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-FinalDestination/LABEL_reportMaintenance-label">
+						<value>Please notify the site manager and mechanic of the maintenance issue</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/LMD-VAL-chwlID">
+			<label ref="jr:itext('LMD-VAL-chwlID-label')" />
+			<alert ref="jr:itext('LMD-VAL-chwlID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-manualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-manualDate-label')" />
+		</input>
+		<select1 ref="/data/LMD-VAL-visitType">
+			<label ref="jr:itext('LMD-VAL-visitType-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-visitType-supervisionVisit-label')" />
+				<value>supervisionVisit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-visitType-finalDestination-label')" />
+				<value>finalDestination</value>
+			</item>
+		</select1>
+		<group ref="/data/GRP-CHWSupervisionVisit">
+			<label ref="jr:itext('GRP-CHWSupervisionVisit-label')" />
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival-label')" />
+			</input>
+			<select1 ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-label')" />
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-CHWPresent-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-label')" />
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-excusedAbsence-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID-label')" />
+				<alert ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-SupervisedCHWID-constraintMsg')" />
+			</input>
+		</group>
+		<group ref="/data/GRP-FinalDestination">
+			<label ref="jr:itext('GRP-FinalDestination-label')" />
+			<input ref="/data/GRP-FinalDestination/LMD-TIM-timeOfArrival">
+				<label ref="jr:itext('GRP-FinalDestination/LMD-TIM-timeOfArrival-label')" />
+			</input>
+			<select1 ref="/data/GRP-FinalDestination/LMD-VAL-fieldEmergencies">
+				<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-fieldEmergencies-label')" />
+				<item>
+					<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-fieldEmergencies-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-fieldEmergencies-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<trigger ref="/data/GRP-FinalDestination/LABEL_reportEmergency" appearance="minimal">
+				<label ref="jr:itext('GRP-FinalDestination/LABEL_reportEmergency-label')" />
+			</trigger>
+			<select1 ref="/data/GRP-FinalDestination/LMD-VAL-maintenanceIssues">
+				<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-maintenanceIssues-label')" />
+				<item>
+					<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-maintenanceIssues-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-FinalDestination/LMD-VAL-maintenanceIssues-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<trigger ref="/data/GRP-FinalDestination/LABEL_reportMaintenance" appearance="minimal">
+				<label ref="jr:itext('GRP-FinalDestination/LABEL_reportMaintenance-label')" />
+			</trigger>
+		</group>
+	</h:body>
+</h:html>

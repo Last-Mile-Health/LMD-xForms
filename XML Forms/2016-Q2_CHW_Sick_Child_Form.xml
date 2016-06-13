@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CHW: Sick Child Form</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/81629c524d9705a5cb26e4994e1ca6d6ffacacaa" uiVersion="8" version="8" name="CHW: Sick Child Form">
+					<Decision_Variables>
+						<LMD-VAL-childHasDangerSign />
+						<VAR-treatAtHome />
+						<VAR-NotifySupervisor />
+						<VAR-incorrectAge />
+						<GRP-textVariables>
+							<VAR-genderTextMale />
+							<VAR-genderTextFemale />
+						</GRP-textVariables>
+						<GRP-dangerSigns>
+							<VAR-dangerSignMUAC />
+							<VAR-feetSwelling />
+							<VAR-dangerSignUnconscious />
+							<VAR-dangerSignConvulsions />
+							<VAR-dangerSignNotEatingOrDrinking />
+							<VAR-dangerSignVomitingEverything />
+							<VAR-dangerSignBloodInStool />
+							<VAR-dangerSignCoughingMoreThan21Days />
+							<VAR-dangerSignChestIndrawing />
+							<VAR-dangerSignFeverMoreThan7Days />
+							<VAR-dangerSignDiarreheaMoreThan14Days />
+							<VAR-dangerSignOtherProblem />
+						</GRP-dangerSigns>
+						<GRP-homeTreatmentSigns>
+							<VAR-homeTreatment_coughing />
+							<VAR-homeTreatment_fever />
+							<VAR-homeTreatment_diarrhea />
+							<VAR-homeTreatment_malnutrition />
+						</GRP-homeTreatmentSigns>
+					</Decision_Variables>
+					<LMD-TABLE />
+					<LMD-DATABASE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-chwID />
+					<LMD-VAL-manualDate />
+					<LMD-VAL-communityID />
+					<LMD-VAL-HHID />
+					<LMD-VAL-memberInitials />
+					<LMD-VAL-firstName />
+					<LMD-VAL-lastName />
+					<GRP-reviewAssessment>
+						<LMD-VAL-visitType />
+						<LMD-VAL-gender />
+						<GRP-childAge>
+							<LMD-VAL-childAgeYears />
+							<LMD-VAL-ChildAgeMonths />
+						</GRP-childAge>
+						<LABEL-underage />
+						<LMD-VAL-source />
+					</GRP-reviewAssessment>
+					<GRP-dangerSigns>
+						<LMD-CHK-dangerSigns />
+					</GRP-dangerSigns>
+					<GRP-referToFacility>
+						<Referal_Information>
+							<LABEL-hasDangerSigns />
+							<Label-ReferralInformationOne />
+						</Referal_Information>
+						<GRP-referral_providedAmoxicillin>
+							<LMD-VAL-referral_providedAmoxicillin />
+						</GRP-referral_providedAmoxicillin>
+						<GRP-referral_providedACTandParacetamol>
+							<LMD-VAL-giveACT />
+						</GRP-referral_providedACTandParacetamol>
+						<GRP-referral_providedORS>
+							<LMD-VAL-referral_GiveORS />
+						</GRP-referral_providedORS>
+						<LABEL-referral_GiveFluids />
+						<LABEL-referralKeepChildWarm />
+						<LABEL-referralKeepChildCool />
+						<LMD-VAL-referralCompleteForm />
+						<LMD-VAL-referralArangedtransport />
+						<LMD-VAL-referralSuccessful />
+					</GRP-referToFacility>
+					<GRP-homeTreatmentSigns>
+						<LABEL-homeTreatmentSymptomsNoDangerSigns />
+						<LABEL-homeTreatmentSymptomsDangerSigns />
+						<GRP-YellowMUAC>
+							<LMD-VAL-yellowMUAC />
+						</GRP-YellowMUAC>
+						<GRP-coughing>
+							<LMD-VAL-childCoughing />
+							<LMD-VAL-fastBreathing />
+						</GRP-coughing>
+						<GRP-Fever>
+							<LMD-VAL-fever />
+							<LMD-VAL-gaveRDT />
+							<LMD-VAL-postiveMalaria />
+						</GRP-Fever>
+						<GRP-Diarrhea>
+							<LMD-VAL-diarrhea />
+						</GRP-Diarrhea>
+					</GRP-homeTreatmentSigns>
+					<GRP-homeTreatment>
+						<LABEL-homeTreatmentSigns />
+						<GRP-treatPneumonia>
+							<LMD-VAL-treatPneumonia />
+							<LMD-VAL-PneumoniaDoseGiven />
+							<LMD-VAL-didNotTreatPneumoniaReason />
+							<LMD-VAL-didNotTreatPneumoniaReason_Other />
+						</GRP-treatPneumonia>
+						<GRP-treatMalaria>
+							<LMD-VAL-treatMalaria />
+							<LMD-VAL-MalariaDoseGiven />
+							<LMD-VAL-didNotTreatMalariaReason />
+							<LMD-VAL-didNotTreatMalariaReason_Other />
+						</GRP-treatMalaria>
+						<GRP-treatDiarrhea>
+							<LMD-VAL-treatDiarrhea />
+							<LMD-VAL-DiarrheaDoseGiven />
+							<LMD-VAL-didNotTreatDiarrheaReason />
+							<LMD-VAL-didNotTreatDiarrheaReason_Other />
+						</GRP-treatDiarrhea>
+						<GRP-malnutrition>
+							<LMD-VAL-counseledForMalnutrition />
+						</GRP-malnutrition>
+						<LABEL-adviseKeepWarm />
+						<LABEL-adviseKeepCool />
+						<LABEL-adviseMoreFluids />
+					</GRP-homeTreatment>
+					<GRP-outcome>
+						<LABEL-continueTreatment />
+						<LABEL-noSymptoms />
+						<LABEL-endTreatment />
+						<LABEL-notifySupervisor />
+					</GRP-outcome>
+				</data>
+			</instance>
+			<bind nodeset="/data/Decision_Variables" />
+			<bind nodeset="/data/Decision_Variables/LMD-VAL-childHasDangerSign" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-redMUAC') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feetSwelling') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-unconscious') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-convulsions') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-problemsEatingAndDrinking') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-vomitingEverything') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-bloodInStool') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-coughingMoreThan21Days') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-chestIndrawing') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-diarrheaMoreThan14Days') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-anyOtherProblem')" calculate="1" />
+			<bind nodeset="/data/Decision_Variables/VAR-treatAtHome" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria = '1' or /data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT or /data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing = '1' or /data/GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC = '1' or /data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea = '1'" calculate="1" />
+			<bind nodeset="/data/Decision_Variables/VAR-NotifySupervisor" relevant="(/data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea = '1' or /data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever = '1' or /data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing = '1') and /data/GRP-reviewAssessment/LMD-VAL-visitType = 'followUpVisit3'" calculate="1" />
+			<bind nodeset="/data/Decision_Variables/VAR-incorrectAge" relevant="/data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears &gt; 5 or /data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears = 5 and /data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths &gt; 1 or /data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears &lt;= 0 and /data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths &lt; 2" calculate="1" />
+			<bind nodeset="/data/Decision_Variables/GRP-textVariables" />
+			<bind nodeset="/data/Decision_Variables/GRP-textVariables/VAR-genderTextMale" relevant="/data/GRP-reviewAssessment/LMD-VAL-gender = 'male'" calculate="&quot;he&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-textVariables/VAR-genderTextFemale" relevant="/data/GRP-reviewAssessment/LMD-VAL-gender = 'female'" calculate="&quot;she&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignMUAC" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-redMUAC')" calculate="&quot; &#10;    - Malnutrition (Red MUAC)&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-feetSwelling" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feetSwelling')" calculate="&quot; &#10;    - Feet Swelling&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignUnconscious" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-unconscious')" calculate="&quot; &#10;    - Unconscious or very sleepy&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignConvulsions" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-convulsions')" calculate="&quot; &#10;    - Convulsions (Jerking)&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignNotEatingOrDrinking" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-problemsEatingAndDrinking')" calculate="&quot; &#10;    - Not eating or drinking anything&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignVomitingEverything" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-vomitingEverything')" calculate="&quot; &#10;    - Vomiting everything&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignBloodInStool" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-bloodInStool')" calculate="&quot; &#10;    - Blood in stool&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignCoughingMoreThan21Days" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-coughingMoreThan21Days')" calculate="&quot; &#10;    - Coughing for more than 21 days&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignChestIndrawing" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-chestIndrawing')" calculate="&quot; &#10;    - Chest indrawing&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignFeverMoreThan7Days" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days')" calculate="&quot; &#10;    - Fever for more than 7 days&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignDiarreheaMoreThan14Days" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-diarrheaMoreThan14Days')" calculate="&quot; &#10;    - Diarrhea (Running Stomach) for more than 14 days&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignOtherProblem" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-anyOtherProblem')" calculate="&quot; &#10;    - Another problem (could not treat)&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-homeTreatmentSigns" />
+			<bind nodeset="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_coughing" relevant="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing = '1'" calculate="&quot; &#10;    - Fast breathing&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_fever" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria = '1' or /data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT = '0'" calculate="&quot; &#10;    - Fever (Malaria)&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_diarrhea" relevant="/data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea = '1'" calculate="&quot; &#10;    - Diarrhea&quot;" />
+			<bind nodeset="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_malnutrition" relevant="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC = '1'" calculate="&quot; &#10;    - Malnutrition (Yellow MUAC)&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_sickChildForm&quot;" />
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="8" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-chwID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-chwID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-manualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/LMD-VAL-communityID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-communityID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-HHID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-HHID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-memberInitials" type="xsd:string" constraint="string-length(.) = 2" jr:constraintMsg="jr:itext('LMD-VAL-memberInitials-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-firstName" type="xsd:string" constraint="regex(., '^[a-zA-Z\s]+$')" jr:constraintMsg="jr:itext('LMD-VAL-firstName-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-lastName" type="xsd:string" constraint="regex(., '^[a-zA-Z\s]+$')" jr:constraintMsg="jr:itext('LMD-VAL-lastName-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-reviewAssessment" />
+			<bind nodeset="/data/GRP-reviewAssessment/LMD-VAL-visitType" required="true()" />
+			<bind nodeset="/data/GRP-reviewAssessment/LMD-VAL-gender" relevant="/data/GRP-reviewAssessment/LMD-VAL-visitType = 'initialVisit'" required="true()" />
+			<bind nodeset="/data/GRP-reviewAssessment/GRP-childAge" />
+			<bind nodeset="/data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears" type="xsd:int" relevant="/data/GRP-reviewAssessment/LMD-VAL-visitType = 'initialVisit'" required="true()" />
+			<bind nodeset="/data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths" type="xsd:int" constraint=". &lt; 12" relevant="/data/GRP-reviewAssessment/LMD-VAL-visitType = 'initialVisit'" required="true()" />
+			<bind nodeset="/data/GRP-reviewAssessment/LABEL-underage" relevant="/data/Decision_Variables/VAR-incorrectAge = 1" />
+			<bind nodeset="/data/GRP-reviewAssessment/LMD-VAL-source" relevant="/data/GRP-reviewAssessment/LMD-VAL-visitType = 'initialVisit' and /data/Decision_Variables/VAR-incorrectAge != 1" required="true()" />
+			<bind nodeset="/data/GRP-dangerSigns" relevant="/data/Decision_Variables/VAR-incorrectAge != 1" />
+			<bind nodeset="/data/GRP-dangerSigns/LMD-CHK-dangerSigns" constraint="count-selected(.) &lt; 2 or not(selected(., &quot;LMD-OPT-none&quot;))" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility" relevant="/data/Decision_Variables/LMD-VAL-childHasDangerSign = 1 and /data/Decision_Variables/VAR-incorrectAge != 1" />
+			<bind nodeset="/data/GRP-referToFacility/Referal_Information" />
+			<bind nodeset="/data/GRP-referToFacility/Referal_Information/LABEL-hasDangerSigns" />
+			<bind nodeset="/data/GRP-referToFacility/Referal_Information/Label-ReferralInformationOne" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedAmoxicillin" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-chestIndrawing')" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedAmoxicillin/LMD-VAL-referral_providedAmoxicillin" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedACTandParacetamol" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days')" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedORS" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-bloodInStool') or selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-diarrheaMoreThan14Days')" />
+			<bind nodeset="/data/GRP-referToFacility/GRP-referral_providedORS/LMD-VAL-referral_GiveORS" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LABEL-referral_GiveFluids" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LABEL-referralKeepChildWarm" relevant="not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days'))" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LABEL-referralKeepChildCool" relevant="selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days')" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LMD-VAL-referralCompleteForm" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LMD-VAL-referralArangedtransport" required="true()" />
+			<bind nodeset="/data/GRP-referToFacility/LMD-VAL-referralSuccessful" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns" relevant="/data/Decision_Variables/VAR-incorrectAge != 1" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsNoDangerSigns" relevant="/data/Decision_Variables/LMD-VAL-childHasDangerSign != 1" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsDangerSigns" relevant="/data/Decision_Variables/LMD-VAL-childHasDangerSign = 1" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC" relevant="not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-redMUAC'))" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-coughing" relevant="not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-coughingMoreThan21Days'))" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing" relevant="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Fever" relevant="not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-feverMoreThan7Days'))" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Diarrhea" relevant="not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-diarrheaMoreThan14Days')) and not(selected(/data/GRP-dangerSigns/LMD-CHK-dangerSigns, 'LMD-OPT-bloodInStool'))" />
+			<bind nodeset="/data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment" relevant="/data/Decision_Variables/VAR-incorrectAge != 1 and /data/Decision_Variables/VAR-treatAtHome = 1" />
+			<bind nodeset="/data/GRP-homeTreatment/LABEL-homeTreatmentSigns" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatPneumonia" relevant="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing = '1'" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-PneumoniaDoseGiven" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason" relevant="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia = '0'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason_Other" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason = 'other'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatMalaria" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT = '0' or /data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria = '1'" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-MalariaDoseGiven" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason" relevant="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria = '0'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason_Other" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason = 'other'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatDiarrhea" relevant="/data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea = '1'" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-DiarrheaDoseGiven" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea = '1'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason" relevant="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea = '0'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason_Other" type="xsd:string" relevant="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason = 'other'" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-malnutrition" relevant="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC = '1'" />
+			<bind nodeset="/data/GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition" required="true()" />
+			<bind nodeset="/data/GRP-homeTreatment/LABEL-adviseKeepWarm" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever = '0' and /data/Decision_Variables/LMD-VAL-childHasDangerSign != 1" />
+			<bind nodeset="/data/GRP-homeTreatment/LABEL-adviseKeepCool" relevant="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever = '1' and /data/Decision_Variables/LMD-VAL-childHasDangerSign != 1" />
+			<bind nodeset="/data/GRP-homeTreatment/LABEL-adviseMoreFluids" relevant="/data/Decision_Variables/LMD-VAL-childHasDangerSign != 1" />
+			<bind nodeset="/data/GRP-outcome" relevant="/data/Decision_Variables/VAR-incorrectAge != 1 or /data/GRP-reviewAssessment/LMD-VAL-visitType != 'initialVisit'" />
+			<bind nodeset="/data/GRP-outcome/LABEL-continueTreatment" relevant="/data/GRP-reviewAssessment/LMD-VAL-visitType != 'followUpVisit3'" />
+			<bind nodeset="/data/GRP-outcome/LABEL-noSymptoms" relevant="/data/Decision_Variables/VAR-treatAtHome != 1 and /data/GRP-reviewAssessment/LMD-VAL-visitType != 'followUpVisit3' and /data/Decision_Variables/LMD-VAL-childHasDangerSign != 1" />
+			<bind nodeset="/data/GRP-outcome/LABEL-endTreatment" relevant="/data/Decision_Variables/LMD-VAL-childHasDangerSign != 1 and /data/Decision_Variables/VAR-treatAtHome != 1 and /data/GRP-reviewAssessment/LMD-VAL-visitType = 'followUpVisit3'" required="false()" />
+			<bind nodeset="/data/GRP-outcome/LABEL-notifySupervisor" relevant="/data/Decision_Variables/VAR-NotifySupervisor = 1" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="Decision_Variables-label">
+						<value>Decision Variables</value>
+					</text>
+					<text id="Decision_Variables/GRP-textVariables-label">
+						<value>GRP-textVariables</value>
+					</text>
+					<text id="Decision_Variables/GRP-dangerSigns-label">
+						<value>GRP-dangerSigns</value>
+					</text>
+					<text id="Decision_Variables/GRP-homeTreatmentSigns-label">
+						<value>GRP-homeTreatmentSigns</value>
+					</text>
+					<text id="LMD-VAL-chwID-label">
+						<value>CHW ID:</value>
+					</text>
+					<text id="LMD-VAL-chwID-constraintMsg">
+						<value>CHW ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-manualDate-label">
+						<value>Today's date:</value>
+					</text>
+					<text id="LMD-VAL-communityID-label">
+						<value>Community ID:</value>
+					</text>
+					<text id="LMD-VAL-communityID-constraintMsg">
+						<value>Community ID must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-HHID-label">
+						<value>Household ID:</value>
+					</text>
+					<text id="LMD-VAL-HHID-constraintMsg">
+						<value>Household ID must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-memberInitials-label">
+						<value>Please write the first letter of the child's first name and child's last name. For example, if the child's name is Success Thomas, please write ST:</value>
+					</text>
+					<text id="LMD-VAL-memberInitials-constraintMsg">
+						<value>Initials must be 2 characters in length</value>
+					</text>
+					<text id="LMD-VAL-firstName-label">
+						<value>Child's first name:</value>
+					</text>
+					<text id="LMD-VAL-firstName-constraintMsg">
+						<value>Please only use letters to record the child's name</value>
+					</text>
+					<text id="LMD-VAL-lastName-label">
+						<value>Child's family name:</value>
+					</text>
+					<text id="LMD-VAL-lastName-constraintMsg">
+						<value>Please only use letters to record the child's name</value>
+					</text>
+					<text id="GRP-reviewAssessment-label">
+						<value>Review Assessment</value>
+					</text>
+					<text id="question1-label">
+						<value>What kind of visit is this?</value>
+					</text>
+					<text id="question1-item1.1_Yes-label">
+						<value>Initial Visit</value>
+					</text>
+					<text id="question1-item1.2_No-label">
+						<value>1st follow-up visit</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-visitType-followUpVisit2-label">
+						<value>2nd follow-up visit</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-visitType-followUpVisit3-label">
+						<value>3rd follow-up visit</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-gender-label">
+						<value>Child's sex:</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-gender-male-label">
+						<value>Male</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-gender-female-label">
+						<value>Female</value>
+					</text>
+					<text id="GRP-reviewAssessment/GRP-childAge-label">
+						<value>GRP-childAge</value>
+					</text>
+					<text id="GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears-label">
+						<value>How old is the child?
+
+Years:</value>
+					</text>
+					<text id="GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths-label">
+						<value>Months:</value>
+					</text>
+					<text id="GRP-reviewAssessment/LABEL-underage-label">
+						<value>Child is under 2 months or over 5 years. Please focus only on providing care for children who are older than 2 months and younger than 5 years.</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-source-label">
+						<value>How did you find the child?</value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-source-passiveCaseFinding-label">
+						<value>Passive case finding (Parent came to me) </value>
+					</text>
+					<text id="GRP-reviewAssessment/LMD-VAL-source-activeCaseFinding-label">
+						<value>Active case finding (CHW went to sick child or on routine visit)</value>
+					</text>
+					<text id="GRP-dangerSigns-label">
+						<value>Danger Signs</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-label">
+						<value>Ask and look to see if the child has any DANGER SIGNS:</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-redMUAC-label">
+						<value>Red MUAC Strap</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-feetSwelling-label">
+						<value>Both feet swelling</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-unconscious-label">
+						<value>Very sleepy or unconscious </value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-convulsions-label">
+						<value>Convulsions (Jerking)</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-problemsEatingAndDrinking-label">
+						<value>Unable to eat or drink anything</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-vomitingEverything-label">
+						<value>Vomiting everything</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-bloodInStool-label">
+						<value>Blood in poo poo</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-coughingMoreThan21Days-label">
+						<value>Coughing more than 21 days</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-chestIndrawing-label">
+						<value>Chest indrawing</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-feverMoreThan7Days-label">
+						<value>Fever more than 7 days</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-diarrheaMoreThan14Days-label">
+						<value>Stomach running more than 14 days</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-anyOtherProblem-label">
+						<value>Any other problem you cannot treat</value>
+					</text>
+					<text id="GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-none-label">
+						<value>None of the above</value>
+					</text>
+					<text id="GRP-referToFacility-label">
+						<value>Refer to Health Facility</value>
+					</text>
+					<text id="GRP-referToFacility/Referal_Information-label">
+						<value>Referal Information</value>
+					</text>
+					<text id="GRP-referToFacility/Referal_Information/LABEL-hasDangerSigns-label">
+						<value><output value="/data/LMD-VAL-firstName" /> has the following danger signs and needs to be referred to a health facility. 
+<output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignMUAC" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-feetSwelling" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignUnconscious" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignConvulsions" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignNotEatingOrDrinking" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignVomitingEverything" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignBloodInStool" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignCoughingMoreThan21Days" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignChestIndrawing" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignFeverMoreThan7Days" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignDiarreheaMoreThan14Days" /><output value="/data/Decision_Variables/GRP-dangerSigns/VAR-dangerSignOtherProblem" /></value>
+					</text>
+					<text id="C_Decision_Refer/question15/question9-label">
+						<value>Explain why the caregiver must take the child to a health facility</value>
+					</text>
+					<text id="C_Decision_Refer/question15/question9-item9.1-label">
+						<value>I have explained to the caregiver why the child must be moved to the health facility</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedAmoxicillin-label">
+						<value>Referral - Chest Indrawing</value>
+					</text>
+					<text id="C_Decision_Refer/C_if_ChestIndrawing/question57-label">
+						<value>PNEUMONIA: If the child can drink, give child first dose of oral antibiotics (amoxicillin)</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedAmoxicillin/LMD-VAL-referral_providedAmoxicillin-hint">
+						<value>[See dose card]</value>
+					</text>
+					<text id="C_Decision_Refer/C_if_ChestIndrawing/question57-item57.1_Yes-label">
+						<value>Yes. I have given the child oral antibiotics (amoxicillin)</value>
+					</text>
+					<text id="C_Decision_Refer/C_if_ChestIndrawing/question57-item57.2_No-label">
+						<value>No. Oral antibiotics (amoxicillin) were not provided</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedACTandParacetamol-label">
+						<value>Referral - Fever (+) 7 days</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-label">
+						<value>MALARIA: Refer + Treat Malaria. Help caregiver give first dose of ACT and Paracetamol</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-hint">
+						<value>[See dose card]</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-1-label">
+						<value>Yes. I provided the first dose of ACT and Paracetamol</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-0-label">
+						<value>No. I did not provide the first dose of ACT and Paracetamol</value>
+					</text>
+					<text id="GRP-referToFacility/GRP-referral_providedORS-label">
+						<value>Referral - Running Stomach (+) 14 days</value>
+					</text>
+					<text id="C_Decision_Refer/question38-label">
+						<value>DIARRHEA: Give ORS right away</value>
+					</text>
+					<text id="C_Decision_Refer/question38-item38.1-label">
+						<value>Yes. I have given ORS to the child</value>
+					</text>
+					<text id="C_Decision_Refer/C_if_diarrhea/question38-item38.2_No-label">
+						<value>No. I have not given ORS to the child</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referral_GiveFluids-label">
+						<value>Advise the caregiver to give water and continue feeding the child</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referral_GiveFluids-1-label">
+						<value>I have advised the caregiver to give fluids and continue feeding</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referralKeepChildWarm-label">
+						<value>Advise the caregiver to keep the child warm</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referralKeepChildWarm-1-label">
+						<value>I have advised the caregiver to keep the child warm</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referralKeepChildCool-label">
+						<value>Advise the caregiver to keep the child cool</value>
+					</text>
+					<text id="GRP-referToFacility/LABEL-referralKeepChildCool-1-label">
+						<value>I have advised the caregiver to keep the child cool</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralCompleteForm-label">
+						<value>Complete the "CHW Form: Referral"</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralCompleteForm-1-label">
+						<value>Yes. I have completed the CHW Form: Referral</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralCompleteForm-0-label">
+						<value>No. I have NOT completed the CHW Form: Referral</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralArangedtransport-label">
+						<value>Arrange transport for the child and refer the child to the health facility</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralArangedtransport-1-label">
+						<value>I have attempted and was successful in arranging transport for the child for a referral visit to the facility</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralArangedtransport-0-label">
+						<value>I have attempted but was not successful in arranging transport for the child for a referral visit to the facility</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralSuccessful-label">
+						<value>Has the caregiver agreed to take child to health facility?</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralSuccessful-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-referToFacility/LMD-VAL-referralSuccessful-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns-label">
+						<value>GRP-homeTreatmentSigns</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsNoDangerSigns-label">
+						<value>Child has no danger signs. Please look for the following symptoms which can be treated at home:</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsDangerSigns-label">
+						<value>Please look for the following symptoms which can be treated at home:</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-YellowMUAC-label">
+						<value>GRP-YellowMUAC</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-label">
+						<value>Does the child have Yellow MUAC?</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-hint">
+						<value>[Do not check MUAC during no touch period]</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing-label">
+						<value>Coughing or Difficult Breathing</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-label">
+						<value>Is the child coughing?</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-label">
+						<value>Child has fast breathing?
+    - If 2-11 months: 50+ breaths per minute
+    - If 1-5 years: 40+ breaths per minute</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-1-label">
+						<value>Yes, has fast breathing</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-0-label">
+						<value>Not fast breathing</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever-label">
+						<value>Fever</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-label">
+						<value>Child had fever in past 3 days?</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-label">
+						<value>Perform an RDT on the child</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-hint">
+						<value>[Do not perform RDT during no touch period]</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-1-label">
+						<value>Yes, I gave the child an RDT</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-0-label">
+						<value>No, I did not give the child an RDT</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-label">
+						<value>What was the result of the RDT?</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-1-label">
+						<value>Positive RDT</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-0-label">
+						<value>Negative RDT</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Diarrhea-label">
+						<value>Diarrhea</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-label">
+						<value>Has the child had 3 or more diarrhea (watery poo poos) in the last 24 hours?</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-homeTreatment-label">
+						<value>GRP-homeTreatment</value>
+					</text>
+					<text id="GRP-homeTreatment/LABEL-homeTreatmentSigns-label">
+						<value>Begin home treatment. <output value="/data/LMD-VAL-firstName" /> has the following symptoms:
+<output value="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_coughing" /><output value="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_fever" /><output value="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_diarrhea" /><output value="/data/Decision_Variables/GRP-homeTreatmentSigns/VAR-homeTreatment_malnutrition" /></value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia-label">
+						<value>GRP-treatPneumonia</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-label">
+						<value>PNEUMONIA: Treat at home with Amoxicillin. Teach caregiver how to give treatment and watch caregiver give first dose now. Check caregiver's understanding and ask him/her to explain treatment plan</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-hint">
+						<value>[Use dose card to determine correct treatment plan]</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-1-label">
+						<value>Yes, I told the caregiver and gave him/her Amoxicillin</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-0-label">
+						<value>No, I did not give the caregiver Amoxicillin</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-PneumoniaDoseGiven-label">
+						<value>Dose given:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-label">
+						<value>Why was treatment for Pneumonia not provided?</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-outOFStock-label">
+						<value>Out of stock</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-treatmentProvidedByClinicOrOutreach-label">
+						<value>Treatment provided by outreach  or clinic</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason_Other-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria-label">
+						<value>GRP-treatMalaria</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-label">
+						<value>MALARIA: Teach caregiver how to give treatment and watch caregiver give first ACT and Paracetamol doses now. Check caregiver's understanding and ask him/her to explain treatment plan</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-hint">
+						<value>[Use dose card to determine correct treatment plan]</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-1-label">
+						<value>Yes, I informed the caregiver and gave child ACT and Paracetamol</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-0-label">
+						<value>No, I did not give the child ACT and Paracetamol</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-MalariaDoseGiven-label">
+						<value>Dose given:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-label">
+						<value>Why was treatment for Malaria not provided?</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-outOFStock-label">
+						<value>Out of stock</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-treatmentProvidedByClinicOrOutreach-label">
+						<value>Treatment provided by outreach clinic</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason_Other-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea-label">
+						<value>GRP-treatDiarrhea</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-label">
+						<value>DIARRHEA: Teach caregiver how to give treatment and watch caregiver give first dose of ORS and Zinc now. Check caregiver's understanding and ask him/her to explain treatment plan</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-hint">
+						<value>[Use dose card to determine correct treatment plan]</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-1-label">
+						<value>Yes, I informed the caregiver and gave child ORS and Zinc</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-0-label">
+						<value>No, I did not give the child ORS and Zinc</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-DiarrheaDoseGiven-label">
+						<value>Dose given:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-label">
+						<value>Why was treatment for Diarrhea not provided?</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-outOFStock-label">
+						<value>Out of stock</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-treatmentProvidedByClinicOrOutreach-label">
+						<value>Treatment provided by outreach clinic</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason_Other-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-label">
+						<value>Yellow MUAC - Child is malnourished. Advise the caregiver on malnutrition and how to give child a balanced diet and good food. Notify your supervisor.</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-1-label">
+						<value>Yes, I advised on malnutrition and will notify my supervisor</value>
+					</text>
+					<text id="GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-0-label">
+						<value>No, I did not advise on malnutrition</value>
+					</text>
+					<text id="GRP-homeTreatment/LABEL-adviseKeepWarm-label">
+						<value>Advise the caregiver to keep the child warm</value>
+					</text>
+					<text id="GRP-homeTreatment/LABEL-adviseKeepCool-label">
+						<value>Advise the caregiver to keep the child cool</value>
+					</text>
+					<text id="GRP-homeTreatment/LABEL-adviseMoreFluids-label">
+						<value>Advise caregiver to give more fluids and continue feeding</value>
+					</text>
+					<text id="GRP-outcome-label">
+						<value>GRP-outcome</value>
+					</text>
+					<text id="GRP-outcome/LABEL-continueTreatment-label">
+						<value>Reminder: Follow up with the child</value>
+					</text>
+					<text id="GRP-outcome/LABEL-noSymptoms-label">
+						<value>Child has no symptoms. Follow up with caregiver to make sure the child stays healthy</value>
+					</text>
+					<text id="GRP-outcome/LABEL-endTreatment-label">
+						<value>Treatment completed. Ask caregiver to return if the child has any other health problems</value>
+					</text>
+					<text id="GRP-outcome/LABEL-notifySupervisor-label">
+						<value>Child has not recovered in three follow up visits. Please notify your supervisor</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<group ref="/data/Decision_Variables">
+			<label ref="jr:itext('Decision_Variables-label')" />
+			<group ref="/data/Decision_Variables/GRP-textVariables">
+				<label ref="jr:itext('Decision_Variables/GRP-textVariables-label')" />
+			</group>
+			<group ref="/data/Decision_Variables/GRP-dangerSigns">
+				<label ref="jr:itext('Decision_Variables/GRP-dangerSigns-label')" />
+			</group>
+			<group ref="/data/Decision_Variables/GRP-homeTreatmentSigns">
+				<label ref="jr:itext('Decision_Variables/GRP-homeTreatmentSigns-label')" />
+			</group>
+		</group>
+		<input ref="/data/LMD-VAL-chwID">
+			<label ref="jr:itext('LMD-VAL-chwID-label')" />
+			<alert ref="jr:itext('LMD-VAL-chwID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-manualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-manualDate-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-communityID">
+			<label ref="jr:itext('LMD-VAL-communityID-label')" />
+			<alert ref="jr:itext('LMD-VAL-communityID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-HHID">
+			<label ref="jr:itext('LMD-VAL-HHID-label')" />
+			<alert ref="jr:itext('LMD-VAL-HHID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-memberInitials">
+			<label ref="jr:itext('LMD-VAL-memberInitials-label')" />
+			<alert ref="jr:itext('LMD-VAL-memberInitials-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-firstName">
+			<label ref="jr:itext('LMD-VAL-firstName-label')" />
+			<alert ref="jr:itext('LMD-VAL-firstName-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-lastName">
+			<label ref="jr:itext('LMD-VAL-lastName-label')" />
+			<alert ref="jr:itext('LMD-VAL-lastName-constraintMsg')" />
+		</input>
+		<group ref="/data/GRP-reviewAssessment">
+			<label ref="jr:itext('GRP-reviewAssessment-label')" />
+			<select1 ref="/data/GRP-reviewAssessment/LMD-VAL-visitType">
+				<label ref="jr:itext('question1-label')" />
+				<item>
+					<label ref="jr:itext('question1-item1.1_Yes-label')" />
+					<value>initialVisit</value>
+				</item>
+				<item>
+					<label ref="jr:itext('question1-item1.2_No-label')" />
+					<value>followUpVisit1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-visitType-followUpVisit2-label')" />
+					<value>followUpVisit2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-visitType-followUpVisit3-label')" />
+					<value>followUpVisit3</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-reviewAssessment/LMD-VAL-gender">
+				<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-gender-label')" />
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-gender-male-label')" />
+					<value>male</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-gender-female-label')" />
+					<value>female</value>
+				</item>
+			</select1>
+			<group ref="/data/GRP-reviewAssessment/GRP-childAge" appearance="field-list">
+				<label ref="jr:itext('GRP-reviewAssessment/GRP-childAge-label')" />
+				<input ref="/data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears">
+					<label ref="jr:itext('GRP-reviewAssessment/GRP-childAge/LMD-VAL-childAgeYears-label')" />
+				</input>
+				<input ref="/data/GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths">
+					<label ref="jr:itext('GRP-reviewAssessment/GRP-childAge/LMD-VAL-ChildAgeMonths-label')" />
+				</input>
+			</group>
+			<trigger ref="/data/GRP-reviewAssessment/LABEL-underage" appearance="minimal">
+				<label ref="jr:itext('GRP-reviewAssessment/LABEL-underage-label')" />
+			</trigger>
+			<select1 ref="/data/GRP-reviewAssessment/LMD-VAL-source">
+				<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-source-label')" />
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-source-passiveCaseFinding-label')" />
+					<value>passiveCaseFinding</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-reviewAssessment/LMD-VAL-source-activeCaseFinding-label')" />
+					<value>activeCaseFinding</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/GRP-dangerSigns">
+			<label ref="jr:itext('GRP-dangerSigns-label')" />
+			<select ref="/data/GRP-dangerSigns/LMD-CHK-dangerSigns">
+				<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-label')" />
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-redMUAC-label')" />
+					<value>LMD-OPT-redMUAC</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-feetSwelling-label')" />
+					<value>LMD-OPT-feetSwelling</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-unconscious-label')" />
+					<value>LMD-OPT-unconscious</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-convulsions-label')" />
+					<value>LMD-OPT-convulsions</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-problemsEatingAndDrinking-label')" />
+					<value>LMD-OPT-problemsEatingAndDrinking</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-vomitingEverything-label')" />
+					<value>LMD-OPT-vomitingEverything</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-bloodInStool-label')" />
+					<value>LMD-OPT-bloodInStool</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-coughingMoreThan21Days-label')" />
+					<value>LMD-OPT-coughingMoreThan21Days</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-chestIndrawing-label')" />
+					<value>LMD-OPT-chestIndrawing</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-feverMoreThan7Days-label')" />
+					<value>LMD-OPT-feverMoreThan7Days</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-diarrheaMoreThan14Days-label')" />
+					<value>LMD-OPT-diarrheaMoreThan14Days</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-anyOtherProblem-label')" />
+					<value>LMD-OPT-anyOtherProblem</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-dangerSigns/LMD-CHK-dangerSigns-LMD-OPT-none-label')" />
+					<value>LMD-OPT-none</value>
+				</item>
+			</select>
+		</group>
+		<group ref="/data/GRP-referToFacility">
+			<label ref="jr:itext('GRP-referToFacility-label')" />
+			<group ref="/data/GRP-referToFacility/Referal_Information">
+				<label ref="jr:itext('GRP-referToFacility/Referal_Information-label')" />
+				<trigger ref="/data/GRP-referToFacility/Referal_Information/LABEL-hasDangerSigns" appearance="minimal">
+					<label ref="jr:itext('GRP-referToFacility/Referal_Information/LABEL-hasDangerSigns-label')" />
+				</trigger>
+				<select1 ref="/data/GRP-referToFacility/Referal_Information/Label-ReferralInformationOne">
+					<label ref="jr:itext('C_Decision_Refer/question15/question9-label')" />
+					<item>
+						<label ref="jr:itext('C_Decision_Refer/question15/question9-item9.1-label')" />
+						<value>1</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-referToFacility/GRP-referral_providedAmoxicillin">
+				<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedAmoxicillin-label')" />
+				<select1 ref="/data/GRP-referToFacility/GRP-referral_providedAmoxicillin/LMD-VAL-referral_providedAmoxicillin">
+					<label ref="jr:itext('C_Decision_Refer/C_if_ChestIndrawing/question57-label')" />
+					<hint ref="jr:itext('GRP-referToFacility/GRP-referral_providedAmoxicillin/LMD-VAL-referral_providedAmoxicillin-hint')" />
+					<item>
+						<label ref="jr:itext('C_Decision_Refer/C_if_ChestIndrawing/question57-item57.1_Yes-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('C_Decision_Refer/C_if_ChestIndrawing/question57-item57.2_No-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-referToFacility/GRP-referral_providedACTandParacetamol">
+				<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedACTandParacetamol-label')" />
+				<select1 ref="/data/GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT">
+					<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-label')" />
+					<hint ref="jr:itext('GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedACTandParacetamol/LMD-VAL-giveACT-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-referToFacility/GRP-referral_providedORS">
+				<label ref="jr:itext('GRP-referToFacility/GRP-referral_providedORS-label')" />
+				<select1 ref="/data/GRP-referToFacility/GRP-referral_providedORS/LMD-VAL-referral_GiveORS">
+					<label ref="jr:itext('C_Decision_Refer/question38-label')" />
+					<item>
+						<label ref="jr:itext('C_Decision_Refer/question38-item38.1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('C_Decision_Refer/C_if_diarrhea/question38-item38.2_No-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<select1 ref="/data/GRP-referToFacility/LABEL-referral_GiveFluids">
+				<label ref="jr:itext('GRP-referToFacility/LABEL-referral_GiveFluids-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LABEL-referral_GiveFluids-1-label')" />
+					<value>1</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-referToFacility/LABEL-referralKeepChildWarm">
+				<label ref="jr:itext('GRP-referToFacility/LABEL-referralKeepChildWarm-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LABEL-referralKeepChildWarm-1-label')" />
+					<value>1</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-referToFacility/LABEL-referralKeepChildCool">
+				<label ref="jr:itext('GRP-referToFacility/LABEL-referralKeepChildCool-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LABEL-referralKeepChildCool-1-label')" />
+					<value>1</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-referToFacility/LMD-VAL-referralCompleteForm">
+				<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralCompleteForm-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralCompleteForm-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralCompleteForm-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-referToFacility/LMD-VAL-referralArangedtransport">
+				<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralArangedtransport-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralArangedtransport-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralArangedtransport-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-referToFacility/LMD-VAL-referralSuccessful">
+				<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralSuccessful-label')" />
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralSuccessful-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-referToFacility/LMD-VAL-referralSuccessful-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+		</group>
+		<group ref="/data/GRP-homeTreatmentSigns">
+			<label ref="jr:itext('GRP-homeTreatmentSigns-label')" />
+			<trigger ref="/data/GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsNoDangerSigns" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsNoDangerSigns-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsDangerSigns" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/LABEL-homeTreatmentSymptomsDangerSigns-label')" />
+			</trigger>
+			<group ref="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-YellowMUAC-label')" />
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-label')" />
+					<hint ref="jr:itext('GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-YellowMUAC/LMD-VAL-yellowMUAC-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-homeTreatmentSigns/GRP-coughing">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing-label')" />
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-childCoughing-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-coughing/LMD-VAL-fastBreathing-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-homeTreatmentSigns/GRP-Fever">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever-label')" />
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-fever-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-label')" />
+					<hint ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-gaveRDT-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Fever/LMD-VAL-postiveMalaria-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/GRP-homeTreatmentSigns/GRP-Diarrhea">
+				<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Diarrhea-label')" />
+				<select1 ref="/data/GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea">
+					<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatmentSigns/GRP-Diarrhea/LMD-VAL-diarrhea-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+		</group>
+		<group ref="/data/GRP-homeTreatment">
+			<label ref="jr:itext('GRP-homeTreatment-label')" />
+			<trigger ref="/data/GRP-homeTreatment/LABEL-homeTreatmentSigns" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatment/LABEL-homeTreatmentSigns-label')" />
+			</trigger>
+			<group ref="/data/GRP-homeTreatment/GRP-treatPneumonia">
+				<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia-label')" />
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-label')" />
+					<hint ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-treatPneumonia-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-PneumoniaDoseGiven">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-PneumoniaDoseGiven-label')" />
+				</input>
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-outOFStock-label')" />
+						<value>outOFStock</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-treatmentProvidedByClinicOrOutreach-label')" />
+						<value>treatmentProvidedByClinicOrOutreach</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason-other-label')" />
+						<value>other</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason_Other">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatPneumonia/LMD-VAL-didNotTreatPneumoniaReason_Other-label')" />
+				</input>
+			</group>
+			<group ref="/data/GRP-homeTreatment/GRP-treatMalaria">
+				<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria-label')" />
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-label')" />
+					<hint ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-treatMalaria-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-MalariaDoseGiven">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-MalariaDoseGiven-label')" />
+				</input>
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-outOFStock-label')" />
+						<value>outOFStock</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-treatmentProvidedByClinicOrOutreach-label')" />
+						<value>treatmentProvidedByClinicOrOutreach</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason-other-label')" />
+						<value>other</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason_Other">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatMalaria/LMD-VAL-didNotTreatMalariaReason_Other-label')" />
+				</input>
+			</group>
+			<group ref="/data/GRP-homeTreatment/GRP-treatDiarrhea">
+				<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea-label')" />
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-label')" />
+					<hint ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-hint')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-treatDiarrhea-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-DiarrheaDoseGiven">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-DiarrheaDoseGiven-label')" />
+				</input>
+				<select1 ref="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-outOFStock-label')" />
+						<value>outOFStock</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-treatmentProvidedByClinicOrOutreach-label')" />
+						<value>treatmentProvidedByClinicOrOutreach</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason-other-label')" />
+						<value>other</value>
+					</item>
+				</select1>
+				<input ref="/data/GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason_Other">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-treatDiarrhea/LMD-VAL-didNotTreatDiarrheaReason_Other-label')" />
+				</input>
+			</group>
+			<group ref="/data/GRP-homeTreatment/GRP-malnutrition">
+				<select1 ref="/data/GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition">
+					<label ref="jr:itext('GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-label')" />
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-1-label')" />
+						<value>1</value>
+					</item>
+					<item>
+						<label ref="jr:itext('GRP-homeTreatment/GRP-malnutrition/LMD-VAL-counseledForMalnutrition-0-label')" />
+						<value>0</value>
+					</item>
+				</select1>
+			</group>
+			<trigger ref="/data/GRP-homeTreatment/LABEL-adviseKeepWarm" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatment/LABEL-adviseKeepWarm-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-homeTreatment/LABEL-adviseKeepCool" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatment/LABEL-adviseKeepCool-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-homeTreatment/LABEL-adviseMoreFluids" appearance="minimal">
+				<label ref="jr:itext('GRP-homeTreatment/LABEL-adviseMoreFluids-label')" />
+			</trigger>
+		</group>
+		<group ref="/data/GRP-outcome">
+			<label ref="jr:itext('GRP-outcome-label')" />
+			<trigger ref="/data/GRP-outcome/LABEL-continueTreatment" appearance="minimal">
+				<label ref="jr:itext('GRP-outcome/LABEL-continueTreatment-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-outcome/LABEL-noSymptoms" appearance="minimal">
+				<label ref="jr:itext('GRP-outcome/LABEL-noSymptoms-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-outcome/LABEL-endTreatment" appearance="minimal">
+				<label ref="jr:itext('GRP-outcome/LABEL-endTreatment-label')" />
+			</trigger>
+			<trigger ref="/data/GRP-outcome/LABEL-notifySupervisor" appearance="minimal">
+				<label ref="jr:itext('GRP-outcome/LABEL-notifySupervisor-label')" />
+			</trigger>
+		</group>
+	</h:body>
+</h:html>

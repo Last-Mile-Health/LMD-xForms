@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CCS: Supervision Visit Log</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/dfffda82090fa6f377b3343ec73c439cff5d4bdd" uiVersion="1" version="1" name="CCS: Supervision Visit Log">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-ccsID />
+					<LMD-VAL-manualDate />
+					<LMD-VAL-supervisionAttendance />
+					<LMD-VAL-chwlExcusedAbsence />
+					<LMD-VAL-reasonCHWLAbsence />
+					<LMD-VAL-supervisedCHWLID />
+					<GRP-CHWSupervisionVisit>
+						<LMD-VAL-supervisedCHWID />
+						<LMD-VAL-communityID />
+						<LMD-TIM-timeOfArrival />
+						<LMD-VAL-chwExcusedAbsence />
+						<LMD-VAL-reasonCHWAbsence />
+						<LMD-VAL-correctTreatment />
+						<LMD-VAL-incorrectTreatment />
+						<LMD-VAL-fieldEmergencies />
+						<LMD-VAL-fieldEmergencyDescription />
+						<LABEL_reportEmergency />
+					</GRP-CHWSupervisionVisit>
+				</data>
+			</instance>
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_supervisionvisitlog&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="1" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-ccsID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-ccsID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-manualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/LMD-VAL-supervisionAttendance" required="true()" />
+			<bind nodeset="/data/LMD-VAL-chwlExcusedAbsence" relevant="/data/LMD-VAL-supervisionAttendance = '3'" required="true()" />
+			<bind nodeset="/data/LMD-VAL-reasonCHWLAbsence" type="xsd:string" relevant="/data/LMD-VAL-chwlExcusedAbsence = '0'" required="true()" />
+			<bind nodeset="/data/LMD-VAL-supervisedCHWLID" type="xsd:int" constraint=". &gt; 0 and . != /data/LMD-VAL-ccsID" jr:constraintMsg="jr:itext('LMD-VAL-supervisedCHWLID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID" type="xsd:int" constraint=". &gt; 0 and . != /data/LMD-VAL-ccsID and . != /data/LMD-VAL-supervisedCHWLID" jr:constraintMsg="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-communityID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-communityID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival" type="xsd:time" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence" relevant="/data/LMD-VAL-supervisionAttendance = '2'" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-reasonCHWAbsence" type="xsd:string" relevant="/data/GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence = '0'" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-correctTreatment" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-incorrectTreatment" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencyDescription" type="xsd:string" relevant="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies = '1'" required="true()" />
+			<bind nodeset="/data/GRP-CHWSupervisionVisit/LABEL_reportEmergency" relevant="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies = '1'" required="false()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-ccsID-label">
+						<value>CCS ID:</value>
+					</text>
+					<text id="LMD-VAL-ccsID-constraintMsg">
+						<value>CCS ID number must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-manualDate-label">
+						<value>Today's date:</value>
+					</text>
+					<text id="LMD-VAL-supervisionAttendance-label">
+						<value>Who is present during today's supervision?</value>
+					</text>
+					<text id="LMD-VAL-supervisionAttendance-1-label">
+						<value>CHW-L and CHW</value>
+					</text>
+					<text id="LMD-VAL-supervisionAttendance-2-label">
+						<value>CHW-L only</value>
+					</text>
+					<text id="LMD-VAL-supervisionAttendance-3-label">
+						<value>CHW only</value>
+					</text>
+					<text id="LMD-VAL-chwlExcusedAbsence-label">
+						<value>Is the CHW-L excused for his/her absence?</value>
+					</text>
+					<text id="LMD-VAL-chwlExcusedAbsence-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-VAL-chwlExcusedAbsence-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-VAL-reasonCHWLAbsence-label">
+						<value>Why is the CHW-L absent?</value>
+					</text>
+					<text id="LMD-VAL-supervisedCHWLID-label">
+						<value>CHW-L ID:</value>
+					</text>
+					<text id="LMD-VAL-supervisedCHWLID-constraintMsg">
+						<value>CHW-L ID is a unique number and  must be greater than 0</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit-label">
+						<value>CHW Supervision Visit</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID-label">
+						<value>Which CHW did you visit today? CHW ID:</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID-constraintMsg">
+						<value>CHW ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-communityID-label">
+						<value>Which community did you visit today? Community ID:</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-communityID-constraintMsg">
+						<value>Community ID number must be greater than 0</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival-label">
+						<value>What time did you arrive at <output value="/data/GRP-CHWSupervisionVisit/LMD-VAL-communityName" />?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-label">
+						<value>Is the CHW excused to be absent? </value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-reasonCHWAbsence-label">
+						<value>Why is the CHW absent for today's supervision?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-correctTreatment-label">
+						<value>Please review the Sick Child Form with the CHW. Of all sick children treated, how many received correct treatment?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-incorrectTreatment-label">
+						<value>Please review the Sick Child Form with the CHW. Of all sick children treated, how many received incorrect treatment?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-label">
+						<value>Were there any emergencies in the field?</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencyDescription-label">
+						<value>Please describe the emergency</value>
+					</text>
+					<text id="GRP-CHWSupervisionVisit/LABEL_reportEmergency-label">
+						<value>Please report the emergency to the health facility and clinical mentor</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/LMD-VAL-ccsID">
+			<label ref="jr:itext('LMD-VAL-ccsID-label')" />
+			<alert ref="jr:itext('LMD-VAL-ccsID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-manualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-manualDate-label')" />
+		</input>
+		<select1 ref="/data/LMD-VAL-supervisionAttendance">
+			<label ref="jr:itext('LMD-VAL-supervisionAttendance-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-supervisionAttendance-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-supervisionAttendance-2-label')" />
+				<value>2</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-supervisionAttendance-3-label')" />
+				<value>3</value>
+			</item>
+		</select1>
+		<select1 ref="/data/LMD-VAL-chwlExcusedAbsence">
+			<label ref="jr:itext('LMD-VAL-chwlExcusedAbsence-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-chwlExcusedAbsence-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-chwlExcusedAbsence-0-label')" />
+				<value>0</value>
+			</item>
+		</select1>
+		<input ref="/data/LMD-VAL-reasonCHWLAbsence">
+			<label ref="jr:itext('LMD-VAL-reasonCHWLAbsence-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-supervisedCHWLID">
+			<label ref="jr:itext('LMD-VAL-supervisedCHWLID-label')" />
+			<alert ref="jr:itext('LMD-VAL-supervisedCHWLID-constraintMsg')" />
+		</input>
+		<group ref="/data/GRP-CHWSupervisionVisit">
+			<label ref="jr:itext('GRP-CHWSupervisionVisit-label')" />
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID-label')" />
+				<alert ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-supervisedCHWID-constraintMsg')" />
+			</input>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-communityID">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-communityID-label')" />
+				<alert ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-communityID-constraintMsg')" />
+			</input>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-TIM-timeOfArrival-label')" />
+			</input>
+			<select1 ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-label')" />
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-chwExcusedAbsence-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-reasonCHWAbsence">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-reasonCHWAbsence-label')" />
+			</input>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-correctTreatment">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-correctTreatment-label')" />
+			</input>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-incorrectTreatment">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-incorrectTreatment-label')" />
+			</input>
+			<select1 ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-label')" />
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencies-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input ref="/data/GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencyDescription">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LMD-VAL-fieldEmergencyDescription-label')" />
+			</input>
+			<trigger ref="/data/GRP-CHWSupervisionVisit/LABEL_reportEmergency" appearance="minimal">
+				<label ref="jr:itext('GRP-CHWSupervisionVisit/LABEL_reportEmergency-label')" />
+			</trigger>
+		</group>
+	</h:body>
+</h:html>

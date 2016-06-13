@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>CHW: Routine Visit (mod 1)</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/0CD76C77-EFA5-4857-AB86-A13DB2919DF8" uiVersion="2" version="2" name="CHW: Routine Visit (mod 1)">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-TIM-meta_dataEntry_startTime />
+					<LMD-TIM-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-manualDate />
+					<LMD-VAL-chwID />
+					<LMD-VAL-communityID />
+					<LMD-VAL-householdID />
+					<LMD-VAL-numberOfBirths />
+					<LMD-VAL-numberOfStillBirths />
+					<GRP-Deaths>
+						<LMD-VAL-numberOfDeaths />
+						<LMD-VAL-neonatalDeaths />
+						<LMD-VAL-postNeonatalDeaths />
+						<LMD-VAL-childDeaths />
+						<LMD-VAL-maternalDeaths />
+						<LMD-VAL-adultDeaths />
+						<VAR-mismatchedDeaths />
+					</GRP-Deaths>
+					<LMD-VAL-numberOfPregnancies />
+					<LMD-VAL-numberOfInfants />
+					<LMD-VAL-numberOfVaccineCards />
+					<LMD-VAL-numberOfInfantsWithVaccines />
+					<LMD-VAL-infantsReferredForVaccines />
+					<LMD-VAL-education />
+					<LMD-VAL-educationOtherText />
+					<GRP-Module2>
+						<LMD-VAL-numberOfSickChildVisits />
+						<LMD-VAL-numberOfWellChildVisits />
+						<LMD-VAL-numberOfBedNets />
+					</GRP-Module2>
+					<GRP-Module3>
+						<LMD-VAL-numberOfPregnancyVisits />
+						<LMD-VAL-familyPlanningVisits />
+						<LMD-VAL-wellAdultVisits />
+						<LMD-VAL-communityTrigger />
+						<LMD-VAL-communityTriggerEducation />
+					</GRP-Module3>
+				</data>
+			</instance>
+			<bind nodeset="/data/LMD-DATABASE" calculate="&quot;lastmile_chwdb&quot;" />
+			<bind nodeset="/data/LMD-TABLE" calculate="&quot;staging_odk_routinevisit&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_startTime" type="time" jr:preload="timestamp" jr:preloadParams="start" />
+			<bind nodeset="/data/LMD-TIM-meta_dataEntry_endTime" type="time" jr:preload="timestamp" jr:preloadParams="end" />
+			<bind nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind nodeset="/data/LMD-VAL-meta_formVersion" calculate="8" />
+			<bind nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind nodeset="/data/LMD-VAL-manualDate" type="xsd:date" required="true()" />
+			<bind nodeset="/data/LMD-VAL-chwID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-chwID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-communityID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-communityID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-householdID" type="xsd:int" constraint=". &gt; 0" jr:constraintMsg="jr:itext('LMD-VAL-householdID-constraintMsg')" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfBirths" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfStillBirths" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-numberOfDeaths" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-neonatalDeaths" type="xsd:int" constraint=". &gt;= 0" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-postNeonatalDeaths" type="xsd:int" constraint=". &gt;= 0" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-childDeaths" type="xsd:int" constraint=". &gt;= 0" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-maternalDeaths" type="xsd:int" constraint=". &gt;= 0" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/LMD-VAL-adultDeaths" type="xsd:int" constraint=". &gt;= 0" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths &gt; 0" required="true()" />
+			<bind nodeset="/data/GRP-Deaths/VAR-mismatchedDeaths" type="xsd:int" constraint=". = 198854752312521453668" relevant="/data/GRP-Deaths/LMD-VAL-numberOfDeaths != 0 and /data/GRP-Deaths/LMD-VAL-numberOfDeaths != /data/GRP-Deaths/LMD-VAL-neonatalDeaths + /data/GRP-Deaths/LMD-VAL-adultDeaths + /data/GRP-Deaths/LMD-VAL-maternalDeaths + /data/GRP-Deaths/LMD-VAL-childDeaths + /data/GRP-Deaths/LMD-VAL-postNeonatalDeaths" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfPregnancies" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfInfants" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfVaccineCards" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-numberOfInfantsWithVaccines" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-infantsReferredForVaccines" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/LMD-VAL-education" required="true()" />
+			<bind nodeset="/data/LMD-VAL-educationOtherText" type="xsd:string" relevant="/data/LMD-VAL-education = 'LMD-OPT-other'" required="true()" />
+			<bind nodeset="/data/GRP-Module2" relevant="1 != 1" />
+			<bind nodeset="/data/GRP-Module2/LMD-VAL-numberOfSickChildVisits" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module2/LMD-VAL-numberOfWellChildVisits" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module2/LMD-VAL-numberOfBedNets" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module3" relevant="1 != 1" />
+			<bind nodeset="/data/GRP-Module3/LMD-VAL-numberOfPregnancyVisits" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module3/LMD-VAL-familyPlanningVisits" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module3/LMD-VAL-wellAdultVisits" type="xsd:int" constraint=". &gt;= 0" required="true()" />
+			<bind nodeset="/data/GRP-Module3/LMD-VAL-communityTrigger" required="true()" />
+			<bind nodeset="/data/GRP-Module3/LMD-VAL-communityTriggerEducation" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-manualDate-label">
+						<value>Today's date:</value>
+					</text>
+					<text id="LMD-VAL-chwID-label">
+						<value>CHW ID Number:</value>
+					</text>
+					<text id="LMD-VAL-chwID-constraintMsg">
+						<value>CHW ID is a unique number and must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-communityID-label">
+						<value>Community ID Number:</value>
+					</text>
+					<text id="LMD-VAL-communityID-constraintMsg">
+						<value>Community ID must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-householdID-label">
+						<value>Household ID Number:</value>
+					</text>
+					<text id="LMD-VAL-householdID-constraintMsg">
+						<value>Household ID must be greater than 0</value>
+					</text>
+					<text id="LMD-VAL-numberOfBirths-label">
+						<value>Number of births:</value>
+					</text>
+					<text id="LMD-VAL-numberOfStillBirths-label">
+						<value>Number of still births:</value>
+					</text>
+					<text id="GRP-Deaths-label">
+						<value>GRP-Deaths</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-numberOfDeaths-label">
+						<value>Total number of deaths?</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-neonatalDeaths-label">
+						<value>Number of neonatal deaths [0-28 days old]</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-postNeonatalDeaths-label">
+						<value>Number of post-neonatal deaths [29 days-364 days old]:</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-childDeaths-label">
+						<value>Number of child deaths [1-5 years old]</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-maternalDeaths-label">
+						<value>Number of maternal deaths</value>
+					</text>
+					<text id="GRP-Deaths/LMD-VAL-adultDeaths-label">
+						<value>Number of other deaths [5 years or older]</value>
+					</text>
+					<text id="GRP-Deaths/VAR-mismatchedDeaths-label">
+						<value>Please go back and make sure that the total number of deaths equals the specific types of deaths. </value>
+					</text>
+					<text id="LMD-VAL-numberOfPregnancies-label">
+						<value>Number of Big Bellies:</value>
+					</text>
+					<text id="LMD-VAL-numberOfInfants-label">
+						<value>Number of Infants (under 1)</value>
+					</text>
+					<text id="LMD-VAL-numberOfVaccineCards-label">
+						<value>Number of vaccine cards seen for infants (under 1):</value>
+					</text>
+					<text id="LMD-VAL-numberOfInfantsWithVaccines-label">
+						<value>Number of infants (under 1) tracked for vaccines:</value>
+					</text>
+					<text id="LMD-VAL-infantsReferredForVaccines-label">
+						<value>Number of infants (under 1) referred for vaccines:</value>
+					</text>
+					<text id="LMD-VAL-education-label">
+						<value>What type of education did you give during today's visit?</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-bigBelly-label">
+						<value>Big Belly</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-diarrheaAndSanitation-label">
+						<value>Diarrhea and Sanitation</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT_familyPlanning-label">
+						<value>Family Planning</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-malariaAndBednet-label">
+						<value>Malaria and Bednet Use</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-nutrition-label">
+						<value>Nutrition</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-pneumonia-label">
+						<value>Penumonia</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-vaccination-label">
+						<value>Vaccination</value>
+					</text>
+					<text id="LMD-VAL-education-LMD-OPT-other-label">
+						<value>Other</value>
+					</text>
+					<text id="LMD-VAL-educationOtherText-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-Module2-label">
+						<value>GRP-Module2</value>
+					</text>
+					<text id="GRP-Module2/LMD-VAL-numberOfSickChildVisits-label">
+						<value>Number of sick child visits:</value>
+					</text>
+					<text id="GRP-Module2/LMD-VAL-numberOfWellChildVisits-label">
+						<value>Number of well child visits:</value>
+					</text>
+					<text id="GRP-Module2/LMD-VAL-numberOfBedNets-label">
+						<value>Number of bed nets distributed:</value>
+					</text>
+					<text id="GRP-Module3-label">
+						<value>GRP-Module3</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-numberOfPregnancyVisits-label">
+						<value>Number of big belly visits:</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-familyPlanningVisits-label">
+						<value>Number of family planning visits:</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-wellAdultVisits-label">
+						<value>Number of well adult visits:</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTrigger-label">
+						<value>Have you observed or identified any new triggers in your community?</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTrigger-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTrigger-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTriggerEducation-label">
+						<value>Have you educated the community about possible triggers that they should look out for?</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTriggerEducation-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Module3/LMD-VAL-communityTriggerEducation-0-label">
+						<value>No</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/LMD-VAL-manualDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-manualDate-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-chwID">
+			<label ref="jr:itext('LMD-VAL-chwID-label')" />
+			<alert ref="jr:itext('LMD-VAL-chwID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-communityID">
+			<label ref="jr:itext('LMD-VAL-communityID-label')" />
+			<alert ref="jr:itext('LMD-VAL-communityID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-householdID">
+			<label ref="jr:itext('LMD-VAL-householdID-label')" />
+			<alert ref="jr:itext('LMD-VAL-householdID-constraintMsg')" />
+		</input>
+		<input ref="/data/LMD-VAL-numberOfBirths">
+			<label ref="jr:itext('LMD-VAL-numberOfBirths-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-numberOfStillBirths">
+			<label ref="jr:itext('LMD-VAL-numberOfStillBirths-label')" />
+		</input>
+		<group ref="/data/GRP-Deaths">
+			<label ref="jr:itext('GRP-Deaths-label')" />
+			<input ref="/data/GRP-Deaths/LMD-VAL-numberOfDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-numberOfDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/LMD-VAL-neonatalDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-neonatalDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/LMD-VAL-postNeonatalDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-postNeonatalDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/LMD-VAL-childDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-childDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/LMD-VAL-maternalDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-maternalDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/LMD-VAL-adultDeaths">
+				<label ref="jr:itext('GRP-Deaths/LMD-VAL-adultDeaths-label')" />
+			</input>
+			<input ref="/data/GRP-Deaths/VAR-mismatchedDeaths">
+				<label ref="jr:itext('GRP-Deaths/VAR-mismatchedDeaths-label')" />
+			</input>
+		</group>
+		<input ref="/data/LMD-VAL-numberOfPregnancies">
+			<label ref="jr:itext('LMD-VAL-numberOfPregnancies-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-numberOfInfants">
+			<label ref="jr:itext('LMD-VAL-numberOfInfants-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-numberOfVaccineCards">
+			<label ref="jr:itext('LMD-VAL-numberOfVaccineCards-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-numberOfInfantsWithVaccines">
+			<label ref="jr:itext('LMD-VAL-numberOfInfantsWithVaccines-label')" />
+		</input>
+		<input ref="/data/LMD-VAL-infantsReferredForVaccines">
+			<label ref="jr:itext('LMD-VAL-infantsReferredForVaccines-label')" />
+		</input>
+		<select ref="/data/LMD-VAL-education">
+			<label ref="jr:itext('LMD-VAL-education-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-bigBelly-label')" />
+				<value>LMD-OPT-bigBelly</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-diarrheaAndSanitation-label')" />
+				<value>LMD-OPT-diarrheaAndSanitation</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT_familyPlanning-label')" />
+				<value>LMD-OPT_familyPlanning</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-malariaAndBednet-label')" />
+				<value>LMD-OPT-malariaAndBednet</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-nutrition-label')" />
+				<value>LMD-OPT-nutrition</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-pneumonia-label')" />
+				<value>LMD-OPT-pneumonia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-vaccination-label')" />
+				<value>LMD-OPT-vaccination</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-education-LMD-OPT-other-label')" />
+				<value>LMD-OPT-other</value>
+			</item>
+		</select>
+		<input ref="/data/LMD-VAL-educationOtherText">
+			<label ref="jr:itext('LMD-VAL-educationOtherText-label')" />
+		</input>
+		<group ref="/data/GRP-Module2">
+			<label ref="jr:itext('GRP-Module2-label')" />
+			<input ref="/data/GRP-Module2/LMD-VAL-numberOfSickChildVisits">
+				<label ref="jr:itext('GRP-Module2/LMD-VAL-numberOfSickChildVisits-label')" />
+			</input>
+			<input ref="/data/GRP-Module2/LMD-VAL-numberOfWellChildVisits">
+				<label ref="jr:itext('GRP-Module2/LMD-VAL-numberOfWellChildVisits-label')" />
+			</input>
+			<input ref="/data/GRP-Module2/LMD-VAL-numberOfBedNets">
+				<label ref="jr:itext('GRP-Module2/LMD-VAL-numberOfBedNets-label')" />
+			</input>
+		</group>
+		<group ref="/data/GRP-Module3">
+			<label ref="jr:itext('GRP-Module3-label')" />
+			<input ref="/data/GRP-Module3/LMD-VAL-numberOfPregnancyVisits">
+				<label ref="jr:itext('GRP-Module3/LMD-VAL-numberOfPregnancyVisits-label')" />
+			</input>
+			<input ref="/data/GRP-Module3/LMD-VAL-familyPlanningVisits">
+				<label ref="jr:itext('GRP-Module3/LMD-VAL-familyPlanningVisits-label')" />
+			</input>
+			<input ref="/data/GRP-Module3/LMD-VAL-wellAdultVisits">
+				<label ref="jr:itext('GRP-Module3/LMD-VAL-wellAdultVisits-label')" />
+			</input>
+			<select1 ref="/data/GRP-Module3/LMD-VAL-communityTrigger">
+				<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTrigger-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTrigger-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTrigger-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 ref="/data/GRP-Module3/LMD-VAL-communityTriggerEducation">
+				<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTriggerEducation-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTriggerEducation-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Module3/LMD-VAL-communityTriggerEducation-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>
