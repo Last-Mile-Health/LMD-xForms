@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>2 Female Questionnaire</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/B9B08631-DBB5-491A-ABBE-336D1A145FFF" uiVersion="1" version="1" name="2 Female Questionnaire">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-VAL-meta_dataEntry_startTime />
+					<LMD-VAL-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<VAR-inappropriate_child_age />
+					<LABEL-Instruction />
+					<LMD-VAL-EnumeratorID />
+					<LMD-VAL-ClusterID />
+					<LMD-VAL-CommunityName />
+					<LMD-VAL-RespondentName />
+					<LMD-VAL-FemaleID />
+					<LMD-VAL-Age />
+					<LMD-VAL-TodayDate />
+					<LMD-VAL-SurveyLanguage />
+					<LMD-VAL-OtherLanguage />
+					<LMD-VAL-HaveChildren />
+					<LMD-VAL-NumberOfLivingChildren />
+					<LMD-VAL-LastChildName />
+					<GRP-AgeOfLastChild>
+						<LMD-VAL-AgeInMonths />
+						<LMD-VAL-AgeInYears />
+					</GRP-AgeOfLastChild>
+					<LMD-GRP-Section2A>
+						<LMD-VAL-WentToSchool />
+						<LMD-VAL-EducationLevel />
+						<LMD-VAL-TookBigBellyVitamin />
+						<LMD-VAL-TakeMicroNutrient />
+						<LMD-VAL-GiveBabyTaytayWater />
+						<LMD-VAL-BabyFedByOtherMeans />
+						<LMD-VAL-BreastFedBabyYesterday />
+						<LMD-VAL-FoodOtherThanTaytayWater />
+						<LMD-VAL-LiquidsUnderSixMonth />
+						<LMD-VAL-FirstTimeOfTaytayWater />
+						<LMD-VAL-FirstTimeOfTaytayWater_hours />
+						<LMD-VAL-FirstTimeOfTaytayWater_days />
+						<LMD-VAL-WhenChildGivenFood />
+						<LMD-VAL-WhenChildGivenFood_months />
+						<LMD-VAL-WhenChildGivenFood_days />
+						<LMD-VAL-FirstFoodAsideTaytayWater />
+						<LMD-VAL-OtherFood />
+						<LMD-VAL-ChildAteSolidYesterday />
+						<LMD-VAL-NumberOfSolidFood />
+						<LMD-VAL-KnowAboutCHA />
+						<LMD-VAL-EducationTalkByCHA />
+						<LMD-VAL-EducationToFeedBaby />
+						<LMD-VAL-ChildPlaceOfBirth />
+						<LMD-VAL-OtherChildPlaceOfBirth />
+						<LMD-VAL-HoldBabyToYourSkin />
+						<LMD-VAL-HoldingBabyToYouByCHA />
+						<LMD-VAL-AssistedByHFWorkerPlaceOnSkin />
+					</LMD-GRP-Section2A>
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/LMD-DATABASE" nodeset="/data/LMD-DATABASE" calculate="lastmile_upload" />
+			<bind vellum:nodeset="#form/LMD-TABLE" nodeset="/data/LMD-TABLE" calculate="odk_LMHNutritionSurveyFemaleQuestionnaire" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_UUID" nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_autoDate" nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_startTime" nodeset="/data/LMD-VAL-meta_dataEntry_startTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_endTime" nodeset="/data/LMD-VAL-meta_dataEntry_endTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataSource" nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_formVersion" nodeset="/data/LMD-VAL-meta_formVersion" calculate="&quot;1.0.1&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_deviceID" nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind vellum:nodeset="#form/VAR-inappropriate_child_age" nodeset="/data/VAR-inappropriate_child_age" vellum:relevant="#form/GRP-AgeOfLastChild/LMD-VAL-AgeInYears &gt; 5 or (#form/GRP-AgeOfLastChild/LMD-VAL-AgeInYears = 5 and #form/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths &gt; 0)" relevant="/data/GRP-AgeOfLastChild/LMD-VAL-AgeInYears &gt; 5 or (/data/GRP-AgeOfLastChild/LMD-VAL-AgeInYears = 5 and /data/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths &gt; 0)" calculate="1" />
+			<bind vellum:nodeset="#form/LABEL-Instruction" nodeset="/data/LABEL-Instruction" />
+			<bind vellum:nodeset="#form/LMD-VAL-EnumeratorID" nodeset="/data/LMD-VAL-EnumeratorID" type="xsd:int" constraint="regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ClusterID" nodeset="/data/LMD-VAL-ClusterID" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-CommunityName" nodeset="/data/LMD-VAL-CommunityName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-RespondentName" nodeset="/data/LMD-VAL-RespondentName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-FemaleID" nodeset="/data/LMD-VAL-FemaleID" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-Age" nodeset="/data/LMD-VAL-Age" type="xsd:int" constraint="(. &gt;= 18 and . &lt;= 49) and regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('LMD-VAL-Age-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-TodayDate" nodeset="/data/LMD-VAL-TodayDate" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-SurveyLanguage" nodeset="/data/LMD-VAL-SurveyLanguage" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-OtherLanguage" nodeset="/data/LMD-VAL-OtherLanguage" type="xsd:string" vellum:relevant="#form/LMD-VAL-SurveyLanguage = 'other'" relevant="/data/LMD-VAL-SurveyLanguage = 'other'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-HaveChildren" nodeset="/data/LMD-VAL-HaveChildren" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-NumberOfLivingChildren" nodeset="/data/LMD-VAL-NumberOfLivingChildren" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-LastChildName" nodeset="/data/LMD-VAL-LastChildName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/GRP-AgeOfLastChild" nodeset="/data/GRP-AgeOfLastChild" />
+			<bind vellum:nodeset="#form/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths" nodeset="/data/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths" type="xsd:int" constraint="(. &lt;= 11) and regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('GRP-AgeOfLastChild/LMD-VAL-AgeInMonths-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-AgeOfLastChild/LMD-VAL-AgeInYears" nodeset="/data/GRP-AgeOfLastChild/LMD-VAL-AgeInYears" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A" nodeset="/data/LMD-GRP-Section2A" vellum:relevant="#form/LMD-VAL-HaveChildren = '1' or #form/VAR-inappropriate_child_age = 1" relevant="/data/LMD-VAL-HaveChildren = '1' or /data/VAR-inappropriate_child_age = 1" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-WentToSchool" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-WentToSchool" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-EducationLevel" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-EducationLevel" type="xsd:int" constraint="regex(., '^[0-9]+$')" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-WentToSchool = '1'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-WentToSchool = '1'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth" vellum:relevant="(#form/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths &lt; 6 and #form/GRP-AgeOfLastChild/LMD-VAL-AgeInYears = 0) and (#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0')" relevant="(/data/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths &lt; 6 and /data/GRP-AgeOfLastChild/LMD-VAL-AgeInYears = 0) and (/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours" type="xsd:int" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater = 'hours'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater = 'hours'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days" type="xsd:int" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater = 'days'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater = 'days'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months" type="xsd:int" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood = 'Months'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood = 'Months'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days" type="xsd:int" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood = 'Days'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood = 'Days'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or #form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0' and #form/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth != 'Only_taytay_water'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater != '0' or /data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans != '0' and /data/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth != 'Only_taytay_water'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-OtherFood" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-OtherFood" type="xsd:string" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater = 'other'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater = 'other'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood" type="xsd:int" constraint="regex(., '^[0-9]+$')" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday != '0'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday != '0'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby" constraint="not(selected(., 'LMD-OPT-None')) and not(selected(., 'LMD-OPT-Declined')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth" type="xsd:string" vellum:relevant="#form/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth = 'Other'" relevant="/data/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth = 'Other'" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA" required="true()" />
+			<bind vellum:nodeset="#form/LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin" nodeset="/data/LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LABEL-Instruction-label">
+						<value>ASK THE QUESTIONS IN SECTION 2 TO EVERY FEMALE AGED 18-49 IN THE HOUSEHOLD. PLEASE PROVIDE RESPONDENT WITH A CONSENT FORM. DO NOT COMPLETE THIS SURVEY WITHOUT CONSENT FIRST.</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorID-label">
+						<value>Enumerator ID:</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorID-constraintMsg">
+						<value>ID Number MUST be greater than zero</value>
+					</text>
+					<text id="LMD-VAL-ClusterID-label">
+						<value>Cluster ID:</value>
+					</text>
+					<text id="LMD-VAL-CommunityName-label">
+						<value>Community name:</value>
+					</text>
+					<text id="LMD-VAL-RespondentName-label">
+						<value>Respondent Name:</value>
+					</text>
+					<text id="LMD-VAL-FemaleID-label">
+						<value>Female ID:</value>
+					</text>
+					<text id="LMD-VAL-Age-label">
+						<value>How old is <output value="/data/LMD-VAL-RespondentName" vellum:value="#form/LMD-VAL-RespondentName" />?</value>
+					</text>
+					<text id="LMD-VAL-Age-constraintMsg">
+						<value>The female age MUST be between 18 - 49yrs.</value>
+					</text>
+					<text id="LMD-VAL-TodayDate-label">
+						<value>Today's Date:</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-label">
+						<value>Survey Language:</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-english-label">
+						<value>English</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-kpelle-label">
+						<value>Kpelle</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-bassa-label">
+						<value>Bassa</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-french-label">
+						<value>French</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-other-label">
+						<value>Other</value>
+					</text>
+					<text id="LMD-VAL-OtherLanguage-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="LMD-VAL-HaveChildren-label">
+						<value>2.1 Do you have any children living or dead?</value>
+					</text>
+					<text id="LMD-VAL-HaveChildren-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-VAL-HaveChildren-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-VAL-HaveChildren-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-VAL-NumberOfLivingChildren-label">
+						<value>How many living children do you have? [888 = Declined to answer, 999 = I don't know]</value>
+					</text>
+					<text id="LMD-VAL-LastChildName-label">
+						<value>What is the name of your last child? [888 = Declined to answer, 999 = I don't know]</value>
+					</text>
+					<text id="GRP-AgeOfLastChild-label">
+						<value>How old is <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />?</value>
+					</text>
+					<text id="GRP-AgeOfLastChild/LMD-VAL-AgeInMonths-label">
+						<value>Months:</value>
+					</text>
+					<text id="GRP-AgeOfLastChild/LMD-VAL-AgeInMonths-constraintMsg">
+						<value>Months should be less than 12</value>
+					</text>
+					<text id="GRP-AgeOfLastChild/LMD-VAL-AgeInYears-label">
+						<value>Years:</value>
+					</text>
+					<text id="LMD-GRP-Section2A-label">
+						<value>SECTION 2A: Female Questionnaire, Breastfeeding Practices</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WentToSchool-label">
+						<value>You been to school before?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WentToSchool-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WentToSchool-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WentToSchool-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationLevel-label">
+						<value>What is the highest grade you completed?
+(888 = I don't know)</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-label">
+						<value>Did you ever take the big belly vitamins (tablet/medicine) when you had belly with <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-0-label">
+						<value>No, did not take</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-999-label">
+						<value>Don't know</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-label">
+						<value>Did you take any micro-nutrient powder when you had big belly with <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-0-label">
+						<value>No, did not take</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-999-label">
+						<value>Don't know</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-label">
+						<value>Have you ever given taytay water to <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-label">
+						<value>Since yesterday, did <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> take any taytay water from another woman or from a bottle or cup?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-label">
+						<value>Did you give taytay water to <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> yesterday during the day or night?
+
+
+
+
+</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-label">
+						<value>Since <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> was born, that only taytay water you give, or you ever give thing like juice, sugar water or creek water?
+
+
+
+</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Only_taytay_water-label">
+						<value>Baby had only taytay water</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Baby_had_other_things-label">
+						<value>Baby had other things</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-label">
+						<value>Before <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> reached 6 months, that only taytay water you give, or you give thing like juice, sugar water or creek water?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Only_taytay_water-label">
+						<value>Baby only had taytay water</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Baby_had_other_things-label">
+						<value>Baby had other things</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-label">
+						<value>How long after you born <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> before you give taytay water?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-Less_than_one_hour-label">
+						<value>Less than one hour</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-hours-label">
+						<value>Hours</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-days-label">
+						<value>Days</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours-label">
+						<value>Number of hours:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days-label">
+						<value>Number of days:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-label">
+						<value>How long after you born <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> did you give the  something other than taytay water?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Days-label">
+						<value>Days</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Months-label">
+						<value>Months</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months-label">
+						<value>Number of months:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days-label">
+						<value>Number of days:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-label">
+						<value>What was the first thing you gave to <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> beside taytay water water?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-water-label">
+						<value>Water</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-juice-label">
+						<value>Juice</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-rice-label">
+						<value>Rice</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-cassava-label">
+						<value>Cassava</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-bitterball-label">
+						<value>Bitterball</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-gari-label">
+						<value>Gari</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-baby_formula-label">
+						<value>Baby formula</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-other-label">
+						<value>Other</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-OtherFood-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-label">
+						<value>Did <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> eat any hard, semi-hard, or soft foods other than liquids yesterday during the day or at night?
+(888 = declined to answer)</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood-label">
+						<value>How many times did <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" /> eat hard, semi-hard or soft foods beside liquid food yesterday during the day or night?
+(888 = declined to answer)</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-label">
+						<value>You know anyone here in the community that they call "CHA" or "Community Health Assistant":?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-999-label">
+						<value>Do not remember</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-label">
+						<value>The Community Health Assistant or CHA or Trained Traditional Midwife or TTM ever give a talk to you about giving taytay water and how long to give taytay water?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-DoNotRemember-label">
+						<value>Do not remember</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-label">
+						<value>During your pregnancy with <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />, what information did you receive about how to feed your newborn baby? [Read all aloud and select all that apply]</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-constraintMsg">
+						<value>You can't choose "NONE" or "DECLINED" with other options</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGiveOnlyTaytayWater-label">
+						<value>Only give taytay water (only feeding taytay water and nothing esle except for prescribed medicine; no water).</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationImmediateBreastFeeding-label">
+						<value>Immediately giving taytay water (putting baby to breast immediately after birth/in 1 hour time).</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGivingFirstBreastMilk-label">
+						<value>Giving newborn baby first yellowish milk or not throwing it out</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationNotGivingWater-label">
+						<value>Not giving baby any water, sugar water, tea or traditional preparation after birth</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGiveTaytayBabyWantIt-label">
+						<value>Give taytay water whenever baby wants</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationHoldingBabyToGiveTaytayWater-label">
+						<value>Show you how to hold your baby while giving taytay water</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationHavingPainBreastFeeding-label">
+						<value>What to do if experience pain or problems while giving taytay water</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationUsingMilkPowder-label">
+						<value>Encouraged use of infant formula or milk powder</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationUseOtherFoodBeforeSixMonths-label">
+						<value>Encouraged to feed baby with other liquids or food before 6 months</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-LMD-OPT-None-label">
+						<value>None of the above</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-LMD-OPT-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-label">
+						<value>Where did you give birth to <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-facility-label">
+						<value>In a facility (Clinc or Hospital)</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-Community-label">
+						<value>In the Community</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-label">
+						<value>After you gave birth  to <output value="/data/LMD-VAL-LastChildName" vellum:value="#form/LMD-VAL-LastChildName" />, did you immediately hold the baby with baby's skin next to your skin ?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-label">
+						<value>Did a CHA, TTM or any health facility staff tell you to hold the baby with the baby's skin next to your skin right away after birth?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-label">
+						<value>Did a CHA, TTM or any health facility staff help place the baby's skin next to your skin immediately birth?</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-888-label">
+						<value>Declined to answer</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<trigger vellum:ref="#form/LABEL-Instruction" ref="/data/LABEL-Instruction" appearance="minimal">
+			<label ref="jr:itext('LABEL-Instruction-label')" />
+		</trigger>
+		<input vellum:ref="#form/LMD-VAL-EnumeratorID" ref="/data/LMD-VAL-EnumeratorID">
+			<label ref="jr:itext('LMD-VAL-EnumeratorID-label')" />
+			<alert ref="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-ClusterID" ref="/data/LMD-VAL-ClusterID">
+			<label ref="jr:itext('LMD-VAL-ClusterID-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-CommunityName" ref="/data/LMD-VAL-CommunityName">
+			<label ref="jr:itext('LMD-VAL-CommunityName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-RespondentName" ref="/data/LMD-VAL-RespondentName">
+			<label ref="jr:itext('LMD-VAL-RespondentName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-FemaleID" ref="/data/LMD-VAL-FemaleID">
+			<label ref="jr:itext('LMD-VAL-FemaleID-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-Age" ref="/data/LMD-VAL-Age">
+			<label ref="jr:itext('LMD-VAL-Age-label')" />
+			<alert ref="jr:itext('LMD-VAL-Age-constraintMsg')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-TodayDate" ref="/data/LMD-VAL-TodayDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-TodayDate-label')" />
+		</input>
+		<select1 vellum:ref="#form/LMD-VAL-SurveyLanguage" ref="/data/LMD-VAL-SurveyLanguage">
+			<label ref="jr:itext('LMD-VAL-SurveyLanguage-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-english-label')" />
+				<value>english</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-kpelle-label')" />
+				<value>kpelle</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-bassa-label')" />
+				<value>bassa</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-french-label')" />
+				<value>french</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-other-label')" />
+				<value>other</value>
+			</item>
+		</select1>
+		<input vellum:ref="#form/LMD-VAL-OtherLanguage" ref="/data/LMD-VAL-OtherLanguage">
+			<label ref="jr:itext('LMD-VAL-OtherLanguage-label')" />
+		</input>
+		<select1 vellum:ref="#form/LMD-VAL-HaveChildren" ref="/data/LMD-VAL-HaveChildren">
+			<label ref="jr:itext('LMD-VAL-HaveChildren-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-HaveChildren-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-HaveChildren-0-label')" />
+				<value>0</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-HaveChildren-888-label')" />
+				<value>888</value>
+			</item>
+		</select1>
+		<input vellum:ref="#form/LMD-VAL-NumberOfLivingChildren" ref="/data/LMD-VAL-NumberOfLivingChildren">
+			<label ref="jr:itext('LMD-VAL-NumberOfLivingChildren-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-LastChildName" ref="/data/LMD-VAL-LastChildName">
+			<label ref="jr:itext('LMD-VAL-LastChildName-label')" />
+		</input>
+		<group vellum:ref="#form/GRP-AgeOfLastChild" ref="/data/GRP-AgeOfLastChild" appearance="field-list">
+			<label ref="jr:itext('GRP-AgeOfLastChild-label')" />
+			<input vellum:ref="#form/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths" ref="/data/GRP-AgeOfLastChild/LMD-VAL-AgeInMonths">
+				<label ref="jr:itext('GRP-AgeOfLastChild/LMD-VAL-AgeInMonths-label')" />
+				<alert ref="jr:itext('GRP-AgeOfLastChild/LMD-VAL-AgeInMonths-constraintMsg')" />
+			</input>
+			<input vellum:ref="#form/GRP-AgeOfLastChild/LMD-VAL-AgeInYears" ref="/data/GRP-AgeOfLastChild/LMD-VAL-AgeInYears">
+				<label ref="jr:itext('GRP-AgeOfLastChild/LMD-VAL-AgeInYears-label')" />
+			</input>
+		</group>
+		<group vellum:ref="#form/LMD-GRP-Section2A" ref="/data/LMD-GRP-Section2A">
+			<label ref="jr:itext('LMD-GRP-Section2A-label')" />
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-WentToSchool" ref="/data/LMD-GRP-Section2A/LMD-VAL-WentToSchool">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WentToSchool-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WentToSchool-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WentToSchool-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WentToSchool-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-EducationLevel" ref="/data/LMD-GRP-Section2A/LMD-VAL-EducationLevel">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationLevel-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin" ref="/data/LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TookBigBellyVitamin-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient" ref="/data/LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-TakeMicroNutrient-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater" ref="/data/LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-GiveBabyTaytayWater-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans" ref="/data/LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BabyFedByOtherMeans-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday" ref="/data/LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-BreastFedBabyYesterday-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater" ref="/data/LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Only_taytay_water-label')" />
+					<value>Only_taytay_water</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Baby_had_other_things-label')" />
+					<value>Baby_had_other_things</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FoodOtherThanTaytayWater-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth" ref="/data/LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Only_taytay_water-label')" />
+					<value>Only_taytay_water</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Baby_had_other_things-label')" />
+					<value>Baby_had_other_things</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-LiquidsUnderSixMonth-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater" ref="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-Less_than_one_hour-label')" />
+					<value>Less_than_one_hour</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-hours-label')" />
+					<value>hours</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-days-label')" />
+					<value>days</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours" ref="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_hours-label')" />
+			</input>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days" ref="/data/LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstTimeOfTaytayWater_days-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood" ref="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Days-label')" />
+					<value>Days</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Months-label')" />
+					<value>Months</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months" ref="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_months-label')" />
+			</input>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days" ref="/data/LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-WhenChildGivenFood_days-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater" ref="/data/LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-water-label')" />
+					<value>water</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-juice-label')" />
+					<value>juice</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-rice-label')" />
+					<value>rice</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-cassava-label')" />
+					<value>cassava</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-bitterball-label')" />
+					<value>bitterball</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-gari-label')" />
+					<value>gari</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-baby_formula-label')" />
+					<value>baby_formula</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-other-label')" />
+					<value>other</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-FirstFoodAsideTaytayWater-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-OtherFood" ref="/data/LMD-GRP-Section2A/LMD-VAL-OtherFood">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-OtherFood-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday" ref="/data/LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildAteSolidYesterday-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood" ref="/data/LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-NumberOfSolidFood-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA" ref="/data/LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-KnowAboutCHA-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA" ref="/data/LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-DoNotRemember-label')" />
+					<value>DoNotRemember</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationTalkByCHA-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby" ref="/data/LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-label')" />
+				<alert ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGiveOnlyTaytayWater-label')" />
+					<value>EducationGiveOnlyTaytayWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationImmediateBreastFeeding-label')" />
+					<value>EducationImmediateBreastFeeding</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGivingFirstBreastMilk-label')" />
+					<value>EducationGivingFirstBreastMilk</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationNotGivingWater-label')" />
+					<value>EducationNotGivingWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationGiveTaytayBabyWantIt-label')" />
+					<value>EducationGiveTaytayBabyWantIt</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationHoldingBabyToGiveTaytayWater-label')" />
+					<value>EducationHoldingBabyToGiveTaytayWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationHavingPainBreastFeeding-label')" />
+					<value>EducationHavingPainBreastFeeding</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationUsingMilkPowder-label')" />
+					<value>EducationUsingMilkPowder</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-EducationUseOtherFoodBeforeSixMonths-label')" />
+					<value>EducationUseOtherFoodBeforeSixMonths</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-LMD-OPT-None-label')" />
+					<value>LMD-OPT-None</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-EducationToFeedBaby-LMD-OPT-Declined-label')" />
+					<value>LMD-OPT-Declined</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth" ref="/data/LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-facility-label')" />
+					<value>facility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-Community-label')" />
+					<value>Community</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-ChildPlaceOfBirth-Other-label')" />
+					<value>Other</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth" ref="/data/LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-OtherChildPlaceOfBirth-label')" />
+			</input>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin" ref="/data/LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldBabyToYourSkin-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA" ref="/data/LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-HoldingBabyToYouByCHA-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin" ref="/data/LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin">
+				<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-label')" />
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('LMD-GRP-Section2A/LMD-VAL-AssistedByHFWorkerPlaceOnSkin-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>

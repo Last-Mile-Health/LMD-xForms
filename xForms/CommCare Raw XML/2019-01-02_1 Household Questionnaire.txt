@@ -1,0 +1,2509 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>1 Household Questionnaire</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/B3E0352C-486E-4F02-9894-3C1DBF59D362" uiVersion="1" version="1" name="1 Household Questionnaire">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-VAL-meta_dataEntry_startTime />
+					<LMD-VAL-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LMD-VAL-EnumeratorID />
+					<LMD-VAL-ClusterID />
+					<LMD-VAL-EnumeratorName />
+					<LMD-VAL-CommName />
+					<LMD-VAL-TodayDate />
+					<LMD-VAL-SurveyLanguage />
+					<LMD-VAL-OtherLanguage />
+					<LABEL-Intro />
+					<LMD-VAL-household_member_present />
+					<LMD-VAL-ChildrenBelowFiveYears />
+					<LABEL-1AInstruction />
+					<LMD-VAL-NumberOfHouseholdMember />
+					<GRP-Section1A>
+						<LMD-RPT-GROUP jr:template="">
+							<LMD-VAL-FirstName />
+							<LMD-VAL-Sex />
+							<LMD-VAL-Age />
+							<LMD-RPT-RegularHouseMember />
+							<LMD-RPT-SleptInHouse />
+						</LMD-RPT-GROUP>
+						<LMD-CHK-HouseholdBasicNeed />
+						<LMD-VAL-WatchOwner />
+						<LMD-VAL-BankAccount />
+						<LMD-VAL-SourceOfCurrent />
+						<LMD-VAL-CookingFuel />
+						<LMD-VAL-FloorMaterial />
+						<LMD-VAL-HouseMaterialForBuilding />
+						<LMD-VAL-SourceOfDrinkingWater />
+						<LMD-VAL-OtherSpecifyDrinkingSource />
+						<LMD-VAL-NonDrinkingWaterSource />
+						<LMD-VAL-TreatWater />
+						<LMD-CHK-WaterTreatmentMethod />
+						<LMD-VAL-OtherWaterTreatment_Specify />
+						<LMD-VAL-ToiletPlace />
+						<LMD-VAL-SharedToilet />
+						<LMD-CHK-UsingSoapConditions />
+						<LMD-VAL-OtherConditionForWashingHands />
+						<LMD-VAL-PlaceOfWashingHand />
+						<LMD-CHK-HandWashingWaterPresence />
+						<LMD-CHK-SoapForHandWashing />
+						<LMD-VAL-Has_child_of_appropriate_age />
+					</GRP-Section1A>
+					<GRP-Section1B>
+						<LMD-VAL-youngest_child_name />
+						<LABEL-Instruction />
+						<LMD-VAL-LastMarketDay />
+						<LMD-VAL-FoodTaytayWater />
+						<LMD-VAL-FoodGrain />
+						<LMD-VAL-FoodTuber />
+						<LMD-VAL-FoodPumpkin />
+						<LMD-VAL-FoodVegetables />
+						<LMD-VAL-FoodMango />
+						<LMD-VAL-FoodFruits />
+						<LMD-VAL-FoodMeatOrgan />
+						<LMD-VAL-FoodMeat />
+						<LMD-VAL-FoodSnail />
+						<LMD-VAL-FoodEgg />
+						<LMD-VAL-FoodFish />
+						<LMD-VAL-FoodPea />
+						<LMD-VAL-FoodMilk />
+						<LMD-VAL-FoodPalmOil />
+						<LMD-VAL-FoodFat />
+						<LMD-VAL-FoodSugar />
+						<LMD-VAL-FoodSpice />
+						<LMD-VAL-FoodBabyFood />
+						<LMD-VAL-FoodSolidFood />
+						<LMD-VAL-NameSolidFood />
+					</GRP-Section1B>
+					<GRP-HFIAS>
+						<LMD-VAL-FoodSecurity />
+						<LMD-VAL-NumberOfFoodSecurityIssue />
+						<LMD-VAL-LackOfResource />
+						<LMD-VAL-NumberOfLackOfResources />
+						<LMD-VAL-LimitedFoodConsumption />
+						<LMD-VAL-NumberOfLimitedFoodConsumption />
+						<LMD-VAL-UnWantedFoodEating />
+						<LMD-VAL-NumberUnwantedFoodEating />
+						<LMD-VAL-InsufficientFood />
+						<LMD-VAL-NumberInsufficientFood />
+						<LMD-VAL-FewerMeal />
+						<LMD-VAL-NumberOfFewerMeal />
+						<LMD-VAL-NoFoodAtAll />
+						<LMD-VAL-NumberOfNoFoodAtll />
+						<LMD-VAL-GoToBedHungry />
+						<LMD-VAL-NumberOfGoToBedHungry />
+						<LMD-VAL-TotallyNoEating />
+						<LMD-VAL-NumberOfTotallyNotEating />
+					</GRP-HFIAS>
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/LMD-DATABASE" nodeset="/data/LMD-DATABASE" calculate="lastmile_upload" />
+			<bind vellum:nodeset="#form/LMD-TABLE" nodeset="/data/LMD-TABLE" calculate="odk_LMHNutritionSurveyHouseholdQuestionnaire" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_UUID" nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_autoDate" nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_startTime" nodeset="/data/LMD-VAL-meta_dataEntry_startTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_endTime" nodeset="/data/LMD-VAL-meta_dataEntry_endTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataSource" nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_formVersion" nodeset="/data/LMD-VAL-meta_formVersion" calculate="&quot;1.0.1&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_deviceID" nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind vellum:nodeset="#form/LMD-VAL-EnumeratorID" nodeset="/data/LMD-VAL-EnumeratorID" type="xsd:int" constraint="regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ClusterID" nodeset="/data/LMD-VAL-ClusterID" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-EnumeratorName" nodeset="/data/LMD-VAL-EnumeratorName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-CommName" nodeset="/data/LMD-VAL-CommName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-TodayDate" nodeset="/data/LMD-VAL-TodayDate" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-SurveyLanguage" nodeset="/data/LMD-VAL-SurveyLanguage" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-OtherLanguage" nodeset="/data/LMD-VAL-OtherLanguage" type="xsd:string" vellum:relevant="#form/LMD-VAL-SurveyLanguage = 'other'" relevant="/data/LMD-VAL-SurveyLanguage = 'other'" required="true()" />
+			<bind vellum:nodeset="#form/LABEL-Intro" nodeset="/data/LABEL-Intro" />
+			<bind vellum:nodeset="#form/LMD-VAL-household_member_present" nodeset="/data/LMD-VAL-household_member_present" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ChildrenBelowFiveYears" nodeset="/data/LMD-VAL-ChildrenBelowFiveYears" required="true()" />
+			<bind vellum:nodeset="#form/LABEL-1AInstruction" nodeset="/data/LABEL-1AInstruction" />
+			<bind vellum:nodeset="#form/LMD-VAL-NumberOfHouseholdMember" nodeset="/data/LMD-VAL-NumberOfHouseholdMember" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A" nodeset="/data/GRP-Section1A" vellum:relevant="#form/LMD-VAL-ChildrenBelowFiveYears = '1' and #form/LMD-VAL-household_member_present = '1'" relevant="/data/LMD-VAL-ChildrenBelowFiveYears = '1' and /data/LMD-VAL-household_member_present = '1'" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-CHK-HouseholdBasicNeed" nodeset="/data/GRP-Section1A/LMD-CHK-HouseholdBasicNeed" constraint="not(selected(., 'LMD-OPT-none')) and not(selected(., 'LMD-OPT-DeclinedToAnswer')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-WatchOwner" nodeset="/data/GRP-Section1A/LMD-VAL-WatchOwner" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-BankAccount" nodeset="/data/GRP-Section1A/LMD-VAL-BankAccount" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-SourceOfCurrent" nodeset="/data/GRP-Section1A/LMD-VAL-SourceOfCurrent" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-CookingFuel" nodeset="/data/GRP-Section1A/LMD-VAL-CookingFuel" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-FloorMaterial" nodeset="/data/GRP-Section1A/LMD-VAL-FloorMaterial" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-HouseMaterialForBuilding" nodeset="/data/GRP-Section1A/LMD-VAL-HouseMaterialForBuilding" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater" nodeset="/data/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource" nodeset="/data/GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource" type="xsd:string" vellum:relevant="#form/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater = 'OthersSourceOfDrinkingWater'" relevant="/data/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater = 'OthersSourceOfDrinkingWater'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-NonDrinkingWaterSource" nodeset="/data/GRP-Section1A/LMD-VAL-NonDrinkingWaterSource" vellum:relevant="#form/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater = 'BottleWater'" relevant="/data/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater = 'BottleWater'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-TreatWater" nodeset="/data/GRP-Section1A/LMD-VAL-TreatWater" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-CHK-WaterTreatmentMethod" nodeset="/data/GRP-Section1A/LMD-CHK-WaterTreatmentMethod" constraint="not(selected(., 'LMD-OPT-DeclinedToAnswer')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-constraintMsg')" vellum:relevant="#form/GRP-Section1A/LMD-VAL-TreatWater = '1'" relevant="/data/GRP-Section1A/LMD-VAL-TreatWater = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify" nodeset="/data/GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify" type="xsd:string" vellum:relevant="selected(#form/GRP-Section1A/LMD-CHK-WaterTreatmentMethod, 'LMD-OPT-Other')" relevant="selected(/data/GRP-Section1A/LMD-CHK-WaterTreatmentMethod, 'LMD-OPT-Other')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-ToiletPlace" nodeset="/data/GRP-Section1A/LMD-VAL-ToiletPlace" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-SharedToilet" nodeset="/data/GRP-Section1A/LMD-VAL-SharedToilet" vellum:relevant="#form/GRP-Section1A/LMD-VAL-ToiletPlace != 'othersAreaOfToilet' and #form/GRP-Section1A/LMD-VAL-ToiletPlace != 'In_the_bush' and #form/GRP-Section1A/LMD-VAL-ToiletPlace != 'Declined_to_answer'" relevant="/data/GRP-Section1A/LMD-VAL-ToiletPlace != 'othersAreaOfToilet' and /data/GRP-Section1A/LMD-VAL-ToiletPlace != 'In_the_bush' and /data/GRP-Section1A/LMD-VAL-ToiletPlace != 'Declined_to_answer'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-CHK-UsingSoapConditions" nodeset="/data/GRP-Section1A/LMD-CHK-UsingSoapConditions" constraint="not(selected(., 'LMD-OPT-DeclinedToAnswer')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-OtherConditionForWashingHands" nodeset="/data/GRP-Section1A/LMD-VAL-OtherConditionForWashingHands" type="xsd:string" vellum:relevant="selected(#form/GRP-Section1A/LMD-CHK-UsingSoapConditions, 'LMD-OPT-OtherForWashingHands')" relevant="selected(/data/GRP-Section1A/LMD-CHK-UsingSoapConditions, 'LMD-OPT-OtherForWashingHands')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-PlaceOfWashingHand" nodeset="/data/GRP-Section1A/LMD-VAL-PlaceOfWashingHand" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-CHK-HandWashingWaterPresence" nodeset="/data/GRP-Section1A/LMD-CHK-HandWashingWaterPresence" vellum:relevant="#form/GRP-Section1A/LMD-VAL-PlaceOfWashingHand = 'Observed'" relevant="/data/GRP-Section1A/LMD-VAL-PlaceOfWashingHand = 'Observed'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-CHK-SoapForHandWashing" nodeset="/data/GRP-Section1A/LMD-CHK-SoapForHandWashing" vellum:relevant="#form/GRP-Section1A/LMD-VAL-PlaceOfWashingHand = 'Observed'" relevant="/data/GRP-Section1A/LMD-VAL-PlaceOfWashingHand = 'Observed'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age" nodeset="/data/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B" nodeset="/data/GRP-Section1B" vellum:relevant="#form/LMD-VAL-ChildrenBelowFiveYears = '1' and #form/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age = '1' and #form/LMD-VAL-household_member_present = '1'" relevant="/data/LMD-VAL-ChildrenBelowFiveYears = '1' and /data/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age = '1' and /data/LMD-VAL-household_member_present = '1'" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-youngest_child_name" nodeset="/data/GRP-Section1B/LMD-VAL-youngest_child_name" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LABEL-Instruction" nodeset="/data/GRP-Section1B/LABEL-Instruction" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-LastMarketDay" nodeset="/data/GRP-Section1B/LMD-VAL-LastMarketDay" type="xsd:int" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodTaytayWater" nodeset="/data/GRP-Section1B/LMD-VAL-FoodTaytayWater" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodGrain" nodeset="/data/GRP-Section1B/LMD-VAL-FoodGrain" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodTuber" nodeset="/data/GRP-Section1B/LMD-VAL-FoodTuber" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodPumpkin" nodeset="/data/GRP-Section1B/LMD-VAL-FoodPumpkin" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodVegetables" nodeset="/data/GRP-Section1B/LMD-VAL-FoodVegetables" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodMango" nodeset="/data/GRP-Section1B/LMD-VAL-FoodMango" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodFruits" nodeset="/data/GRP-Section1B/LMD-VAL-FoodFruits" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodMeatOrgan" nodeset="/data/GRP-Section1B/LMD-VAL-FoodMeatOrgan" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodMeat" nodeset="/data/GRP-Section1B/LMD-VAL-FoodMeat" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodSnail" nodeset="/data/GRP-Section1B/LMD-VAL-FoodSnail" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodEgg" nodeset="/data/GRP-Section1B/LMD-VAL-FoodEgg" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodFish" nodeset="/data/GRP-Section1B/LMD-VAL-FoodFish" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodPea" nodeset="/data/GRP-Section1B/LMD-VAL-FoodPea" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodMilk" nodeset="/data/GRP-Section1B/LMD-VAL-FoodMilk" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodPalmOil" nodeset="/data/GRP-Section1B/LMD-VAL-FoodPalmOil" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodFat" nodeset="/data/GRP-Section1B/LMD-VAL-FoodFat" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodSugar" nodeset="/data/GRP-Section1B/LMD-VAL-FoodSugar" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodSpice" nodeset="/data/GRP-Section1B/LMD-VAL-FoodSpice" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodBabyFood" nodeset="/data/GRP-Section1B/LMD-VAL-FoodBabyFood" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-FoodSolidFood" nodeset="/data/GRP-Section1B/LMD-VAL-FoodSolidFood" required="true()" />
+			<bind vellum:nodeset="#form/GRP-Section1B/LMD-VAL-NameSolidFood" nodeset="/data/GRP-Section1B/LMD-VAL-NameSolidFood" type="xsd:string" vellum:relevant="#form/GRP-Section1B/LMD-VAL-FoodSolidFood = '1'" relevant="/data/GRP-Section1B/LMD-VAL-FoodSolidFood = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS" nodeset="/data/GRP-HFIAS" vellum:relevant="#form/LMD-VAL-ChildrenBelowFiveYears = '1' and #form/LMD-VAL-household_member_present = '1'" relevant="/data/LMD-VAL-ChildrenBelowFiveYears = '1' and /data/LMD-VAL-household_member_present = '1'" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-FoodSecurity" nodeset="/data/GRP-HFIAS/LMD-VAL-FoodSecurity" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-FoodSecurity = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-FoodSecurity = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-LackOfResource" nodeset="/data/GRP-HFIAS/LMD-VAL-LackOfResource" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfLackOfResources" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfLackOfResources" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-LackOfResource = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-LackOfResource = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption" nodeset="/data/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-UnWantedFoodEating" nodeset="/data/GRP-HFIAS/LMD-VAL-UnWantedFoodEating" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-UnWantedFoodEating = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-UnWantedFoodEating = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-InsufficientFood" nodeset="/data/GRP-HFIAS/LMD-VAL-InsufficientFood" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberInsufficientFood" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberInsufficientFood" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-InsufficientFood = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-InsufficientFood = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-FewerMeal" nodeset="/data/GRP-HFIAS/LMD-VAL-FewerMeal" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfFewerMeal" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfFewerMeal" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-FewerMeal = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-FewerMeal = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NoFoodAtAll" nodeset="/data/GRP-HFIAS/LMD-VAL-NoFoodAtAll" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-NoFoodAtAll = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-NoFoodAtAll = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-GoToBedHungry" nodeset="/data/GRP-HFIAS/LMD-VAL-GoToBedHungry" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-GoToBedHungry = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-GoToBedHungry = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-TotallyNoEating" nodeset="/data/GRP-HFIAS/LMD-VAL-TotallyNoEating" required="true()" />
+			<bind vellum:nodeset="#form/GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating" nodeset="/data/GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating" vellum:relevant="#form/GRP-HFIAS/LMD-VAL-TotallyNoEating = '1'" relevant="/data/GRP-HFIAS/LMD-VAL-TotallyNoEating = '1'" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LMD-VAL-EnumeratorID-label">
+						<value>Enumerator ID:</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorID-constraintMsg">
+						<value>ID Number MUST be greater than zero</value>
+					</text>
+					<text id="LMD-VAL-ClusterID-label">
+						<value>Cluster ID:</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorName-label">
+						<value>Enumerator name:</value>
+					</text>
+					<text id="LMD-VAL-CommName-label">
+						<value>Community Name:</value>
+					</text>
+					<text id="LMD-VAL-TodayDate-label">
+						<value>Today's Date:</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-label">
+						<value>Which language are you using to interview the respondent?</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-english-label">
+						<value>English</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-krahn-label">
+						<value>Krahn</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-kpelle-label">
+						<value>Kpelle</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-bassa-label">
+						<value>Bassa</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-franch-label">
+						<value>French</value>
+					</text>
+					<text id="LMD-VAL-SurveyLanguage-other-label">
+						<value>Other</value>
+					</text>
+					<text id="LMD-VAL-OtherLanguage-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="LABEL-Intro-label">
+						<value>We are called Last Mile Health. We work with the government of Liberia in Rivercess County to help people who live far from health facilities to get healthcare. We are helping with the government to understand better how to support nutrition (what children eat and how they grow). We invite you to take our survey. Your participation is very important to us to learn about the community. The result of this survey will help us to bring better health programs to Rivercess and in Liberia.</value>
+					</text>
+					<text id="LMD-VAL-household_member_present-label">
+						<value>We are looking to speak to the female head of household. Is she here?</value>
+					</text>
+					<text id="LMD-VAL-household_member_present-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-VAL-household_member_present-0-label">
+						<value>No</value>
+					</text>
+					<text id="LMD-VAL-ChildrenBelowFiveYears-label">
+						<value>Is there any child living in this house who is less than 5 years old and who is in the house today?</value>
+					</text>
+					<text id="LMD-VAL-ChildrenBelowFiveYears-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="LMD-VAL-ChildrenBelowFiveYears-2-label">
+						<value>No</value>
+					</text>
+					<text id="LABEL-1AInstruction-label">
+						<value>INSTRUCTION: Ask these questions in this section to the female head of household; ONLY fill out one per household
+
+Please provide respondent with a consent form. Do not complete this survey without consent first.</value>
+					</text>
+					<text id="LMD-VAL-NumberOfHouseholdMember-label">
+						<value>How many persons are living in your house altogether, please include even the strangers or visitors who slept here last night?</value>
+					</text>
+					<text id="GRP-Section1A-label">
+						<value>SECTION 1A: HOUSEHOLD OVERVIEW:</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP-label">
+						<value>Household Member Basic Information</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName-label">
+						<value>What is your (or house member) first name? [Declined to answer = 888]</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-label">
+						<value>Sex</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-male-label">
+						<value>Male</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-female-label">
+						<value>Female</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-Declined_to_answer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age-label">
+						<value>What is the age of the person? [Declined to answer = 888]</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-label">
+						<value><output value="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" vellum:value="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" /> living here all the time?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-label">
+						<value><output value="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" vellum:value="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" /> slept here last night?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-label">
+						<value>Does your household have (read aloud and check all that apply)?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-constraintMsg">
+						<value>You can't choose "DECLINED" with other options</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Generator-label">
+						<value>Generator</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Cupboard-label">
+						<value>Cupboard</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Chairs-label">
+						<value>Chairs</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Television-label">
+						<value>Television (TV)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-none-label">
+						<value>None</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-WatchOwner-label">
+						<value>Does any member of the household own a watch?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-WatchOwner-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-WatchOwner-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-WatchOwner-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-BankAccount-label">
+						<value>Does any member of this household have a bank account?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-BankAccount-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-BankAccount-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-BankAccount-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfCurrent-label">
+						<value>What is the main source of current in this house?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfCurrent-electricity-label">
+						<value>Electricity</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfCurrent-other_source_of_current-label">
+						<value>Other source of current</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfCurrent-Declined_to_answer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-CookingFuel-label">
+						<value>What it the main thing you can use to cook?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-CookingFuel-Charcoal-label">
+						<value>Fire coal/Charcoal</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-CookingFuel-wood-label">
+						<value>Wood</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-CookingFuel-others-label">
+						<value>Other type of fuel</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-CookingFuel-Declined_to_answer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-FloorMaterial-label">
+						<value>What is the main material of the floor in your house?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-FloorMaterial-EarthorBareGround-label">
+						<value>Bare ground/sand/mud
+</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-FloorMaterial-OthersMaterial-label">
+						<value>Other Material</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-FloorMaterial-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-label">
+						<value>What is the main material you used to build the walls of your house?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-MudAndSticks-label">
+						<value>Mud and Sticks</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-OthersMaterForBuilding-label">
+						<value>Other Material</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-label">
+						<value>Where do you people get water from for drinking most of the times?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PipedWaterDwelling-label">
+						<value>Piped water into dwelling</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PipedWaterYard-label">
+						<value>Piped water to yard/plot</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PublicPump-label">
+						<value>Public tap/standpipe</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-Borehole-label">
+						<value>Tubewell/borehole</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-ProtectedDugWell-label">
+						<value>Protected dug well</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-UnprotectedDugWell-label">
+						<value>Unprotected dug well</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-ProtectedSpring-label">
+						<value>Protected spring</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-UnprotectedSpring-label">
+						<value>Unprotected spring</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-Rainwater-label">
+						<value>Rainwater collection</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-BottleWater-label">
+						<value>Bottled water</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-cart-label">
+						<value>Cart with small tank/drum</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-tankertruck-label">
+						<value>Tanker-truck</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-SurfaceWater-label">
+						<value>Surface water (like river, dam, lake, pond, stream, canal, irrigational channels)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-OthersSourceOfDrinkingWater-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-label">
+						<value>Beside drinking, where is the main place you can get water for things like cooking, taking bath, washing hands etc?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PipedWaterDwelling-label">
+						<value>Piped water into dwelling</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PipedWaterYard-label">
+						<value>piped water to yard/plot</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PublicPump-label">
+						<value>Public tap/standpipe</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-Borehole-label">
+						<value>Tubewell/borehole</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-ProtectedDugWell-label">
+						<value>Protected dug well</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-UnprotectedDugWell-label">
+						<value>Unprotected dug well</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-ProtectedSpring-label">
+						<value>Protected spring</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-UnprotectedSpring-label">
+						<value>Unprotected spring</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-Rainwater-label">
+						<value>Rainwater collection</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-BottleWater-label">
+						<value>Bottled water</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-cart-label">
+						<value>Cart with small tank/drum</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-tankertruck-label">
+						<value>Tanker-truck</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-SurfaceWater-label">
+						<value>Surface water (like river, dam, lake, pond, stream, canal, irrigational channels)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-OthersSourceOfDrinkingWater-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-TreatWater-label">
+						<value>Do you put anything in the water to make it more safe to drink?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-TreatWater-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-TreatWater-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-TreatWater-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-label">
+						<value>What do you usually do to make your water more safe to drink?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-constraintMsg">
+						<value>You can't choose DECLINED TO ANSWER with other options.</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Boil-label">
+						<value>Boil</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Chlorine-label">
+						<value>Add Chlorine/bleach</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-WaterFilter-label">
+						<value>Using water filter (ceramic/sand/composite etc)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-SolarDisinfection-label">
+						<value>Solar disinfection (Putting the water in the sun)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-StandAndSettle-label">
+						<value>Let is stand and settle</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-label">
+						<value>Where do you people go to toilet/poo poo most of the times?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-OpenPitLatrine-label">
+						<value>Pit latrine without slab/Open pit</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-Hanging_toilet-label">
+						<value>Hanging toilet/hanging latrine</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-Pit_latrine_with_stab-label">
+						<value>Pit latrine with slab</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-flush_pit_latrine-label">
+						<value>Flush to pit latrine</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-Improved_pit_latrine-label">
+						<value>Ventilated pit latrine</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-Flush_to_septic_tank-label">
+						<value>Flush to septic tank</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-In_the_bush-label">
+						<value>Bush/no facility/field</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-flush_to_sewer_system-label">
+						<value>Flush to piped sewer system</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-composting-label">
+						<value>Composting toilet
+</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-flush_to_somewhere_else-label">
+						<value>Flush to somewhere else</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-bucket_toilet-label">
+						<value>Bucket toilet</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-othersAreaOfToilet-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-flush_dont_know_where-label">
+						<value>Flush, don't know where</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-ToiletPlace-Declined_to_answer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SharedToilet-label">
+						<value>People from other houses go to the same toilet?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SharedToilet-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SharedToilet-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SharedToilet-unknown-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-SharedToilet-888-label">
+						<value>Declined</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-label">
+						<value>When are some of the times you can wash your hands with soap? Any others?[Don't read aloud]</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-constraintMsg">
+						<value>You can't select "Declined To Answer" along with other options</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-CookingFood-label">
+						<value>Before cooking food</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-BeforeEating-label">
+						<value>Before eating</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-BeforeFeedingChild-label">
+						<value>Before feeding a child/baby</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-GivingTaytayWater-label">
+						<value>Before giving tay-tay water</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterCleaningChildButt-label">
+						<value>After cleaning the child's butt</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterChaningBabyDiaper-label">
+						<value>After changing the baby's diaper</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterCleaningChildrenPoopoo-label">
+						<value>After cleaning children poopoo</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterYouPoopoo-label">
+						<value>After you poopoo</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterUsingLatrine-label">
+						<value>After using the latrine</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-OtherForWashingHands-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-OtherConditionForWashingHands-label">
+						<value>Other, please specify:</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-label">
+						<value>[Observe only] Please show me where members of your house can wash their hands most of the times.</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-Observed-label">
+						<value>Observed</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NotInYard-label">
+						<value>Not observed, not in the yard</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NoPermissionGiven-label">
+						<value>Not observed, no permission to see</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NotObservedOtherReason-label">
+						<value>Not observed, other reason(s)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-PlaceOfWashingHand-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HandWashingWaterPresence-label">
+						<value>[Observe] Is there presence of water at the specific place for handwashing?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-WaterAvailable-label">
+						<value>Water is available</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-WaterIsNotAvailable-label">
+						<value>Water is not available</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to Answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-label">
+						<value>[OBSERVE] Record if soap or detergent is present at the specific place for hands washing.</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-SoapBar-label">
+						<value>Soap Bar</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-Detergent-label">
+						<value>Detergent (Powder/liquid/Tile Soap)</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-LiquidSoap-label">
+						<value>Liquid Soap</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-Ashes-label">
+						<value>Ashes/mud/sand</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-None-label">
+						<value>None</value>
+					</text>
+					<text id="GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-label">
+						<value>Do you have any child or baby in this household who is 6 months but less than 2 years?</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B-label">
+						<value>SECTION 1B: Minimum Dietary Diversity Score</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-youngest_child_name-label">
+						<value>What is the child's name?</value>
+					</text>
+					<text id="GRP-Section1B/LABEL-Instruction-label">
+						<value>If there is more than one child who is older than 6 months but less 2 years in the house, ask the following questions about the youngest child
+
+Tell the respondent “I would like to ask you about the types of foods that <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate yesterday during the day and at night.”
+</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-LastMarketDay-label">
+						<value>How many days now since the last market day? [Enter "888" if don't know or declined to answer]</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTaytayWater-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> taken any taytay water?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTaytayWater-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTaytayWater-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTaytayWater-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodGrain-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> eat anything like bread, rice, noodle(idomie), spaghetti, biscuits, porridge, gari, corn, or other food made grains?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodGrain-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodGrain-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodGrain-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTuber-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate any cassava, white potatoes, white yam, eddoes, or other foods made from roots or tubers</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTuber-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTuber-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodTuber-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPumpkin-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like pumpkin, carrots, squash, or sweet potatoes that are yellow or orange inside?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPumpkin-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPumpkin-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPumpkin-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodVegetables-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like cassava leafs, potato greens, collard greens, or any other dark green, leafy vegetables?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodVegetables-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodVegetables-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodVegetables-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMango-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like ripe plum (mango) or pawpaw (papaya)?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMango-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMango-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMango-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFruits-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate any other fruits?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFruits-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFruits-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFruits-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeatOrgan-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like liver, kidney, or other organ meats, or sausage made from those meats?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeatOrgan-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeatOrgan-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeatOrgan-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeat-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like beef, pork, lamb, goat, rabbit, wild game, chicken, duck, other birds, bush, or sausages made from those meats?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeat-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeat-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMeat-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSnail-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like grubs, snails or insects?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSnail-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSnail-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSnail-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodEgg-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate any egg?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodEgg-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodEgg-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodEgg-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFish-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like fresh or dried fish or shellfish?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFish-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFish-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFish-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPea-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like beans, peas, lentils, seeds or nuts?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPea-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPea-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPea-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMilk-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like cheese, yogurt, milk or other food made from animal milk?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMilk-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMilk-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodMilk-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPalmOil-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like red palm oil, palm kernel, or palm butter?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPalmOil-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPalmOil-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodPalmOil-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFat-label">
+						<value>Yesterday during the day and at night <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like other oil, fat or butter?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFat-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFat-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodFat-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSugar-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like sugar, honey or sugary food like sweets or candies?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSugar-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSugar-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSugar-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSpice-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate anything like condiments, spices(pepper), herbs, fish powder, coffee or tea?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSpice-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSpice-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSpice-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodBabyFood-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate any baby food like Nutri Bom, Nutri long Cerelac, Gerber, Hero, or Nestrum?</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodBabyFood-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodBabyFood-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodBabyFood-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSolidFood-label">
+						<value>Yesterday during the day and at night, <output value="/data/GRP-Section1B/LMD-VAL-youngest_child_name" vellum:value="#form/GRP-Section1B/LMD-VAL-youngest_child_name" /> ate any other solid, semi-solid, or soft food? Record all other solid, semi-solid, or soft food that do not fit the food groups above</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSolidFood-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSolidFood-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-FoodSolidFood-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-Section1B/LMD-VAL-NameSolidFood-label">
+						<value>What is the specify solid, semi-solid or soft food that the child ate yesterday?
+[888 = Declined to answer]</value>
+					</text>
+					<text id="GRP-HFIAS-label">
+						<value>SECTION 1C: Household Food Insecurity Access Scale (HFIAS)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FoodSecurity-label">
+						<value>In the past four weeks, did you worry that your household will not have enough food?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FoodSecurity-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FoodSecurity-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FoodSecurity-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Rarely-label">
+						<value>Rarely(One or two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Often-label">
+						<value>Often (more than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LackOfResource-label">
+						<value>In the past four weeks, were you or anybody in your house not able to eat the kinds of foods you wanted to eat but no way because of money or something like that?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LackOfResource-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LackOfResource-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LackOfResource-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Rarely-label">
+						<value>Rarely ( One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Often-label">
+						<value>Often ( More than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-label">
+						<value>In the past four weeks, did you or anybody in your house has to eat fewer types of food because there was no money or something like that?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Rarely-label">
+						<value>Rarely(one or two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Often-label">
+						<value>Often(more than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-UnWantedFoodEating-label">
+						<value>In the past four weeks, did you or anybody in your house have to eat some foods that you really did not want to eat because no money or something like that?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-UnWantedFoodEating-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-UnWantedFoodEating-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-UnWantedFoodEating-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Rarely-label">
+						<value>Rarely (One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Often-label">
+						<value>Often (more than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-InsufficientFood-label">
+						<value>In the past four weeks, did you or anybody in your house have to eat a smaller meal than you felt you needed  because there was not enough food?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-InsufficientFood-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-InsufficientFood-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-InsufficientFood-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberInsufficientFood-label">
+						<value>How many times this did happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Rarely-label">
+						<value>Rarely (One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Often-label">
+						<value>Often (More than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FewerMeal-label">
+						<value>In the past four weeks, did you or anybody in your house have to eat fewer meals in a day because there was not enough food?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FewerMeal-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FewerMeal-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-FewerMeal-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Rarely-label">
+						<value>Rarely ( one to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Often-label">
+						<value>Often (more than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NoFoodAtAll-label">
+						<value>In the past four weeks, was there ever no food to eat of any kind in your household because of money or something like that?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NoFoodAtAll-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NoFoodAtAll-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NoFoodAtAll-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Rarely-label">
+						<value>Rarely ( One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Often-label">
+						<value>Often ( More than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-GoToBedHungry-label">
+						<value>In the past four weeks, did you or anybody in your house go to sleep at night hungry because there was not enough food?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-GoToBedHungry-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-GoToBedHungry-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-GoToBedHungry-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Rarely-label">
+						<value>Rarely (One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Often-label">
+						<value>Often (More than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-TotallyNoEating-label">
+						<value>In the past four weeks, did you or anybody in your house go a whole day and night without eating anything because there was not enough food?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-TotallyNoEating-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-TotallyNoEating-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-TotallyNoEating-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-label">
+						<value>How many times did this happen?</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Rarely-label">
+						<value>Rarely (One to two times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Sometimes-label">
+						<value>Sometimes (three to ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Often-label">
+						<value>Often ( More than ten times in the past four weeks)</value>
+					</text>
+					<text id="GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<input vellum:ref="#form/LMD-VAL-EnumeratorID" ref="/data/LMD-VAL-EnumeratorID">
+			<label ref="jr:itext('LMD-VAL-EnumeratorID-label')" />
+			<alert ref="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-ClusterID" ref="/data/LMD-VAL-ClusterID">
+			<label ref="jr:itext('LMD-VAL-ClusterID-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-EnumeratorName" ref="/data/LMD-VAL-EnumeratorName">
+			<label ref="jr:itext('LMD-VAL-EnumeratorName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-CommName" ref="/data/LMD-VAL-CommName">
+			<label ref="jr:itext('LMD-VAL-CommName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-TodayDate" ref="/data/LMD-VAL-TodayDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-TodayDate-label')" />
+		</input>
+		<select1 vellum:ref="#form/LMD-VAL-SurveyLanguage" ref="/data/LMD-VAL-SurveyLanguage">
+			<label ref="jr:itext('LMD-VAL-SurveyLanguage-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-english-label')" />
+				<value>english</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-krahn-label')" />
+				<value>krahn</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-kpelle-label')" />
+				<value>kpelle</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-bassa-label')" />
+				<value>bassa</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-franch-label')" />
+				<value>franch</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-SurveyLanguage-other-label')" />
+				<value>other</value>
+			</item>
+		</select1>
+		<input vellum:ref="#form/LMD-VAL-OtherLanguage" ref="/data/LMD-VAL-OtherLanguage">
+			<label ref="jr:itext('LMD-VAL-OtherLanguage-label')" />
+		</input>
+		<trigger vellum:ref="#form/LABEL-Intro" ref="/data/LABEL-Intro" appearance="minimal">
+			<label ref="jr:itext('LABEL-Intro-label')" />
+		</trigger>
+		<select1 vellum:ref="#form/LMD-VAL-household_member_present" ref="/data/LMD-VAL-household_member_present">
+			<label ref="jr:itext('LMD-VAL-household_member_present-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-household_member_present-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-household_member_present-0-label')" />
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 vellum:ref="#form/LMD-VAL-ChildrenBelowFiveYears" ref="/data/LMD-VAL-ChildrenBelowFiveYears">
+			<label ref="jr:itext('LMD-VAL-ChildrenBelowFiveYears-label')" />
+			<item>
+				<label ref="jr:itext('LMD-VAL-ChildrenBelowFiveYears-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('LMD-VAL-ChildrenBelowFiveYears-2-label')" />
+				<value>2</value>
+			</item>
+		</select1>
+		<trigger vellum:ref="#form/LABEL-1AInstruction" ref="/data/LABEL-1AInstruction" appearance="minimal">
+			<label ref="jr:itext('LABEL-1AInstruction-label')" />
+		</trigger>
+		<input vellum:ref="#form/LMD-VAL-NumberOfHouseholdMember" ref="/data/LMD-VAL-NumberOfHouseholdMember">
+			<label ref="jr:itext('LMD-VAL-NumberOfHouseholdMember-label')" />
+		</input>
+		<group vellum:ref="#form/GRP-Section1A" ref="/data/GRP-Section1A">
+			<label ref="jr:itext('GRP-Section1A-label')" />
+			<group>
+				<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP-label')" />
+				<repeat vellum:jr__count="#form/LMD-VAL-NumberOfHouseholdMember" jr:count="/data/LMD-VAL-NumberOfHouseholdMember" jr:noAddRemove="true()" vellum:nodeset="#form/GRP-Section1A/LMD-RPT-GROUP" nodeset="/data/GRP-Section1A/LMD-RPT-GROUP">
+					<input vellum:ref="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName" ref="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName">
+						<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-FirstName-label')" />
+					</input>
+					<select1 vellum:ref="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex" ref="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex">
+						<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-label')" />
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-male-label')" />
+							<value>male</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-female-label')" />
+							<value>female</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Sex-Declined_to_answer-label')" />
+							<value>Declined_to_answer</value>
+						</item>
+					</select1>
+					<input vellum:ref="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age" ref="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age">
+						<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-VAL-Age-label')" />
+					</input>
+					<select1 vellum:ref="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember" ref="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember">
+						<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-label')" />
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-1-label')" />
+							<value>1</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-0-label')" />
+							<value>0</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-RegularHouseMember-888-label')" />
+							<value>888</value>
+						</item>
+					</select1>
+					<select1 vellum:ref="#form/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse" ref="/data/GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse">
+						<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-label')" />
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-1-label')" />
+							<value>1</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-0-label')" />
+							<value>0</value>
+						</item>
+						<item>
+							<label ref="jr:itext('GRP-Section1A/LMD-RPT-GROUP/LMD-RPT-SleptInHouse-888-label')" />
+							<value>888</value>
+						</item>
+					</select1>
+				</repeat>
+			</group>
+			<select vellum:ref="#form/GRP-Section1A/LMD-CHK-HouseholdBasicNeed" ref="/data/GRP-Section1A/LMD-CHK-HouseholdBasicNeed">
+				<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-label')" />
+				<alert ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Generator-label')" />
+					<value>LMD-OPT-Generator</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Cupboard-label')" />
+					<value>LMD-OPT-Cupboard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Chairs-label')" />
+					<value>LMD-OPT-Chairs</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-Television-label')" />
+					<value>LMD-OPT-Television</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-none-label')" />
+					<value>LMD-OPT-none</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HouseholdBasicNeed-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-WatchOwner" ref="/data/GRP-Section1A/LMD-VAL-WatchOwner">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-WatchOwner-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-WatchOwner-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-WatchOwner-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-WatchOwner-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-BankAccount" ref="/data/GRP-Section1A/LMD-VAL-BankAccount">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-BankAccount-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-BankAccount-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-BankAccount-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-BankAccount-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-SourceOfCurrent" ref="/data/GRP-Section1A/LMD-VAL-SourceOfCurrent">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfCurrent-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfCurrent-electricity-label')" />
+					<value>electricity</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfCurrent-other_source_of_current-label')" />
+					<value>other_source_of_current</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfCurrent-Declined_to_answer-label')" />
+					<value>Declined_to_answer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-CookingFuel" ref="/data/GRP-Section1A/LMD-VAL-CookingFuel">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-CookingFuel-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-CookingFuel-Charcoal-label')" />
+					<value>Charcoal</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-CookingFuel-wood-label')" />
+					<value>wood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-CookingFuel-others-label')" />
+					<value>others</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-CookingFuel-Declined_to_answer-label')" />
+					<value>Declined_to_answer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-FloorMaterial" ref="/data/GRP-Section1A/LMD-VAL-FloorMaterial">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-FloorMaterial-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-FloorMaterial-EarthorBareGround-label')" />
+					<value>EarthorBareGround</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-FloorMaterial-OthersMaterial-label')" />
+					<value>OthersMaterial</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-FloorMaterial-DeclinedToAnswer-label')" />
+					<value>DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-HouseMaterialForBuilding" ref="/data/GRP-Section1A/LMD-VAL-HouseMaterialForBuilding">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-MudAndSticks-label')" />
+					<value>MudAndSticks</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-OthersMaterForBuilding-label')" />
+					<value>OthersMaterForBuilding</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-HouseMaterialForBuilding-DeclinedToAnswer-label')" />
+					<value>DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater" ref="/data/GRP-Section1A/LMD-VAL-SourceOfDrinkingWater">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PipedWaterDwelling-label')" />
+					<value>PipedWaterDwelling</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PipedWaterYard-label')" />
+					<value>PipedWaterYard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-PublicPump-label')" />
+					<value>PublicPump</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-Borehole-label')" />
+					<value>Borehole</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-ProtectedDugWell-label')" />
+					<value>ProtectedDugWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-UnprotectedDugWell-label')" />
+					<value>UnprotectedDugWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-ProtectedSpring-label')" />
+					<value>ProtectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-UnprotectedSpring-label')" />
+					<value>UnprotectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-Rainwater-label')" />
+					<value>Rainwater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-BottleWater-label')" />
+					<value>BottleWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-cart-label')" />
+					<value>cart</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-tankertruck-label')" />
+					<value>tankertruck</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-SurfaceWater-label')" />
+					<value>SurfaceWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-OthersSourceOfDrinkingWater-label')" />
+					<value>OthersSourceOfDrinkingWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SourceOfDrinkingWater-DeclinedToAnswer-label')" />
+					<value>DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource" ref="/data/GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-OtherSpecifyDrinkingSource-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-NonDrinkingWaterSource" ref="/data/GRP-Section1A/LMD-VAL-NonDrinkingWaterSource">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PipedWaterDwelling-label')" />
+					<value>PipedWaterDwelling</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PipedWaterYard-label')" />
+					<value>PipedWaterYard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-PublicPump-label')" />
+					<value>PublicPump</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-Borehole-label')" />
+					<value>Borehole</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-ProtectedDugWell-label')" />
+					<value>ProtectedDugWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-UnprotectedDugWell-label')" />
+					<value>UnprotectedDugWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-ProtectedSpring-label')" />
+					<value>ProtectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-UnprotectedSpring-label')" />
+					<value>UnprotectedSpring</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-Rainwater-label')" />
+					<value>Rainwater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-BottleWater-label')" />
+					<value>BottleWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-cart-label')" />
+					<value>cart</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-tankertruck-label')" />
+					<value>tankertruck</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-SurfaceWater-label')" />
+					<value>SurfaceWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-OthersSourceOfDrinkingWater-label')" />
+					<value>OthersSourceOfDrinkingWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-NonDrinkingWaterSource-DeclinedToAnswer-label')" />
+					<value>DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-TreatWater" ref="/data/GRP-Section1A/LMD-VAL-TreatWater">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-TreatWater-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-TreatWater-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-TreatWater-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-TreatWater-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-Section1A/LMD-CHK-WaterTreatmentMethod" ref="/data/GRP-Section1A/LMD-CHK-WaterTreatmentMethod">
+				<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-label')" />
+				<alert ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Boil-label')" />
+					<value>LMD-OPT-Boil</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Chlorine-label')" />
+					<value>LMD-OPT-Chlorine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-WaterFilter-label')" />
+					<value>LMD-OPT-WaterFilter</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-SolarDisinfection-label')" />
+					<value>LMD-OPT-SolarDisinfection</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-StandAndSettle-label')" />
+					<value>LMD-OPT-StandAndSettle</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-Other-label')" />
+					<value>LMD-OPT-Other</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-WaterTreatmentMethod-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select>
+			<input vellum:ref="#form/GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify" ref="/data/GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-OtherWaterTreatment_Specify-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-ToiletPlace" ref="/data/GRP-Section1A/LMD-VAL-ToiletPlace">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-OpenPitLatrine-label')" />
+					<value>OpenPitLatrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-Hanging_toilet-label')" />
+					<value>Hanging_toilet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-Pit_latrine_with_stab-label')" />
+					<value>Pit_latrine_with_stab</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-flush_pit_latrine-label')" />
+					<value>flush_pit_latrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-Improved_pit_latrine-label')" />
+					<value>Improved_pit_latrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-Flush_to_septic_tank-label')" />
+					<value>Flush_to_septic_tank</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-In_the_bush-label')" />
+					<value>In_the_bush</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-flush_to_sewer_system-label')" />
+					<value>flush_to_sewer_system</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-composting-label')" />
+					<value>composting</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-flush_to_somewhere_else-label')" />
+					<value>flush_to_somewhere_else</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-bucket_toilet-label')" />
+					<value>bucket_toilet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-othersAreaOfToilet-label')" />
+					<value>othersAreaOfToilet</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-flush_dont_know_where-label')" />
+					<value>flush_dont_know_where</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-ToiletPlace-Declined_to_answer-label')" />
+					<value>Declined_to_answer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-SharedToilet" ref="/data/GRP-Section1A/LMD-VAL-SharedToilet">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-SharedToilet-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SharedToilet-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SharedToilet-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SharedToilet-unknown-label')" />
+					<value>unknown</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-SharedToilet-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-Section1A/LMD-CHK-UsingSoapConditions" ref="/data/GRP-Section1A/LMD-CHK-UsingSoapConditions">
+				<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-label')" />
+				<alert ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-CookingFood-label')" />
+					<value>LMD-OPT-CookingFood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-BeforeEating-label')" />
+					<value>LMD-OPT-BeforeEating</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-BeforeFeedingChild-label')" />
+					<value>LMD-OPT-BeforeFeedingChild</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-GivingTaytayWater-label')" />
+					<value>LMD-OPT-GivingTaytayWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterCleaningChildButt-label')" />
+					<value>LMD-OPT-AfterCleaningChildButt</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterChaningBabyDiaper-label')" />
+					<value>LMD-OPT-AfterChaningBabyDiaper</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterCleaningChildrenPoopoo-label')" />
+					<value>LMD-OPT-AfterCleaningChildrenPoopoo</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterYouPoopoo-label')" />
+					<value>LMD-OPT-AfterYouPoopoo</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-AfterUsingLatrine-label')" />
+					<value>LMD-OPT-AfterUsingLatrine</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-OtherForWashingHands-label')" />
+					<value>LMD-OPT-OtherForWashingHands</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-UsingSoapConditions-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select>
+			<input vellum:ref="#form/GRP-Section1A/LMD-VAL-OtherConditionForWashingHands" ref="/data/GRP-Section1A/LMD-VAL-OtherConditionForWashingHands">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-OtherConditionForWashingHands-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-PlaceOfWashingHand" ref="/data/GRP-Section1A/LMD-VAL-PlaceOfWashingHand">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-Observed-label')" />
+					<value>Observed</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NotInYard-label')" />
+					<value>NotInYard</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NoPermissionGiven-label')" />
+					<value>NoPermissionGiven</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-NotObservedOtherReason-label')" />
+					<value>NotObservedOtherReason</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-PlaceOfWashingHand-DeclinedToAnswer-label')" />
+					<value>DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-CHK-HandWashingWaterPresence" ref="/data/GRP-Section1A/LMD-CHK-HandWashingWaterPresence">
+				<label ref="jr:itext('GRP-Section1A/LMD-CHK-HandWashingWaterPresence-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-WaterAvailable-label')" />
+					<value>LMD-OPT-WaterAvailable</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-WaterIsNotAvailable-label')" />
+					<value>LMD-OPT-WaterIsNotAvailable</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-HandWashingWaterPresence-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-Section1A/LMD-CHK-SoapForHandWashing" ref="/data/GRP-Section1A/LMD-CHK-SoapForHandWashing">
+				<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-SoapBar-label')" />
+					<value>LMD-OPT-SoapBar</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-Detergent-label')" />
+					<value>LMD-OPT-Detergent</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-LiquidSoap-label')" />
+					<value>LMD-OPT-LiquidSoap</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-Ashes-label')" />
+					<value>LMD-OPT-Ashes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-None-label')" />
+					<value>LMD-OPT-None</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-CHK-SoapForHandWashing-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age" ref="/data/GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age">
+				<label ref="jr:itext('GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1A/LMD-VAL-Has_child_of_appropriate_age-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+		</group>
+		<group vellum:ref="#form/GRP-Section1B" ref="/data/GRP-Section1B">
+			<label ref="jr:itext('GRP-Section1B-label')" />
+			<input vellum:ref="#form/GRP-Section1B/LMD-VAL-youngest_child_name" ref="/data/GRP-Section1B/LMD-VAL-youngest_child_name">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-youngest_child_name-label')" />
+			</input>
+			<trigger vellum:ref="#form/GRP-Section1B/LABEL-Instruction" ref="/data/GRP-Section1B/LABEL-Instruction" appearance="minimal">
+				<label ref="jr:itext('GRP-Section1B/LABEL-Instruction-label')" />
+			</trigger>
+			<input vellum:ref="#form/GRP-Section1B/LMD-VAL-LastMarketDay" ref="/data/GRP-Section1B/LMD-VAL-LastMarketDay">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-LastMarketDay-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodTaytayWater" ref="/data/GRP-Section1B/LMD-VAL-FoodTaytayWater">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTaytayWater-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTaytayWater-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTaytayWater-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTaytayWater-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodGrain" ref="/data/GRP-Section1B/LMD-VAL-FoodGrain">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodGrain-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodGrain-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodGrain-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodGrain-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodTuber" ref="/data/GRP-Section1B/LMD-VAL-FoodTuber">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTuber-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTuber-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTuber-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodTuber-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodPumpkin" ref="/data/GRP-Section1B/LMD-VAL-FoodPumpkin">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPumpkin-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPumpkin-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPumpkin-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPumpkin-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodVegetables" ref="/data/GRP-Section1B/LMD-VAL-FoodVegetables">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodVegetables-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodVegetables-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodVegetables-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodVegetables-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodMango" ref="/data/GRP-Section1B/LMD-VAL-FoodMango">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMango-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMango-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMango-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMango-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodFruits" ref="/data/GRP-Section1B/LMD-VAL-FoodFruits">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFruits-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFruits-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFruits-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFruits-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodMeatOrgan" ref="/data/GRP-Section1B/LMD-VAL-FoodMeatOrgan">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeatOrgan-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeatOrgan-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeatOrgan-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeatOrgan-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodMeat" ref="/data/GRP-Section1B/LMD-VAL-FoodMeat">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeat-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeat-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeat-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMeat-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodSnail" ref="/data/GRP-Section1B/LMD-VAL-FoodSnail">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSnail-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSnail-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSnail-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSnail-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodEgg" ref="/data/GRP-Section1B/LMD-VAL-FoodEgg">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodEgg-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodEgg-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodEgg-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodEgg-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodFish" ref="/data/GRP-Section1B/LMD-VAL-FoodFish">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFish-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFish-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFish-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFish-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodPea" ref="/data/GRP-Section1B/LMD-VAL-FoodPea">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPea-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPea-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPea-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPea-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodMilk" ref="/data/GRP-Section1B/LMD-VAL-FoodMilk">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMilk-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMilk-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMilk-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodMilk-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodPalmOil" ref="/data/GRP-Section1B/LMD-VAL-FoodPalmOil">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPalmOil-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPalmOil-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPalmOil-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodPalmOil-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodFat" ref="/data/GRP-Section1B/LMD-VAL-FoodFat">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFat-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFat-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFat-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodFat-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodSugar" ref="/data/GRP-Section1B/LMD-VAL-FoodSugar">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSugar-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSugar-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSugar-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSugar-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodSpice" ref="/data/GRP-Section1B/LMD-VAL-FoodSpice">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSpice-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSpice-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSpice-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSpice-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodBabyFood" ref="/data/GRP-Section1B/LMD-VAL-FoodBabyFood">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodBabyFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodBabyFood-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodBabyFood-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodBabyFood-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-Section1B/LMD-VAL-FoodSolidFood" ref="/data/GRP-Section1B/LMD-VAL-FoodSolidFood">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSolidFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSolidFood-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSolidFood-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-Section1B/LMD-VAL-FoodSolidFood-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-Section1B/LMD-VAL-NameSolidFood" ref="/data/GRP-Section1B/LMD-VAL-NameSolidFood">
+				<label ref="jr:itext('GRP-Section1B/LMD-VAL-NameSolidFood-label')" />
+			</input>
+		</group>
+		<group vellum:ref="#form/GRP-HFIAS" ref="/data/GRP-HFIAS">
+			<label ref="jr:itext('GRP-HFIAS-label')" />
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-FoodSecurity" ref="/data/GRP-HFIAS/LMD-VAL-FoodSecurity">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FoodSecurity-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FoodSecurity-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FoodSecurity-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FoodSecurity-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFoodSecurityIssue-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-LackOfResource" ref="/data/GRP-HFIAS/LMD-VAL-LackOfResource">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LackOfResource-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LackOfResource-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LackOfResource-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LackOfResource-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfLackOfResources" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfLackOfResources">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLackOfResources-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption" ref="/data/GRP-HFIAS/LMD-VAL-LimitedFoodConsumption">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-LimitedFoodConsumption-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfLimitedFoodConsumption-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-UnWantedFoodEating" ref="/data/GRP-HFIAS/LMD-VAL-UnWantedFoodEating">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-UnWantedFoodEating-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-UnWantedFoodEating-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-UnWantedFoodEating-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-UnWantedFoodEating-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating" ref="/data/GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberUnwantedFoodEating-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-InsufficientFood" ref="/data/GRP-HFIAS/LMD-VAL-InsufficientFood">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-InsufficientFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-InsufficientFood-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-InsufficientFood-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-InsufficientFood-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberInsufficientFood" ref="/data/GRP-HFIAS/LMD-VAL-NumberInsufficientFood">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberInsufficientFood-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberInsufficientFood-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-FewerMeal" ref="/data/GRP-HFIAS/LMD-VAL-FewerMeal">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FewerMeal-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FewerMeal-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FewerMeal-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-FewerMeal-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfFewerMeal" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfFewerMeal">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfFewerMeal-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NoFoodAtAll" ref="/data/GRP-HFIAS/LMD-VAL-NoFoodAtAll">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NoFoodAtAll-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NoFoodAtAll-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NoFoodAtAll-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NoFoodAtAll-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfNoFoodAtll-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-GoToBedHungry" ref="/data/GRP-HFIAS/LMD-VAL-GoToBedHungry">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-GoToBedHungry-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-GoToBedHungry-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-GoToBedHungry-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-GoToBedHungry-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfGoToBedHungry-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-TotallyNoEating" ref="/data/GRP-HFIAS/LMD-VAL-TotallyNoEating">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-TotallyNoEating-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-TotallyNoEating-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-TotallyNoEating-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-TotallyNoEating-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating" ref="/data/GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating">
+				<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-label')" />
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Rarely-label')" />
+					<value>Rarely</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Sometimes-label')" />
+					<value>Sometimes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Often-label')" />
+					<value>Often</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-HFIAS/LMD-VAL-NumberOfTotallyNotEating-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>

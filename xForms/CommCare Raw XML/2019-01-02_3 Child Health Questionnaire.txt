@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>3 Child Health Questionnaire</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/8B9AF25F-B54F-4735-826D-F10F9DE100B7" uiVersion="1" version="1" name="3 Child Health Questionnaire">
+					<LMD-DATABASE />
+					<LMD-TABLE />
+					<LMD-VAL-meta_UUID />
+					<LMD-VAL-meta_autoDate />
+					<LMD-VAL-meta_dataEntry_startTime />
+					<LMD-VAL-meta_dataEntry_endTime />
+					<LMD-VAL-meta_dataSource />
+					<LMD-VAL-meta_formVersion />
+					<LMD-VAL-meta_deviceID />
+					<LABEL-Instruction />
+					<LMD-VAL-EnumeratorID />
+					<LMD-VAL-ClusterID />
+					<LMD-VAL-CommName />
+					<LMD-VAL-MotherName />
+					<LMD-VAL-FemaleID />
+					<LMD-VAL-TodayDate />
+					<LMD-VAL-ChildName />
+					<LMD-VAL-ChildDOB />
+					<GRP-AgeOfChild>
+						<LMD-VAL-AgeInMonths />
+						<LMD-VAL-AgeInYears />
+					</GRP-AgeOfChild>
+					<GRP-ChildInformation>
+						<LMD-VAL-ChildGender />
+						<LMD-VAL-SeekChildTreatment />
+						<LMD-VAL-ChildHadDiarrhea />
+						<LMD-CHK-PlaceOfTreatment />
+						<LMD-CHK-PlaceOfTreatment_other />
+						<LMD-CHK-TreatmentType />
+						<LMD-CHK-SourceOfTreatment />
+						<LMD-VAL-EducationFeedingChild />
+						<LMD-VAL-EducationBreastFeedWhileSick />
+						<LMD-CHK-EducationFeedingType />
+						<LMD-VAL-LastSixMonthsGivenVitaminA />
+						<LMD-CHK-MicroNutrientSupplements />
+						<LMD-VAL-days_taken_vitamins_or_powders />
+						<LMD-CHK-ChildMeasurementComm />
+						<LMD-VAL-InfoOnChildGrowth />
+						<LMD-VAL-ReferredAfterMeasurement />
+						<LMD-CHK-ChildMeasurementFacility />
+						<LMD-VAL-ChildGrowInfoFacility />
+						<LMD-VAL-ReferredByFacility />
+						<LMD-VAL-EnrolledInMicronutientsProgram />
+						<LMD-VAL-MicronutrientsProgramDuration />
+						<LMD-VAL-CHAMeasuredChild />
+						<LMD-VAL-CompletedMicronutrientProgram />
+						<LMD-VAL-StillGetingSupplements />
+						<LMD-CHK-FoodSupplementTypeHF />
+						<LMD-CHK-FoodSupplementTypeComm />
+						<LMD-VAL-ChildHadDewormingTreatment />
+						<LMD-VAL-ChildMainCaregiver />
+						<LMD-VAL-ChildMainCaregiver_Other />
+						<LMD-VAL-ChildRealMotherPresent />
+						<Label-Consent_Mother_Measurement />
+						<LMD-VAL-RealMotherWeight />
+						<LMD-VAL-RealMotherHeight />
+						<Label-Consent_Child_Measurement />
+						<LMD-VAL-ChildHasOedema />
+						<LMD-VAL-ChildWeight />
+						<LMD-VAL-ChildHeightMeasurementMethod />
+						<LMD-VAL-ChildHeight />
+						<LMD-VAL-MUACColorReading />
+						<LMD-VAL-MUACNumberReading />
+						<LMD-VAL-referred_respondent_child />
+					</GRP-ChildInformation>
+					<LABEL-overAge />
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/LMD-DATABASE" nodeset="/data/LMD-DATABASE" calculate="lastmile_upload" />
+			<bind vellum:nodeset="#form/LMD-TABLE" nodeset="/data/LMD-TABLE" calculate="odk_LMHNutritionSurveyChildHealthQuestionnaire" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_UUID" nodeset="/data/LMD-VAL-meta_UUID" calculate="uuid()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_autoDate" nodeset="/data/LMD-VAL-meta_autoDate" calculate="now()" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_startTime" nodeset="/data/LMD-VAL-meta_dataEntry_startTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataEntry_endTime" nodeset="/data/LMD-VAL-meta_dataEntry_endTime" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_dataSource" nodeset="/data/LMD-VAL-meta_dataSource" calculate="&quot;odk&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_formVersion" nodeset="/data/LMD-VAL-meta_formVersion" calculate="&quot;1.0.1&quot;" />
+			<bind vellum:nodeset="#form/LMD-VAL-meta_deviceID" nodeset="/data/LMD-VAL-meta_deviceID" calculate="property('deviceid')" />
+			<bind vellum:nodeset="#form/LABEL-Instruction" nodeset="/data/LABEL-Instruction" />
+			<bind vellum:nodeset="#form/LMD-VAL-EnumeratorID" nodeset="/data/LMD-VAL-EnumeratorID" type="xsd:int" constraint="regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ClusterID" nodeset="/data/LMD-VAL-ClusterID" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-CommName" nodeset="/data/LMD-VAL-CommName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-MotherName" nodeset="/data/LMD-VAL-MotherName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-FemaleID" nodeset="/data/LMD-VAL-FemaleID" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-TodayDate" nodeset="/data/LMD-VAL-TodayDate" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ChildName" nodeset="/data/LMD-VAL-ChildName" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/LMD-VAL-ChildDOB" nodeset="/data/LMD-VAL-ChildDOB" type="xsd:date" required="true()" />
+			<bind vellum:nodeset="#form/GRP-AgeOfChild" nodeset="/data/GRP-AgeOfChild" />
+			<bind vellum:nodeset="#form/GRP-AgeOfChild/LMD-VAL-AgeInMonths" nodeset="/data/GRP-AgeOfChild/LMD-VAL-AgeInMonths" type="xsd:int" constraint="(. &lt;= 11) and regex(., '^[0-9]+$')" jr:constraintMsg="jr:itext('GRP-AgeOfChild/LMD-VAL-AgeInMonths-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-AgeOfChild/LMD-VAL-AgeInYears" nodeset="/data/GRP-AgeOfChild/LMD-VAL-AgeInYears" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation" nodeset="/data/GRP-ChildInformation" vellum:relevant="#form/GRP-AgeOfChild/LMD-VAL-AgeInYears &lt;= 5" relevant="/data/GRP-AgeOfChild/LMD-VAL-AgeInYears &lt;= 5" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildGender" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildGender" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-SeekChildTreatment" nodeset="/data/GRP-ChildInformation/LMD-VAL-SeekChildTreatment" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment" nodeset="/data/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment" constraint="not(selected(., 'LMD-OPT-NoResponse')) and not(selected(., 'LMD-OPT-DontKnow')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-constraintMsg')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other" nodeset="/data/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other" type="xsd:string" vellum:relevant="selected(#form/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment, 'LMD-OPT-Other')" relevant="selected(/data/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment, 'LMD-OPT-Other')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-TreatmentType" nodeset="/data/GRP-ChildInformation/LMD-CHK-TreatmentType" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-SourceOfTreatment" nodeset="/data/GRP-ChildInformation/LMD-CHK-SourceOfTreatment" constraint="not(selected(., 'LMD-OPT-DeclinedToAnswer')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-constraintMsg')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-EducationFeedingChild" nodeset="/data/GRP-ChildInformation/LMD-VAL-EducationFeedingChild" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick" nodeset="/data/GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1' or #form/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1' or /data/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-EducationFeedingType" nodeset="/data/GRP-ChildInformation/LMD-CHK-EducationFeedingType" constraint="not(selected(., 'LMD-OPT-None')) and not(selected(., 'LMD-OPT-NoResponse')) and not(selected(., 'LMD-OPT-DontKnow')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-constraintMsg')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1' or #form/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea = '1' or /data/GRP-ChildInformation/LMD-VAL-SeekChildTreatment = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA" nodeset="/data/GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements" nodeset="/data/GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements" constraint="not(selected(., 'LMD-OPT-DidNotTake')) and not(selected(., 'LMD-OPT-NoResponse')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders" nodeset="/data/GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm" nodeset="/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm" constraint="not(selected(., 'LMD-OPT-NoMeasurementComm')) and not(selected(., 'LMD-OPT-DontKnowComm')) and not(selected(., 'LMD-OPT-NoResponseComm')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth" nodeset="/data/GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth" relevant="selected(LMD-CHK-ChildMeasurementComm, 'LMD-OPT-ChildHeightComm') or selected(LMD-CHK-ChildMeasurementComm, 'LMD-OPT-ChildWeightComm') or selected(LMD-CHK-ChildMeasurementComm, 'LMD-OPT-MUAC')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement" nodeset="/data/GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement" vellum:relevant="selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-Height') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-Weight') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-MUAC')" relevant="selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-Height') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-Weight') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm, 'LMD-OPT-MUAC')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility" nodeset="/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility" constraint="not(selected(., 'LMD-OPT-NoFacility')) and not(selected(., 'LMD-OPT-DontKnowFacility')) and not(selected(., 'LMD-OPT-NoResponseFacitlity')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-constraintMsg')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility" vellum:relevant="selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildHeightFacility') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildWeightFacilty') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-MUACFacility')" relevant="selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildHeightFacility') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildWeightFacilty') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-MUACFacility')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ReferredByFacility" nodeset="/data/GRP-ChildInformation/LMD-VAL-ReferredByFacility" vellum:relevant="selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildHeightFacility') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildWeightFacilty') or selected(#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-MUACFacility')" relevant="selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildHeightFacility') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-ChildWeightFacilty') or selected(/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility, 'LMD-OPT-MUACFacility')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram" nodeset="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration" nodeset="/data/GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration" type="xsd:int" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-CHAMeasuredChild" nodeset="/data/GRP-ChildInformation/LMD-VAL-CHAMeasuredChild" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram" nodeset="/data/GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-StillGetingSupplements" nodeset="/data/GRP-ChildInformation/LMD-VAL-StillGetingSupplements" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF" nodeset="/data/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF" constraint="not(selected(., 'LMD-OPT-DontKnowHF')) and not(selected(., 'LMD-OPT-NoResponseHF')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-constraintMsg')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm" nodeset="/data/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm" constraint="not(selected(., 'LMD-OPT-DontKnowComm')) and not(selected(., 'LMD-OPT-NoResponseComm')) or count-selected(.) &lt; 2" jr:constraintMsg="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-constraintMsg')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other" type="xsd:string" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver = 'other'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver = 'other'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/Label-Consent_Mother_Measurement" nodeset="/data/GRP-ChildInformation/Label-Consent_Mother_Measurement" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-RealMotherWeight" nodeset="/data/GRP-ChildInformation/LMD-VAL-RealMotherWeight" type="xsd:int" constraint="regex(., '^[0-9]+$')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-RealMotherHeight" nodeset="/data/GRP-ChildInformation/LMD-VAL-RealMotherHeight" type="xsd:int" constraint="regex(., '^[0-9]+$')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent = '1'" relevant="/data/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent = '1'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/Label-Consent_Child_Measurement" nodeset="/data/GRP-ChildInformation/Label-Consent_Child_Measurement" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildHasOedema" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildHasOedema" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildWeight" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildWeight" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-ChildHeight" nodeset="/data/GRP-ChildInformation/LMD-VAL-ChildHeight" type="xsd:int" constraint="regex(., '^[0-9]+$')" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-MUACColorReading" nodeset="/data/GRP-ChildInformation/LMD-VAL-MUACColorReading" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-MUACNumberReading" nodeset="/data/GRP-ChildInformation/LMD-VAL-MUACNumberReading" type="xsd:int" constraint="regex(., '^[0-9]+$')" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-MUACColorReading != 'childUnder6Months' and #form/GRP-ChildInformation/LMD-VAL-MUACColorReading != '888'" relevant="/data/GRP-ChildInformation/LMD-VAL-MUACColorReading != 'childUnder6Months' and /data/GRP-ChildInformation/LMD-VAL-MUACColorReading != '888'" required="true()" />
+			<bind vellum:nodeset="#form/GRP-ChildInformation/LMD-VAL-referred_respondent_child" nodeset="/data/GRP-ChildInformation/LMD-VAL-referred_respondent_child" vellum:relevant="#form/GRP-ChildInformation/LMD-VAL-MUACColorReading = 'Red' or #form/GRP-ChildInformation/LMD-VAL-MUACColorReading = 'Yellow'" relevant="/data/GRP-ChildInformation/LMD-VAL-MUACColorReading = 'Red' or /data/GRP-ChildInformation/LMD-VAL-MUACColorReading = 'Yellow'" required="true()" />
+			<bind vellum:nodeset="#form/LABEL-overAge" nodeset="/data/LABEL-overAge" vellum:relevant="#form/GRP-AgeOfChild/LMD-VAL-AgeInYears &gt; 5 and #form/GRP-AgeOfChild/LMD-VAL-AgeInYears != 888" relevant="/data/GRP-AgeOfChild/LMD-VAL-AgeInYears &gt; 5 and /data/GRP-AgeOfChild/LMD-VAL-AgeInYears != 888" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="LABEL-Instruction-label">
+						<value>Complete this form for every child under the age of 5. Consent **MUST** be given for child measurements by parent or guardian.
+
+Please provide respondent with a consent form. Do not complete this survey without consent first.</value>
+						<value form="markdown">Complete this form for every child under the age of 5. Consent **MUST** be given for child measurements by parent or guardian.
+
+Please provide respondent with a consent form. Do not complete this survey without consent first.</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorID-label">
+						<value>Enumerator ID:</value>
+					</text>
+					<text id="LMD-VAL-EnumeratorID-constraintMsg">
+						<value>ID Number MUST be greater than zero</value>
+					</text>
+					<text id="LMD-VAL-ClusterID-label">
+						<value>Cluster ID:</value>
+					</text>
+					<text id="LMD-VAL-CommName-label">
+						<value>Community Name:</value>
+					</text>
+					<text id="LMD-VAL-MotherName-label">
+						<value>Mother's Name:</value>
+					</text>
+					<text id="LMD-VAL-FemaleID-label">
+						<value>Mother's Female ID:</value>
+					</text>
+					<text id="LMD-VAL-TodayDate-label">
+						<value>Today's Date:</value>
+					</text>
+					<text id="LMD-VAL-ChildName-label">
+						<value>Child Name:</value>
+					</text>
+					<text id="LMD-VAL-ChildDOB-label">
+						<value><output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s Date of Birth:</value>
+					</text>
+					<text id="GRP-AgeOfChild-label">
+						<value>How old is <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />?
+(888 for decline to answer)</value>
+					</text>
+					<text id="GRP-AgeOfChild/LMD-VAL-AgeInMonths-label">
+						<value>Months:</value>
+					</text>
+					<text id="GRP-AgeOfChild/LMD-VAL-AgeInMonths-constraintMsg">
+						<value>Months should be less than 12</value>
+					</text>
+					<text id="GRP-AgeOfChild/LMD-VAL-AgeInYears-label">
+						<value>Years:</value>
+					</text>
+					<text id="GRP-ChildInformation-label">
+						<value>Child Health Section 3:</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGender-label">
+						<value><output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s gender:</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGender-male-label">
+						<value>Male</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGender-female-label">
+						<value>Female</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGender-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-SeekChildTreatment-label">
+						<value>In the last 2 weeks, did you ask for advice or treatment from anyone or anywhere because <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> was sick? </value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-SeekChildTreatment-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-SeekChildTreatment-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-SeekChildTreatment-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-label">
+						<value>Has <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> had diarrhea in the last 2 weeks? </value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-label">
+						<value>[Multiple: Do not read choices] Where did you seek advice or treatment ? Anywhere else?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-constraintMsg">
+						<value>You can't choose No RESPONSE or DON'T KNOW with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-NationalHospitalCenter-label">
+						<value>National Hospital Center</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PublicClinic-label">
+						<value>Health and Social Services Center (public)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-RegionalHospitalCenter-label">
+						<value>Regional Hospital Center</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MedicalCenter-label">
+						<value>Medical Center (public)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MedicalCenterWithSurgicalUnit-label">
+						<value>Medical Center with Surgery Unit (public)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CHA-label">
+						<value>Community Health Assistant or Volunteer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MobileClinic-label">
+						<value>Mobile Clinic (private)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PrivateClinic-label">
+						<value>Private Hospital or Clinic</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-Pharmacy-label">
+						<value>Pharmacy</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PrivateDoctor-label">
+						<value>Private Doctor</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CommHealthAgent-label">
+						<value>Health Agent from community</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-StoreOrMobileSeller-label">
+						<value>Store/Market/Supermarket/mobile sellers</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CountryDoctor-label">
+						<value>Country Doctor</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-Other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-DontKnow-label">
+						<value>Don't Know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-NoResponse-label">
+						<value>No Response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-label">
+						<value>Was <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> given any of the following at any time since <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> started having the diarrhea?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-FluidMadeFromORS-label">
+						<value>A fluid made from a special packet called ORS?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-PrePackagedORS-label">
+						<value>A pre-packaged ORS liquid?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-GOLRecommendedHomemadeFluid-label">
+						<value>A government recommended homemade fluid?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-ZincTabletorSyrup-label">
+						<value>Zinc tablets or syrup?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-Unknown-label">
+						<value>Do not know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-label">
+						<value>From where you got the treament?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-constraintMsg">
+						<value>You can't choose DECLINED with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-ClinicOrFacility-label">
+						<value>Clinic/facility</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-CHA-label">
+						<value>CHA</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-gCHV-label">
+						<value>gCHV</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-Drugstore-label">
+						<value>Drugstore</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-BlackBagger-label">
+						<value>Tablet man/black bagger</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-CountryDoctor-label">
+						<value>Country Doctor</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-DeclinedToAnswer-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationFeedingChild-label">
+						<value>During this visit, did the health provider talk to you about feeding your sick child?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationFeedingChild-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationFeedingChild-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationFeedingChild-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationFeedingChild-888-label">
+						<value>Declined</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-label">
+						<value>During this visit, did the health provider or Community Health Assistant talk to you about continuing to give the baby taytay water even when the baby is sick?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-No-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Not_giving_tayatay-label">
+						<value>Not giving child taytay water </value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Unknown-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-label">
+						<value>What did the health provider tell you about feeding your sick child? [Do not read aloud; check all that the inidividually spontaneously list]</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-constraintMsg">
+						<value>You can't choose NONE, DO NOT KNOW, or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-GiveZinc-label">
+						<value>Give the child zinc</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-AdministerORS-label">
+						<value>Administer ORS</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-ContinueTaytayWater-label">
+						<value>Continue giving taytay water</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-FrequentWater-label">
+						<value>More frequent giving taytay water</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-GiveTaytayOnDemand-label">
+						<value>Giving taytay water on demand</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-OtherLiquids-label">
+						<value>More other liquids</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-MoreFood-label">
+						<value>More food</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-LessFood-label">
+						<value>Less Food</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-PatientlyFeedToIncreaseAppetite-label">
+						<value>Patiently feeding to increase appetitie</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-SmallMeal-label">
+						<value>Small frequent meals</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-PorridgeFood-label">
+						<value>Simple foods (porridge, fruits)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-OptimalHygiencePractice-label">
+						<value>Optimal Hygiene practices</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-None-label">
+						<value>None of the above</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-DontKnow-label">
+						<value>Do not know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-NoResponse-label">
+						<value>No Response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-label">
+						<value>In the last six months, was <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> given a vitamin A dose like this [show common types of ampules]?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-label">
+						<value>In the last 30 days, did <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> ever take any of these micronutrient supplements or powder? [Show common pills, powder packets, select all that apply]  </value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-constraintMsg">
+						<value>You can't choose NO or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-MicronutrientPowder-label">
+						<value>Micronutient powder (Sachet)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-OtherSupplement-label">
+						<value>Other multivitamin supplement</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-DidNotTake-label">
+						<value>No, did not take</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-Unknown-label">
+						<value>Don't know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-Declined-label">
+						<value>Declined to Answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders-label">
+						<value>For how many days in the last 30 days did <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> take the vitamins or powders?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-label">
+						<value>[Multiple: Read aloud] In the last 30 days, has a Community Health Assistant measured <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s height, weight or arm (MUAC) while in the COMMUNITY?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-constraintMsg">
+						<value>You can't choose NO MEASUREMENT, DON'T KNOW or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-ChildHeightComm-label">
+						<value>Height</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-ChildWeightComm-label">
+						<value>Weight</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-MUAC-label">
+						<value>MUAC</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-NoMeasurementComm-label">
+						<value>No, never measured</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-DontKnowComm-label">
+						<value>Don't Know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-Declined-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-label">
+						<value>What did they tell you about your child's growth?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-GrowingWell-label">
+						<value>Growing well</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NotGrowingWell-label">
+						<value>Not growing well</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-Malnourished-label">
+						<value>Malnourished</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NotMalnourished-label">
+						<value>Not malnourished</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-DontKnow-label">
+						<value>Do not know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NoResponse-label">
+						<value>No response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-label">
+						<value>After <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> was measured, were you referred to another facility or health worker?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-label">
+						<value>[Mulitple. Read aloud] In the last 30 days, has a health provider measured <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s height, weight or arm (MUAC) at the FACILITY?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-constraintMsg">
+						<value>You can't choose NO, DON'T KNOW or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-ChildHeightFacility-label">
+						<value>Height</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-ChildWeightFacilty-label">
+						<value>Weight</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-MUACFacility-label">
+						<value>MUAC</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-NoFacility-label">
+						<value>No, never measured</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-DontKnow-label">
+						<value>Don't know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-Declined-label">
+						<value>Declined to asnwer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-label">
+						<value>What did they tell you about child's growth?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-GrowingWellFaciltiy-label">
+						<value>Growing well</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-NotGrowingWellFacility-label">
+						<value>Not growing well</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-DontKnowFacility-label">
+						<value>Do not Know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-NoResponseFacility-label">
+						<value>No Response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredByFacility-label">
+						<value>After <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> was measured in the facility, were you referred to a another facility or health worker?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredByFacility-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredByFacility-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredByFacility-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ReferredByFacility-888-label">
+						<value>No response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-label">
+						<value>Has <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />  been enrolled in a program at health facility or in the community that provides food or special food supplements in the last year?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-888-label">
+						<value>No response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration-label">
+						<value>For how many weeks was <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> part of this special program?
+(888 = declined to answer)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-label">
+						<value>While in the program, did a CHA ever measure <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s height, weight, or arm in the community?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-label">
+						<value>Did <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> graduate form the program?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-StillEnrolled-label">
+						<value>Still enrolled</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-StillGetingSupplements-label">
+						<value>Is <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> still receiving the food or special food supplements?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-StillGetingSupplements-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-StillGetingSupplements-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-StillGetingSupplements-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-StillGetingSupplements-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-label">
+						<value>What kind of food or special food supplement did <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> receive from the HEALTH FACILITY?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-constraintMsg">
+						<value>You can't choose DON'T KNOW or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-PlumpyProductHF-label">
+						<value>RUTF/Plumpy's product (packaged peanut-paste)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-F100MilkHF-label">
+						<value>F75 or F100 milk</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-SpecialFlourHF-label">
+						<value>Special flour (Corn Soy Blend/CSB or others with added vitamins)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FoodBasketHF-label">
+						<value>Food Basket with mix of products (example: rice, oil, beans)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FortifiedGariHF-label">
+						<value>Fortified Gari</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FormulaMilkHF-label">
+						<value>Formula milk for the baby</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-OtherHF-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-DontKnowHF-label">
+						<value>Don't know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-NoResponseHF-label">
+						<value>No response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-label">
+						<value>What kind of food or special food supplement did <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> receive from within the COMMUNITY? 
+</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-constraintMsg">
+						<value>You can't choose DON'T KNOW or NO RESPONSE with other options</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-PlumpyProductComm-label">
+						<value>RUTF/Plumpy' product (packaged peanut-paste)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-F100MilkComm-label">
+						<value>F75 OR F100 milk</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-SpecialFlourComm-label">
+						<value>Special flour (Corn Soy Blend/CSB or others with added vitamins)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FoodBasketComm-label">
+						<value>Food Basket with mix of products (for example: rice, oil, beans)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FortifiedGariComm-label">
+						<value>Fortified Gari</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FormulaMilkComm-label">
+						<value>Formula milk for the baby</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-OtherComm-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-DontKnowComm-label">
+						<value>Don't know</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-NoResponseComm-label">
+						<value>No response</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-label">
+						<value>Has <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> received mebendazole deworming treatment or worm tablet?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-999-label">
+						<value>Unknown</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-label">
+						<value>Who is the main person that taking care of the child?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Mother-label">
+						<value>Mother</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Father-label">
+						<value>Father</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Aunt-label">
+						<value>Aunt</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-other-label">
+						<value>Other</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other-label">
+						<value>Other:</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-label">
+						<value>Is <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" />'s real mother here for measurement?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/Label-Consent_Mother_Measurement-label">
+						<value>Please provide the respondent with a consent form to take the MOTHER'S measurements. Do not complete this survey without consent first</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-RealMotherWeight-label">
+						<value>Please record the weight of the biological mother (in kg).
+(888 = declined to take measurement)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-RealMotherHeight-label">
+						<value>Please record the height of the biological mother (in centimeters).
+(888 = declined to take measurement)</value>
+					</text>
+					<text id="GRP-ChildInformation/Label-Consent_Child_Measurement-label">
+						<value>Please provide the respondent with a consent form to take the CHILD'S measurements. Do not complete this survey without consent first</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHasOedema-label">
+						<value>Does <output value="/data/LMD-VAL-ChildName" vellum:value="#form/LMD-VAL-ChildName" /> have oedema?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHasOedema-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHasOedema-0-label">
+						<value>No</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHasOedema-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildWeight-label">
+						<value>Please record the weight of the child (in kg).
+(888 = declined to take measurement)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-label">
+						<value>Children age 0 to 24 months should have their height measured while laying down. Children older than 24 months should have their height measured while standing, unless they are too sick or refuse to stand. How will you record the height of the child?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-Standing-label">
+						<value>Standing</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-Laying-label">
+						<value>Laying</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-declined_measurement-label">
+						<value>Declined measurement</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-ChildHeight-label">
+						<value>Please record the height of the child ( in centimeters)
+(888 = declined to take measurement)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-label">
+						<value>Please perform a MUAC. What is the color of the reading (if child &gt; 6 months)?</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-Red-label">
+						<value>Red</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-Yellow-label">
+						<value>Yellow</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-Green-label">
+						<value>Green</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-childUnder6Months-label">
+						<value>Under 6 months old</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACColorReading-888-label">
+						<value>Declined to answer</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-MUACNumberReading-label">
+						<value>What is the number of the MUAC reading (in millimeters)?
+(888 = declined to take measurement)</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-referred_respondent_child-label">
+						<value>Since the child MUAC result is yellow or red, the child should be referred to the CHA or health facility. Explain the child’s result using the provided script and referral form.</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-referred_respondent_child-1-label">
+						<value>Yes, I referred to the facility</value>
+					</text>
+					<text id="GRP-ChildInformation/LMD-VAL-referred_respondent_child-0-label">
+						<value>No, I did not refer to the facility</value>
+					</text>
+					<text id="LABEL-overAge-label">
+						<value>The child is older than 5 years old. Do not conduct the survey.</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<trigger vellum:ref="#form/LABEL-Instruction" ref="/data/LABEL-Instruction" appearance="minimal">
+			<label ref="jr:itext('LABEL-Instruction-label')" />
+		</trigger>
+		<input vellum:ref="#form/LMD-VAL-EnumeratorID" ref="/data/LMD-VAL-EnumeratorID">
+			<label ref="jr:itext('LMD-VAL-EnumeratorID-label')" />
+			<alert ref="jr:itext('LMD-VAL-EnumeratorID-constraintMsg')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-ClusterID" ref="/data/LMD-VAL-ClusterID">
+			<label ref="jr:itext('LMD-VAL-ClusterID-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-CommName" ref="/data/LMD-VAL-CommName">
+			<label ref="jr:itext('LMD-VAL-CommName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-MotherName" ref="/data/LMD-VAL-MotherName">
+			<label ref="jr:itext('LMD-VAL-MotherName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-FemaleID" ref="/data/LMD-VAL-FemaleID">
+			<label ref="jr:itext('LMD-VAL-FemaleID-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-TodayDate" ref="/data/LMD-VAL-TodayDate" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-TodayDate-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-ChildName" ref="/data/LMD-VAL-ChildName">
+			<label ref="jr:itext('LMD-VAL-ChildName-label')" />
+		</input>
+		<input vellum:ref="#form/LMD-VAL-ChildDOB" ref="/data/LMD-VAL-ChildDOB" appearance="no-calendar">
+			<label ref="jr:itext('LMD-VAL-ChildDOB-label')" />
+		</input>
+		<group vellum:ref="#form/GRP-AgeOfChild" ref="/data/GRP-AgeOfChild" appearance="field-list">
+			<label ref="jr:itext('GRP-AgeOfChild-label')" />
+			<input vellum:ref="#form/GRP-AgeOfChild/LMD-VAL-AgeInMonths" ref="/data/GRP-AgeOfChild/LMD-VAL-AgeInMonths">
+				<label ref="jr:itext('GRP-AgeOfChild/LMD-VAL-AgeInMonths-label')" />
+				<alert ref="jr:itext('GRP-AgeOfChild/LMD-VAL-AgeInMonths-constraintMsg')" />
+			</input>
+			<input vellum:ref="#form/GRP-AgeOfChild/LMD-VAL-AgeInYears" ref="/data/GRP-AgeOfChild/LMD-VAL-AgeInYears">
+				<label ref="jr:itext('GRP-AgeOfChild/LMD-VAL-AgeInYears-label')" />
+			</input>
+		</group>
+		<group vellum:ref="#form/GRP-ChildInformation" ref="/data/GRP-ChildInformation">
+			<label ref="jr:itext('GRP-ChildInformation-label')" />
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildGender" ref="/data/GRP-ChildInformation/LMD-VAL-ChildGender">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGender-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGender-male-label')" />
+					<value>male</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGender-female-label')" />
+					<value>female</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGender-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-SeekChildTreatment" ref="/data/GRP-ChildInformation/LMD-VAL-SeekChildTreatment">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-SeekChildTreatment-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-SeekChildTreatment-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-SeekChildTreatment-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-SeekChildTreatment-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea" ref="/data/GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDiarrhea-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment" ref="/data/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-NationalHospitalCenter-label')" />
+					<value>LMD-OPT-NationalHospitalCenter</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PublicClinic-label')" />
+					<value>LMD-OPT-PublicClinic</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-RegionalHospitalCenter-label')" />
+					<value>LMD-OPT-RegionalHospitalCenter</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MedicalCenter-label')" />
+					<value>LMD-OPT-MedicalCenter</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MedicalCenterWithSurgicalUnit-label')" />
+					<value>LMD-OPT-MedicalCenterWithSurgicalUnit</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CHA-label')" />
+					<value>LMD-OPT-CHA</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-MobileClinic-label')" />
+					<value>LMD-OPT-MobileClinic</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PrivateClinic-label')" />
+					<value>LMD-OPT-PrivateClinic</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-Pharmacy-label')" />
+					<value>LMD-OPT-Pharmacy</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-PrivateDoctor-label')" />
+					<value>LMD-OPT-PrivateDoctor</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CommHealthAgent-label')" />
+					<value>LMD-OPT-CommHealthAgent</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-StoreOrMobileSeller-label')" />
+					<value>LMD-OPT-StoreOrMobileSeller</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-CountryDoctor-label')" />
+					<value>LMD-OPT-CountryDoctor</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-Other-label')" />
+					<value>LMD-OPT-Other</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-DontKnow-label')" />
+					<value>LMD-OPT-DontKnow</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment-LMD-OPT-NoResponse-label')" />
+					<value>LMD-OPT-NoResponse</value>
+				</item>
+			</select>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other" ref="/data/GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-PlaceOfTreatment_other-label')" />
+			</input>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-TreatmentType" ref="/data/GRP-ChildInformation/LMD-CHK-TreatmentType">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-FluidMadeFromORS-label')" />
+					<value>LMD-OPT-FluidMadeFromORS</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-PrePackagedORS-label')" />
+					<value>LMD-OPT-PrePackagedORS</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-GOLRecommendedHomemadeFluid-label')" />
+					<value>LMD-OPT-GOLRecommendedHomemadeFluid</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-ZincTabletorSyrup-label')" />
+					<value>LMD-OPT-ZincTabletorSyrup</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-Unknown-label')" />
+					<value>LMD-OPT-Unknown</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-TreatmentType-LMD-OPT-Declined-label')" />
+					<value>LMD-OPT-Declined</value>
+				</item>
+			</select>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-SourceOfTreatment" ref="/data/GRP-ChildInformation/LMD-CHK-SourceOfTreatment">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-ClinicOrFacility-label')" />
+					<value>LMD-OPT-ClinicOrFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-CHA-label')" />
+					<value>LMD-OPT-CHA</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-gCHV-label')" />
+					<value>LMD-OPT-gCHV</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-Drugstore-label')" />
+					<value>LMD-OPT-Drugstore</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-BlackBagger-label')" />
+					<value>LMD-OPT-BlackBagger</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-CountryDoctor-label')" />
+					<value>LMD-OPT-CountryDoctor</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-SourceOfTreatment-LMD-OPT-DeclinedToAnswer-label')" />
+					<value>LMD-OPT-DeclinedToAnswer</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-EducationFeedingChild" ref="/data/GRP-ChildInformation/LMD-VAL-EducationFeedingChild">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationFeedingChild-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationFeedingChild-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationFeedingChild-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationFeedingChild-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationFeedingChild-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick" ref="/data/GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Yes-label')" />
+					<value>Yes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-No-label')" />
+					<value>No</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Not_giving_tayatay-label')" />
+					<value>Not_giving_tayatay</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Unknown-label')" />
+					<value>Unknown</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EducationBreastFeedWhileSick-Declined-label')" />
+					<value>Declined</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-EducationFeedingType" ref="/data/GRP-ChildInformation/LMD-CHK-EducationFeedingType">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-GiveZinc-label')" />
+					<value>LMD-OPT-GiveZinc</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-AdministerORS-label')" />
+					<value>LMD-OPT-AdministerORS</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-ContinueTaytayWater-label')" />
+					<value>LMD-OPT-ContinueTaytayWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-FrequentWater-label')" />
+					<value>LMD-OPT-FrequentWater</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-GiveTaytayOnDemand-label')" />
+					<value>LMD-OPT-GiveTaytayOnDemand</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-OtherLiquids-label')" />
+					<value>LMD-OPT-OtherLiquids</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-MoreFood-label')" />
+					<value>LMD-OPT-MoreFood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-LessFood-label')" />
+					<value>LMD-OPT-LessFood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-PatientlyFeedToIncreaseAppetite-label')" />
+					<value>LMD-OPT-PatientlyFeedToIncreaseAppetite</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-SmallMeal-label')" />
+					<value>LMD-OPT-SmallMeal</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-PorridgeFood-label')" />
+					<value>LMD-OPT-PorridgeFood</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-OptimalHygiencePractice-label')" />
+					<value>LMD-OPT-OptimalHygiencePractice</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-None-label')" />
+					<value>LMD-OPT-None</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-DontKnow-label')" />
+					<value>LMD-OPT-DontKnow</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-EducationFeedingType-LMD-OPT-NoResponse-label')" />
+					<value>LMD-OPT-NoResponse</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA" ref="/data/GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-LastSixMonthsGivenVitaminA-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements" ref="/data/GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-MicronutrientPowder-label')" />
+					<value>LMD-OPT-MicronutrientPowder</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-OtherSupplement-label')" />
+					<value>LMD-OPT-OtherSupplement</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-DidNotTake-label')" />
+					<value>LMD-OPT-DidNotTake</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-Unknown-label')" />
+					<value>LMD-OPT-Unknown</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-MicroNutrientSupplements-LMD-OPT-Declined-label')" />
+					<value>LMD-OPT-Declined</value>
+				</item>
+			</select>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders" ref="/data/GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-days_taken_vitamins_or_powders-label')" />
+			</input>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm" ref="/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementComm">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-ChildHeightComm-label')" />
+					<value>LMD-OPT-ChildHeightComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-ChildWeightComm-label')" />
+					<value>LMD-OPT-ChildWeightComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-MUAC-label')" />
+					<value>LMD-OPT-MUAC</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-NoMeasurementComm-label')" />
+					<value>LMD-OPT-NoMeasurementComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-DontKnowComm-label')" />
+					<value>LMD-OPT-DontKnowComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementComm-LMD-OPT-Declined-label')" />
+					<value>LMD-OPT-Declined</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth" ref="/data/GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-GrowingWell-label')" />
+					<value>GrowingWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NotGrowingWell-label')" />
+					<value>NotGrowingWell</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-Malnourished-label')" />
+					<value>Malnourished</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NotMalnourished-label')" />
+					<value>NotMalnourished</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-DontKnow-label')" />
+					<value>DontKnow</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-InfoOnChildGrowth-NoResponse-label')" />
+					<value>NoResponse</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement" ref="/data/GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredAfterMeasurement-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility" ref="/data/GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-ChildHeightFacility-label')" />
+					<value>LMD-OPT-ChildHeightFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-ChildWeightFacilty-label')" />
+					<value>LMD-OPT-ChildWeightFacilty</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-MUACFacility-label')" />
+					<value>LMD-OPT-MUACFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-NoFacility-label')" />
+					<value>LMD-OPT-NoFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-DontKnow-label')" />
+					<value>LMD-OPT-DontKnow</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-ChildMeasurementFacility-LMD-OPT-Declined-label')" />
+					<value>LMD-OPT-Declined</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility" ref="/data/GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-GrowingWellFaciltiy-label')" />
+					<value>GrowingWellFaciltiy</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-NotGrowingWellFacility-label')" />
+					<value>NotGrowingWellFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-DontKnowFacility-label')" />
+					<value>DontKnowFacility</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildGrowInfoFacility-NoResponseFacility-label')" />
+					<value>NoResponseFacility</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ReferredByFacility" ref="/data/GRP-ChildInformation/LMD-VAL-ReferredByFacility">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredByFacility-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredByFacility-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredByFacility-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredByFacility-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ReferredByFacility-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram" ref="/data/GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-EnrolledInMicronutientsProgram-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration" ref="/data/GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MicronutrientsProgramDuration-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-CHAMeasuredChild" ref="/data/GRP-ChildInformation/LMD-VAL-CHAMeasuredChild">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CHAMeasuredChild-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram" ref="/data/GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-StillEnrolled-label')" />
+					<value>StillEnrolled</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-CompletedMicronutrientProgram-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-StillGetingSupplements" ref="/data/GRP-ChildInformation/LMD-VAL-StillGetingSupplements">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-StillGetingSupplements-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-StillGetingSupplements-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-StillGetingSupplements-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-StillGetingSupplements-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-StillGetingSupplements-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF" ref="/data/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-PlumpyProductHF-label')" />
+					<value>LMD-OPT-PlumpyProductHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-F100MilkHF-label')" />
+					<value>LMD-OPT-F100MilkHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-SpecialFlourHF-label')" />
+					<value>LMD-OPT-SpecialFlourHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FoodBasketHF-label')" />
+					<value>LMD-OPT-FoodBasketHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FortifiedGariHF-label')" />
+					<value>LMD-OPT-FortifiedGariHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-FormulaMilkHF-label')" />
+					<value>LMD-OPT-FormulaMilkHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-OtherHF-label')" />
+					<value>LMD-OPT-OtherHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-DontKnowHF-label')" />
+					<value>LMD-OPT-DontKnowHF</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeHF-LMD-OPT-NoResponseHF-label')" />
+					<value>LMD-OPT-NoResponseHF</value>
+				</item>
+			</select>
+			<select vellum:ref="#form/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm" ref="/data/GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-label')" />
+				<alert ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-constraintMsg')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-PlumpyProductComm-label')" />
+					<value>LMD-OPT-PlumpyProductComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-F100MilkComm-label')" />
+					<value>LMD-OPT-F100MilkComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-SpecialFlourComm-label')" />
+					<value>LMD-OPT-SpecialFlourComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FoodBasketComm-label')" />
+					<value>LMD-OPT-FoodBasketComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FortifiedGariComm-label')" />
+					<value>LMD-OPT-FortifiedGariComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-FormulaMilkComm-label')" />
+					<value>LMD-OPT-FormulaMilkComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-OtherComm-label')" />
+					<value>LMD-OPT-OtherComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-DontKnowComm-label')" />
+					<value>LMD-OPT-DontKnowComm</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-CHK-FoodSupplementTypeComm-LMD-OPT-NoResponseComm-label')" />
+					<value>LMD-OPT-NoResponseComm</value>
+				</item>
+			</select>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment" ref="/data/GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-999-label')" />
+					<value>999</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHadDewormingTreatment-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver" ref="/data/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Mother-label')" />
+					<value>Mother</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Father-label')" />
+					<value>Father</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-Aunt-label')" />
+					<value>Aunt</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver-other-label')" />
+					<value>other</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other" ref="/data/GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildMainCaregiver_Other-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent" ref="/data/GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildRealMotherPresent-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<trigger vellum:ref="#form/GRP-ChildInformation/Label-Consent_Mother_Measurement" ref="/data/GRP-ChildInformation/Label-Consent_Mother_Measurement" appearance="minimal">
+				<label ref="jr:itext('GRP-ChildInformation/Label-Consent_Mother_Measurement-label')" />
+			</trigger>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-RealMotherWeight" ref="/data/GRP-ChildInformation/LMD-VAL-RealMotherWeight">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-RealMotherWeight-label')" />
+			</input>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-RealMotherHeight" ref="/data/GRP-ChildInformation/LMD-VAL-RealMotherHeight">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-RealMotherHeight-label')" />
+			</input>
+			<trigger vellum:ref="#form/GRP-ChildInformation/Label-Consent_Child_Measurement" ref="/data/GRP-ChildInformation/Label-Consent_Child_Measurement" appearance="minimal">
+				<label ref="jr:itext('GRP-ChildInformation/Label-Consent_Child_Measurement-label')" />
+			</trigger>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildHasOedema" ref="/data/GRP-ChildInformation/LMD-VAL-ChildHasOedema">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHasOedema-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHasOedema-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHasOedema-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHasOedema-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildWeight" ref="/data/GRP-ChildInformation/LMD-VAL-ChildWeight">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildWeight-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod" ref="/data/GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-Standing-label')" />
+					<value>Standing</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-Laying-label')" />
+					<value>Laying</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHeightMeasurementMethod-declined_measurement-label')" />
+					<value>declined_measurement</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-ChildHeight" ref="/data/GRP-ChildInformation/LMD-VAL-ChildHeight">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-ChildHeight-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-MUACColorReading" ref="/data/GRP-ChildInformation/LMD-VAL-MUACColorReading">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-Red-label')" />
+					<value>Red</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-Yellow-label')" />
+					<value>Yellow</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-Green-label')" />
+					<value>Green</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-childUnder6Months-label')" />
+					<value>childUnder6Months</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACColorReading-888-label')" />
+					<value>888</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/GRP-ChildInformation/LMD-VAL-MUACNumberReading" ref="/data/GRP-ChildInformation/LMD-VAL-MUACNumberReading">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-MUACNumberReading-label')" />
+			</input>
+			<select1 vellum:ref="#form/GRP-ChildInformation/LMD-VAL-referred_respondent_child" ref="/data/GRP-ChildInformation/LMD-VAL-referred_respondent_child">
+				<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-referred_respondent_child-label')" />
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-referred_respondent_child-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('GRP-ChildInformation/LMD-VAL-referred_respondent_child-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+		</group>
+		<trigger vellum:ref="#form/LABEL-overAge" ref="/data/LABEL-overAge" appearance="minimal">
+			<label ref="jr:itext('LABEL-overAge-label')" />
+		</trigger>
+	</h:body>
+</h:html>
